@@ -7,5 +7,16 @@ export default defineNuxtConfig({
 
   future: {
     compatibilityVersion: 4
+  },
+
+  colorMode: {
+    preference: 'dark',
+    fallback: 'dark'
+  },
+
+  ui: {
+    theme: {
+      colors: ['red']
+    }
   }
 })

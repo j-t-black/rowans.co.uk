@@ -1,23 +1,23 @@
 <template>
-  <header class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur">
-    <UContainer>
-      <nav class="flex items-center justify-between py-4">
+  <header class="fixed top-0 left-0 right-0 z-50" style="background-color: rgba(0, 0, 0, 0.8); backdrop-filter: blur(10px);">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 0 1rem;">
+      <nav style="display: flex; align-items: center; justify-content: space-between; padding: 1rem 0;">
         <!-- Logo -->
-        <NuxtLink to="/" class="flex items-center">
+        <NuxtLink to="/" style="display: flex; align-items: center;">
           <img
             src="/design-assets/MAIN LOGO.png"
             alt="Rowan's"
-            class="h-12 w-auto"
+            style="height: 3rem; width: auto;"
           />
         </NuxtLink>
 
         <!-- Desktop Navigation -->
-        <div class="hidden md:flex items-center gap-8">
+        <div style="display: none;" class="md:flex items-center gap-8">
           <NuxtLink
             v-for="link in navigation"
             :key="link.to"
             :to="link.to"
-            class="text-white hover:text-primary transition-colors"
+            style="color: #ffffff; text-decoration: none; transition: color 0.3s;"
           >
             {{ link.label }}
           </NuxtLink>
@@ -32,7 +32,7 @@
           @click="isMenuOpen = true"
         />
       </nav>
-    </UContainer>
+    </div>
 
     <!-- Mobile Menu Overlay -->
     <USlideover v-model="isMenuOpen" side="right">
@@ -56,7 +56,8 @@
             v-for="link in navigation"
             :key="link.to"
             :to="link.to"
-            class="text-2xl text-white hover:text-primary transition-colors"
+            class="text-2xl hover:text-primary transition-colors"
+            style="color: #ffffff;"
             @click="isMenuOpen = false"
           >
             {{ link.label }}

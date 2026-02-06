@@ -17,11 +17,11 @@
 
         <!-- Content -->
         <div :class="{ 'lg:order-1': imageRight }">
-          <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 class="text-4xl md:text-6xl font-bold text-red-600 mb-6">
             {{ title }}
           </h2>
 
-          <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+          <p class="text-lg text-white mb-8 leading-relaxed">
             {{ description }}
           </p>
 

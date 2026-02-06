@@ -1,85 +1,99 @@
 <template>
-  <div>
+  <div style="background-color: #000000; min-height: 100vh;">
     <!-- Hero Section -->
-    <SectionsHero
-      image="/design-assets/HERO 1.4 CLEAN LINES - NEW 16.png"
-      title="Iconic Venue in London's Finsbury Park"
-      subtitle="Welcome to Rowans"
-    />
+    <section style="position: relative; height: 100vh; display: flex; flex-direction: column; overflow: hidden;">
+      <img
+        src="/design-assets/HERO 1.4 CLEAN LINES - NEW 16.png"
+        alt="Rowan's Venue"
+        style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;"
+      />
+      <div style="position: absolute; inset: 0; background-color: rgba(0,0,0,0.4); z-index: 1;"></div>
 
-    <!-- Venue Features -->
-    <SectionsFeatures
-      title="World-Class Venue"
-      :features="venueFeatures"
-    />
+      <!-- Logo at top -->
+      <div style="position: relative; z-index: 2; text-align: center; padding: 2rem 2rem 0;">
+        <img
+          src="/design-assets/MAIN LOGO.png"
+          alt="Rowan's"
+          style="height: 8rem; width: auto; margin: 0 auto;"
+        />
+      </div>
 
-    <!-- Organize Your Party -->
-    <SectionsCtaGrid
-      title="Organise Your Party"
-      :ctas="partyCtas"
-    />
+      <!-- Hero content centered -->
+      <div style="position: relative; z-index: 2; text-align: center; padding: 2rem; flex: 1; display: flex; flex-direction: column; justify-content: center; margin-top: -4rem;">
+        <p style="color: #ffffff; font-size: 1.25rem; margin-bottom: 1rem; font-weight: 300;">Iconic Venue in London's Finsbury Park</p>
+        <h1 style="color: #ff0000; font-size: 4rem; font-weight: bold; margin-bottom: 2rem; line-height: 1.1;">Welcome to Rowans</h1>
+        <p style="color: #ffffff; font-size: 1rem; max-width: 800px; margin: 0 auto; line-height: 1.6;">
+          World-class Sound, Intelligent Lighting and video, 2 Distinct Dancefloors,
+          24 Bowling Lanes, 16 Pool Tables, 6 Private Karaoke Booths,
+          4 Bars, Outback Garden with seating and sound system, Arcade
+        </p>
+      </div>
+    </section>
+
+    <!-- Organise Your Party -->
+    <section style="padding: 6rem 2rem; background-color: #000000;">
+      <h2 style="color: #ff0000; font-size: 3rem; font-weight: bold; text-align: center; margin-bottom: 3rem;">Organise Your Party</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 2rem; max-width: 800px; margin: 0 auto;">
+        <a v-for="cta in partyCtas" :key="cta.text" :href="cta.link"
+           style="aspect-ratio: 1; display: flex; align-items: center; justify-content: center; border-radius: 50%; border: 2px solid #ffffff; color: #ffffff; font-weight: bold; text-align: center; padding: 1.5rem; text-decoration: none; font-size: 0.9rem;">
+          {{ cta.text }}
+        </a>
+      </div>
+    </section>
+
+    <!-- Eats + Drinks -->
+    <section style="padding: 6rem 2rem; background-color: #000000;">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; max-width: 1200px; margin: 0 auto; align-items: center;">
+        <div style="order: 2;">
+          <img src="/design-assets/HERO 3 - EATS AND DRINKS.png" alt="Eats and Drinks" style="width: 100%; height: auto; border-radius: 8px;" />
+        </div>
+        <div style="order: 1;">
+          <h2 style="color: #ff0000; font-size: 3rem; font-weight: bold; margin-bottom: 1.5rem;">Eats + Drinks</h2>
+          <p style="color: #ffffff; font-size: 1.125rem; line-height: 1.75;">Signature frozen cocktails, Authentic southern Mexican taco's, Artisan sourdough pizza</p>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 2rem; max-width: 800px; margin: 3rem auto 0;">
+        <a v-for="cta in foodCtas" :key="cta.text" :href="cta.link"
+           style="aspect-ratio: 1; display: flex; align-items: center; justify-content: center; border-radius: 50%; border: 2px solid #ffffff; color: #ffffff; font-weight: bold; text-align: center; padding: 1.5rem; text-decoration: none; font-size: 0.9rem;">
+          {{ cta.text }}
+        </a>
+      </div>
+    </section>
 
     <!-- Audio Section -->
-    <SectionsContentImage
-      image="/design-assets/ROWANS AUDIO LOGO.png"
-      title="AUDIO"
-      description="Void Acoustics and Funktion One sound-systems across the venue playing big basslines. Ever evolving line-up and weekly events."
-      :image-right="false"
-    />
+    <section style="padding: 6rem 2rem; background-color: #000000;">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; max-width: 1200px; margin: 0 auto; align-items: center;">
+        <div>
+          <img src="/design-assets/ROWANS AUDIO LOGO.png" alt="Audio" style="width: 100%; height: auto;" />
+        </div>
+        <div>
+          <h2 style="color: #ff0000; font-size: 3rem; font-weight: bold; margin-bottom: 1.5rem;">AUDIO</h2>
+          <p style="color: #ffffff; font-size: 1.125rem; line-height: 1.75;">Void Acoustics and Funktion One sound-systems across the venue playing big basslines. Ever evolving line-up and weekly events.</p>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 2rem; max-width: 600px; margin: 3rem auto 0;">
+        <a v-for="cta in eventsCtas" :key="cta.text" :href="cta.link"
+           style="aspect-ratio: 1; display: flex; align-items: center; justify-content: center; border-radius: 50%; border: 2px solid #ffffff; color: #ffffff; font-weight: bold; text-align: center; padding: 1.5rem; text-decoration: none; font-size: 0.9rem;">
+          {{ cta.text }}
+        </a>
+      </div>
+    </section>
 
-    <!-- Events CTAs -->
-    <SectionsCtaGrid
-      :ctas="eventsCtas"
-    />
-
-    <!-- Eats & Drinks -->
-    <SectionsContentImage
-      image="/design-assets/HERO 3 - EATS AND DRINKS.png"
-      title="Eats + Drinks"
-      description="Signature frozen cocktails, Authentic southern Mexican taco's, Artisan sourdough pizza"
-      :image-right="true"
-    />
-
-    <!-- Food CTAs -->
-    <SectionsCtaGrid
-      :ctas="foodCtas"
-    />
+    <!-- Footer -->
+    <AppFooter />
   </div>
 </template>
 
 <script setup lang="ts">
-// Define page metadata
 definePageMeta({
-  layout: 'default'
+  layout: false
 })
 
 useSeoMeta({
   title: "Rowan's - Iconic Venue in Finsbury Park",
-  description: 'World-class sound, bowling, karaoke, and events in the heart of Finsbury Park, London',
-  ogImage: '/design-assets/HERO 1.4 CLEAN LINES - NEW 16.png'
+  description: 'World-class sound, bowling, karaoke, and events in the heart of Finsbury Park, London'
 })
 
-// Venue features data
-const venueFeatures = [
-  {
-    title: '2 Distinct Dancefloors',
-    description: 'World-class sound and intelligent lighting'
-  },
-  {
-    title: '24 Bowling Lanes',
-    description: 'State-of-the-art bowling experience'
-  },
-  {
-    title: '6 Private Karaoke Booths',
-    description: 'Perfect for your group'
-  },
-  {
-    title: '14 Pool Tables',
-    description: 'Plus arcade and outdoor garden'
-  }
-]
-
-// Party booking CTAs
 const partyCtas = [
   { text: 'LARGE GROUPS', link: '/groups' },
   { text: 'Kids parties', link: '/groups#kids' },
@@ -87,14 +101,12 @@ const partyCtas = [
   { text: 'LAUNCH PARTIES', link: '/groups#launch' }
 ]
 
-// Events CTAs
 const eventsCtas = [
   { text: "WHAT'S ON", link: '/events' },
   { text: 'ROWANS RADIO', link: '/radio' },
   { text: "RESIDENT DJ'S", link: '/events#djs' }
 ]
 
-// Food & Drinks CTAs
 const foodCtas = [
   { text: 'BIRTHDAY CAKES', link: '/eats-drinks#cakes' },
   { text: 'DRINKS MENU', link: '/eats-drinks#drinks' },

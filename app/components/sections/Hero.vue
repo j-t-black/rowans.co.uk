@@ -7,18 +7,18 @@
         :alt="title"
         class="w-full h-full object-cover"
       />
-      <div class="absolute inset-0 bg-black/40" />
+      <div class="absolute inset-0 bg-black/60" />
     </div>
 
     <!-- Content -->
     <UContainer class="relative z-10 text-center">
-      <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
-        {{ title }}
-      </h1>
-
-      <p v-if="subtitle" class="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto">
+      <p v-if="subtitle" class="text-xl md:text-2xl text-white mb-4 max-w-3xl mx-auto">
         {{ subtitle }}
       </p>
+
+      <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold text-red-600 mb-6">
+        {{ title }}
+      </h1>
 
       <div v-if="$slots.actions" class="flex flex-wrap gap-4 justify-center">
         <slot name="actions" />

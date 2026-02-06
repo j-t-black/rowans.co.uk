@@ -1,0 +1,93 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - alert [ref=e4]: Rowan's - Iconic Venue in Finsbury Park
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - img "Rowan's Venue" [ref=e7]
+        - img "Rowan's" [ref=e10]
+        - generic [ref=e11]:
+          - paragraph [ref=e12]: Iconic Venue in London's Finsbury Park
+          - heading "Welcome to Rowans" [level=1] [ref=e13]
+          - paragraph [ref=e14]: World-class Sound, Intelligent Lighting and video, 2 Distinct Dancefloors, 24 Bowling Lanes, 16 Pool Tables, 6 Private Karaoke Booths, 4 Bars, Outback Garden with seating and sound system, Arcade
+      - generic [ref=e15]:
+        - heading "Organise Your Party" [level=2] [ref=e16]
+        - generic [ref=e17]:
+          - link "LARGE GROUPS" [ref=e18] [cursor=pointer]:
+            - /url: /groups
+          - link "Kids parties" [ref=e19] [cursor=pointer]:
+            - /url: /groups#kids
+          - link "CORPORATE" [ref=e20] [cursor=pointer]:
+            - /url: /corporate
+          - link "LAUNCH PARTIES" [ref=e21] [cursor=pointer]:
+            - /url: /groups#launch
+      - generic [ref=e22]:
+        - generic [ref=e23]:
+          - img "Eats and Drinks" [ref=e25]
+          - generic [ref=e26]:
+            - heading "Eats + Drinks" [level=2] [ref=e27]
+            - paragraph [ref=e28]: Signature frozen cocktails, Authentic southern Mexican taco's, Artisan sourdough pizza
+        - generic [ref=e29]:
+          - link "BIRTHDAY CAKES" [ref=e30] [cursor=pointer]:
+            - /url: /eats-drinks#cakes
+          - link "DRINKS MENU" [ref=e31] [cursor=pointer]:
+            - /url: /eats-drinks#drinks
+          - link "Yucatan Tacos" [ref=e32] [cursor=pointer]:
+            - /url: /eats-drinks#yucatan
+          - link "YARD SALE PIZZA" [ref=e33] [cursor=pointer]:
+            - /url: /eats-drinks#pizza
+      - generic [ref=e34]:
+        - generic [ref=e35]:
+          - img "Audio" [ref=e37]
+          - generic [ref=e38]:
+            - heading "AUDIO" [level=2] [ref=e39]
+            - paragraph [ref=e40]: Void Acoustics and Funktion One sound-systems across the venue playing big basslines. Ever evolving line-up and weekly events.
+        - generic [ref=e41]:
+          - link "WHAT'S ON" [ref=e42] [cursor=pointer]:
+            - /url: /events
+          - link "ROWANS RADIO" [ref=e43] [cursor=pointer]:
+            - /url: /radio
+          - link "RESIDENT DJ'S" [ref=e44] [cursor=pointer]:
+            - /url: /events#djs
+      - contentinfo [ref=e45]:
+        - generic [ref=e46]:
+          - generic [ref=e47]:
+            - generic [ref=e48]:
+              - heading "Visit Us" [level=3] [ref=e49]
+              - paragraph [ref=e50]:
+                - text: 10 Stroud Green Road
+                - text: Finsbury Park
+                - text: London N4 2DF
+            - generic [ref=e51]:
+              - heading "Opening Hours" [level=3] [ref=e52]
+              - paragraph [ref=e53]:
+                - text: "Mon-Thu: 5pm - 1am"
+                - text: "Fri-Sat: 12pm - 3am"
+                - text: "Sun: 12pm - 12am"
+            - generic [ref=e54]:
+              - heading "Quick Links" [level=3] [ref=e55]
+              - navigation [ref=e56]:
+                - link "Book Karaoke" [ref=e57] [cursor=pointer]:
+                  - /url: /book-karaoke
+                - link "Policies" [ref=e58] [cursor=pointer]:
+                  - /url: /policies
+          - paragraph [ref=e60]: © 2026 Rowan's. All rights reserved.
+  - generic:
+    - img
+  - generic:
+    - generic:
+      - generic:
+        - button "Go to parent" [disabled]
+        - button "Open in editor"
+        - button "Close"
+  - generic [ref=e61]:
+    - button "Toggle Nuxt DevTools" [ref=e62] [cursor=pointer]:
+      - img [ref=e63]
+    - generic "Page load time" [ref=e66]:
+      - generic [ref=e67]: "10"
+      - generic [ref=e68]: ms
+    - button "Toggle Component Inspector" [ref=e70] [cursor=pointer]:
+      - img [ref=e71]
+```

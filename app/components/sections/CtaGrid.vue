@@ -1,22 +1,19 @@
 <template>
   <section class="py-24 bg-black">
     <UContainer>
-      <h2 v-if="title" class="text-4xl md:text-5xl font-bold text-white text-center mb-16">
+      <h2 v-if="title" class="text-4xl md:text-5xl font-bold text-red-600 text-center mb-16">
         {{ title }}
       </h2>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <UButton
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+        <NuxtLink
           v-for="(cta, index) in ctas"
           :key="index"
           :to="cta.link"
-          size="xl"
-          color="white"
-          variant="outline"
-          class="h-32 text-xl font-bold"
+          class="flex items-center justify-center aspect-square rounded-full border-2 border-white hover:bg-white hover:text-black transition-all duration-300 text-white font-bold text-center p-6"
         >
-          {{ cta.text }}
-        </UButton>
+          <span class="text-sm md:text-base uppercase">{{ cta.text }}</span>
+        </NuxtLink>
       </div>
     </UContainer>
   </section>
