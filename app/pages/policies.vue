@@ -51,6 +51,22 @@ definePageMeta({
           Our policies ensure a safe and enjoyable experience for all guests.
           Please review our terms and conditions before your visit.
         </p>
+
+        <!-- Policy Buttons -->
+        <div class="policy-buttons">
+          <a href="#privacy" class="policy-button">
+            Privacy Notice
+          </a>
+          <a href="#facial" class="policy-button">
+            Facial Recognition
+          </a>
+          <a href="#cctv" class="policy-button">
+            CCTV Policy
+          </a>
+          <a href="#terms" class="policy-button">
+            Terms & Conditions
+          </a>
+        </div>
       </div>
     </section>
 
@@ -175,6 +191,35 @@ definePageMeta({
   color: #ffffff;
   opacity: 0.9;
   text-align: center;
+  margin-bottom: 3rem;
+}
+
+.policy-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 250px));
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.policy-button {
+  padding: 2rem 1.5rem;
+  background-color: #1a1a1a;
+  border: 2px solid #ffffff;
+  border-radius: 12px;
+  color: #ffffff;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.policy-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-4px);
 }
 
 .footer {

@@ -8,6 +8,13 @@ definePageMeta({
   <div class="min-h-screen bg-black">
     <!-- Hero Section -->
     <section class="hero-section">
+      <!-- Red Speaker (half visible on left) -->
+      <img
+        src="/design-assets/ROWANS AUDIO LOGO.png"
+        alt="Speaker"
+        class="left-speaker"
+      />
+
       <!-- Background Image -->
       <img
         src="/design-assets/ROWANS RADIO HERO.png"
@@ -51,6 +58,19 @@ definePageMeta({
           Tune in to Rowans Radio for the best in underground music.<br><br>
           Live sets, DJ mixes, and exclusive content from our resident artists.
         </p>
+
+        <!-- Red Speaker Buttons -->
+        <div class="speaker-buttons">
+          <a href="/poster1" class="speaker-button">
+            <img src="/design-assets/POSTER 1.jpg" alt="Poster 1" />
+          </a>
+          <a href="/poster2" class="speaker-button">
+            <img src="/design-assets/POSTER 2.jpg" alt="Poster 2" />
+          </a>
+          <a href="/poster3" class="speaker-button">
+            <img src="/design-assets/POSTER 3.jpg" alt="Poster 3" />
+          </a>
+        </div>
       </div>
     </section>
 
@@ -104,6 +124,17 @@ definePageMeta({
   height: 100%;
   object-fit: cover;
   z-index: 0;
+}
+
+.left-speaker {
+  position: absolute;
+  left: -150px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 60%;
+  width: auto;
+  z-index: 1;
+  filter: brightness(0.8) hue-rotate(-10deg) saturate(1.5);
 }
 
 .hero-logo {
@@ -175,6 +206,36 @@ definePageMeta({
   color: #ffffff;
   opacity: 0.9;
   text-align: center;
+  margin-bottom: 3rem;
+}
+
+.speaker-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.speaker-button {
+  width: 250px;
+  height: 250px;
+  display: block;
+  transition: all 0.2s;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.speaker-button img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.speaker-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 30px rgba(255, 0, 0, 0.3);
 }
 
 .footer {
@@ -253,6 +314,16 @@ definePageMeta({
   .hero-button {
     width: 60px;
     height: 58px;
+  }
+
+  .left-speaker {
+    left: -200px;
+    height: 70%;
+  }
+
+  .speaker-button {
+    width: 300px;
+    height: 300px;
   }
 }
 </style>
