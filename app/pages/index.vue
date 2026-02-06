@@ -366,21 +366,25 @@ definePageMeta({
 }
 
 .party-buttons {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 150px));
+  display: flex;
+  flex-direction: row;
   gap: 2rem;
-  max-width: 700px;
+  max-width: 800px;
   margin: 0 auto;
   justify-content: center;
 }
 
 .party-button {
-  aspect-ratio: 1;
+  position: relative;
+  width: 150px;
+  height: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
-  border: 2px solid #ffffff;
+  background-image: url('/design-assets/BUTTON BASE.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   color: #ffffff;
   font-family: 'JetBrains Mono', monospace;
   font-weight: 400;
@@ -393,7 +397,7 @@ definePageMeta({
 }
 
 .party-button:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  opacity: 0.8;
   transform: scale(1.05);
 }
 
@@ -429,21 +433,25 @@ definePageMeta({
 }
 
 .eats-buttons {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 150px));
+  display: flex;
+  flex-direction: row;
   gap: 2rem;
-  max-width: 700px;
+  max-width: 800px;
   margin: 0 auto;
   justify-content: center;
 }
 
 .eats-button {
-  aspect-ratio: 1;
+  position: relative;
+  width: 150px;
+  height: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
-  border: 2px solid #ffffff;
+  background-image: url('/design-assets/BUTTON BASE.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   color: #ffffff;
   font-family: 'JetBrains Mono', monospace;
   font-weight: 400;
@@ -456,7 +464,7 @@ definePageMeta({
 }
 
 .eats-button:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  opacity: 0.8;
   transform: scale(1.05);
 }
 
@@ -503,21 +511,25 @@ definePageMeta({
 }
 
 .audio-buttons {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 150px));
+  display: flex;
+  flex-direction: row;
   gap: 2rem;
-  max-width: 550px;
+  max-width: 650px;
   margin: 0 auto;
   justify-content: center;
 }
 
 .audio-button {
-  aspect-ratio: 1;
+  position: relative;
+  width: 150px;
+  height: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
-  border: 2px solid #ffffff;
+  background-image: url('/design-assets/AUDIO BUTTON.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   color: #ffffff;
   font-family: 'JetBrains Mono', monospace;
   font-weight: 400;
@@ -530,7 +542,7 @@ definePageMeta({
 }
 
 .audio-button:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  opacity: 0.8;
   transform: scale(1.05);
 }
 
@@ -727,17 +739,25 @@ definePageMeta({
   }
 
   .party-buttons,
-  .eats-buttons,
+  .eats-buttons {
+    gap: 3rem;
+  }
+
   .audio-buttons {
-    grid-template-columns: repeat(4, 180px);
     gap: 3rem;
   }
 
   .party-button,
-  .eats-button,
-  .audio-button {
+  .eats-button {
+    width: 180px;
+    height: 180px;
     font-size: 14px;
-    padding: 2rem;
+  }
+
+  .audio-button {
+    width: 180px;
+    height: 180px;
+    font-size: 14px;
   }
 
   .audio-logo {
