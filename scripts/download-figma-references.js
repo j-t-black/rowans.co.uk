@@ -24,12 +24,14 @@ if (!FIGMA_ACCESS_TOKEN || !FIGMA_FILE_KEY) {
   process.exit(1);
 }
 
-// Page sections from Figma with their node IDs
+// Page frames from Figma with their node IDs
+// Format: 'page-viewport': 'node-id'
 const pages = {
-  'home': '2:149',
+  'home-desktop': '2:3',   // Desktop frame for home
+  'home-mobile': '2:76',   // Mobile frame for home
   // Add more pages as needed:
-  // 'eats-drinks': 'NODE_ID',
-  // 'groups': 'NODE_ID',
+  // 'eats-drinks-desktop': 'NODE_ID',
+  // 'eats-drinks-mobile': 'NODE_ID',
   // etc.
 };
 

@@ -15,7 +15,7 @@ if (!fs.existsSync(screenshotsDir)) {
 }
 
 const referencesDir = path.join(__dirname, '../tests/screenshots/references');
-const figmaReference = path.join(referencesDir, 'home-figma.png');
+const figmaReference = path.join(referencesDir, 'home-desktop-figma.png');
 const baseline = path.join(__dirname, '../tests/visual.spec.ts-snapshots/home-baseline-chromium-darwin.png');
 
 const baselineDir = path.dirname(baseline);
