@@ -79,6 +79,66 @@
       </div>
     </section>
 
+    <!-- Visit Us Section -->
+    <section style="padding: 6rem 2rem; background-color: #000000;">
+      <h2 style="color: #ff0000; font-size: 3rem; font-weight: bold; text-align: center; margin-bottom: 3rem;">Visit us</h2>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; max-width: 900px; margin: 0 auto 3rem;">
+        <!-- Finsbury Park Location -->
+        <div style="background-color: #1a1a1a; border: 1px solid #333; border-radius: 8px; padding: 2rem;">
+          <h3 style="color: #ffffff; font-size: 1.5rem; font-weight: bold; margin-bottom: 1.5rem; text-align: center;">Finsbury Park</h3>
+          <div style="color: #9ca3af; text-align: center; margin-bottom: 2rem; line-height: 1.8;">
+            <p>Monday - Thursday</p>
+            <p>5pm - 1am</p>
+            <p style="margin-top: 1rem;">Friday - Saturday</p>
+            <p>12pm - 3am</p>
+            <p style="margin-top: 1rem;">Sunday</p>
+            <p>12pm - 12am</p>
+          </div>
+          <a href="#location" style="display: block; background-color: transparent; border: 2px solid #ffffff; color: #ffffff; padding: 1rem 2rem; text-align: center; text-decoration: none; border-radius: 4px; font-weight: bold;">
+            FIND US
+          </a>
+        </div>
+
+        <!-- Second location box -->
+        <div style="background-color: #1a1a1a; border: 1px solid #333; border-radius: 8px; padding: 2rem;">
+          <h3 style="color: #ffffff; font-size: 1.5rem; font-weight: bold; margin-bottom: 1.5rem; text-align: center;">Finsbury Park</h3>
+          <div style="color: #9ca3af; text-align: center; margin-bottom: 2rem; line-height: 1.8;">
+            <p>Monday - Thursday</p>
+            <p>5pm - 1am</p>
+            <p style="margin-top: 1rem;">Friday - Saturday</p>
+            <p>12pm - 3am</p>
+            <p style="margin-top: 1rem;">Sunday</p>
+            <p>12pm - 12am</p>
+          </div>
+          <a href="#location" style="display: block; background-color: transparent; border: 2px solid #ffffff; color: #ffffff; padding: 1rem 2rem; text-align: center; text-decoration: none; border-radius: 4px; font-weight: bold;">
+            FIND US
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" style="padding: 6rem 2rem; background-color: #000000;">
+      <div style="max-width: 1200px; margin: 0 auto;">
+        <h2 style="color: #ff0000; font-size: 3rem; font-weight: bold; text-align: center; margin-bottom: 3rem;">Location</h2>
+
+        <div style="background-color: #1a1a1a; border: 1px solid #333; border-radius: 8px; padding: 2rem; text-align: center;">
+          <h3 style="color: #ffffff; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">Finsbury Park</h3>
+          <p style="color: #9ca3af; margin-bottom: 2rem;">
+            10 Stroud Green Road<br>
+            Finsbury Park<br>
+            London N4 2DF
+          </p>
+
+          <!-- Map placeholder -->
+          <div style="background-color: #e5e7eb; height: 400px; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+            <span style="color: #6b7280; font-size: 1.125rem;">📍 Map View</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Footer -->
     <AppFooter />
   </div>

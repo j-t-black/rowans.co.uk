@@ -51,29 +51,63 @@
             - /url: /radio
           - link "RESIDENT DJ'S" [ref=e44] [cursor=pointer]:
             - /url: /events#djs
-      - contentinfo [ref=e45]:
-        - generic [ref=e46]:
-          - generic [ref=e47]:
-            - generic [ref=e48]:
-              - heading "Visit Us" [level=3] [ref=e49]
-              - paragraph [ref=e50]:
+      - generic [ref=e45]:
+        - heading "Visit us" [level=2] [ref=e46]
+        - generic [ref=e47]:
+          - generic [ref=e48]:
+            - heading "Finsbury Park" [level=3] [ref=e49]
+            - generic [ref=e50]:
+              - paragraph [ref=e51]: Monday - Thursday
+              - paragraph [ref=e52]: 5pm - 1am
+              - paragraph [ref=e53]: Friday - Saturday
+              - paragraph [ref=e54]: 12pm - 3am
+              - paragraph [ref=e55]: Sunday
+              - paragraph [ref=e56]: 12pm - 12am
+            - link "FIND US" [ref=e57] [cursor=pointer]:
+              - /url: "#location"
+          - generic [ref=e58]:
+            - heading "Finsbury Park" [level=3] [ref=e59]
+            - generic [ref=e60]:
+              - paragraph [ref=e61]: Monday - Thursday
+              - paragraph [ref=e62]: 5pm - 1am
+              - paragraph [ref=e63]: Friday - Saturday
+              - paragraph [ref=e64]: 12pm - 3am
+              - paragraph [ref=e65]: Sunday
+              - paragraph [ref=e66]: 12pm - 12am
+            - link "FIND US" [ref=e67] [cursor=pointer]:
+              - /url: "#location"
+      - generic [ref=e69]:
+        - heading "Location" [level=2] [ref=e70]
+        - generic [ref=e71]:
+          - heading "Finsbury Park" [level=3] [ref=e72]
+          - paragraph [ref=e73]:
+            - text: 10 Stroud Green Road
+            - text: Finsbury Park
+            - text: London N4 2DF
+          - generic [ref=e75]: 📍 Map View
+      - contentinfo [ref=e76]:
+        - generic [ref=e77]:
+          - generic [ref=e78]:
+            - generic [ref=e79]:
+              - heading "Visit Us" [level=3] [ref=e80]
+              - paragraph [ref=e81]:
                 - text: 10 Stroud Green Road
                 - text: Finsbury Park
                 - text: London N4 2DF
-            - generic [ref=e51]:
-              - heading "Opening Hours" [level=3] [ref=e52]
-              - paragraph [ref=e53]:
+            - generic [ref=e82]:
+              - heading "Opening Hours" [level=3] [ref=e83]
+              - paragraph [ref=e84]:
                 - text: "Mon-Thu: 5pm - 1am"
                 - text: "Fri-Sat: 12pm - 3am"
                 - text: "Sun: 12pm - 12am"
-            - generic [ref=e54]:
-              - heading "Quick Links" [level=3] [ref=e55]
-              - navigation [ref=e56]:
-                - link "Book Karaoke" [ref=e57] [cursor=pointer]:
+            - generic [ref=e85]:
+              - heading "Quick Links" [level=3] [ref=e86]
+              - navigation [ref=e87]:
+                - link "Book Karaoke" [ref=e88] [cursor=pointer]:
                   - /url: /book-karaoke
-                - link "Policies" [ref=e58] [cursor=pointer]:
+                - link "Policies" [ref=e89] [cursor=pointer]:
                   - /url: /policies
-          - paragraph [ref=e60]: © 2026 Rowan's. All rights reserved.
+          - paragraph [ref=e91]: © 2026 Rowan's. All rights reserved.
   - generic:
     - img
   - generic:
@@ -82,12 +116,12 @@
         - button "Go to parent" [disabled]
         - button "Open in editor"
         - button "Close"
-  - generic [ref=e61]:
-    - button "Toggle Nuxt DevTools" [ref=e62] [cursor=pointer]:
-      - img [ref=e63]
-    - generic "Page load time" [ref=e66]:
-      - generic [ref=e67]: "9"
-      - generic [ref=e68]: ms
-    - button "Toggle Component Inspector" [ref=e70] [cursor=pointer]:
-      - img [ref=e71]
+  - generic [ref=e92]:
+    - button "Toggle Nuxt DevTools" [ref=e93] [cursor=pointer]:
+      - img [ref=e94]
+    - generic "Page load time" [ref=e97]:
+      - generic [ref=e98]: "9"
+      - generic [ref=e99]: ms
+    - button "Toggle Component Inspector" [ref=e101] [cursor=pointer]:
+      - img [ref=e102]
 ```
