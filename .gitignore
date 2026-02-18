@@ -32,3 +32,8 @@ public/design-assets/WEB\ VIDS\ FINAL/
 # Local asset folders (large binaries - keep local only)
 design-assets/rowans-pdf-assets/
 design-assets/rowans-yucatan-assets/
+
+# Test artifacts and screenshots
+test-results/
+playwright-report/
+tests/screenshots/
