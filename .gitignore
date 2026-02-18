@@ -22,3 +22,13 @@ logs
 .env
 .env.*
 !.env.example
+
+# Large video files
+design-assets/WEB\ VIDS\ FINAL/
+public/design-assets/WEB\ VIDS\ FINAL/
+*.mp4
+*.mov
+
+# Local asset folders (large binaries - keep local only)
+design-assets/rowans-pdf-assets/
+design-assets/rowans-yucatan-assets/
