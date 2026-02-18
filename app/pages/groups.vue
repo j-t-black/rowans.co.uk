@@ -5,8 +5,8 @@
     <section class="hero-section">
       <!-- Background Image -->
       <img
-        src="/design-assets/CORPORATE HERO.png"
-        alt="Corporate Events"
+        src="/design-assets/GROUP HERO.png"
+        alt="Large Groups"
         class="hero-background"
       />
 
@@ -19,17 +19,22 @@
 
       <!-- Navigation Buttons -->
       <!-- Page Title -->
-      <h1 class="hero-heading">Corporate Events</h1>
+      <h1 class="hero-heading">Large Groups</h1>
     </section>
 
     <!-- Content Section -->
     <section class="content-section">
       <div class="content-container">
         <p class="content-text">
-          Host your next corporate event at Rowan's.<br><br>
-          From team building activities to networking events,<br>
-          we provide the perfect space for business gatherings.
+          Perfect for celebrations, reunions, and group outings.<br><br>
+          Book multiple lanes, pool tables, and karaoke booths for your group.<br>
+          Custom packages available for parties of 20+.
         </p>
+
+        <div class="cta-buttons">
+          <a href="#book" class="cta-button">Book Now</a>
+          <a href="#enquire" class="cta-button-outline">Make an Enquiry</a>
+        </div>
       </div>
     </section>
 
@@ -48,7 +53,7 @@
           <h3>Quick Links</h3>
           <nav>
             <a href="/">Home</a>
-            <a href="/corporate">Corporate</a>
+            <a href="/groups">Groups</a>
           </nav>
         </div>
       </div>
@@ -127,6 +132,48 @@
   color: #ffffff;
   opacity: 0.9;
   text-align: center;
+  margin-bottom: 3rem;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-button {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px;
+  padding: 1rem 2.5rem;
+  background-color: #ffffff;
+  color: #000000;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.2s;
+  font-weight: 400;
+}
+
+.cta-button:hover {
+  background-color: #ff0000;
+  color: #ffffff;
+}
+
+.cta-button-outline {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px;
+  padding: 1rem 2.5rem;
+  background-color: transparent;
+  color: #ffffff;
+  text-decoration: none;
+  border: 2px solid #ffffff;
+  border-radius: 4px;
+  transition: all 0.2s;
+  font-weight: 400;
+}
+
+.cta-button-outline:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .footer {

@@ -1,8 +1,3 @@
-<script setup>
-definePageMeta({
-  layout: false
-})
-</script>
 
 <template>
   <div class="min-h-screen bg-black">
@@ -23,23 +18,6 @@ definePageMeta({
       />
 
       <!-- Navigation Buttons -->
-      <div class="hero-buttons">
-        <a href="/" class="hero-button">
-          <img
-            src="/design-assets/LANE TRANS 1.png"
-            alt="Book a Lane"
-            class="button-icon"
-          />
-        </a>
-        <a href="/" class="hero-button">
-          <img
-            src="/design-assets/BURGER TRANS 1.png"
-            alt="Menu"
-            class="button-icon"
-          />
-        </a>
-      </div>
-
       <!-- Page Title -->
       <h1 class="hero-heading">Policies</h1>
     </section>
@@ -143,33 +121,6 @@ definePageMeta({
   text-align: center;
   margin: 0;
   z-index: 5;
-}
-
-.hero-buttons {
-  position: fixed;
-  top: 12px;
-  right: 12px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  z-index: 9999;
-}
-
-.hero-button {
-  width: 45px;
-  height: 44px;
-  display: block;
-  transition: opacity 0.2s;
-}
-
-.hero-button:hover {
-  opacity: 0.8;
-}
-
-.button-icon {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
 }
 
 .content-section {
@@ -289,15 +240,5 @@ definePageMeta({
     height: 180px;
   }
 
-  .hero-buttons {
-    top: 20px;
-    right: 20px;
-    gap: 16px;
   }
-
-  .hero-button {
-    width: 60px;
-    height: 58px;
-  }
-}
 </style>

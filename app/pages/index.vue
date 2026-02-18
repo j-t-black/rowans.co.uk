@@ -1,9 +1,3 @@
-<script setup>
-definePageMeta({
-  layout: false
-})
-</script>
-
 <template>
   <div class="min-h-screen bg-black">
     <!-- Hero Section -->
@@ -28,42 +22,29 @@ definePageMeta({
         London's Finsbury Park
       </h1>
 
-      <!-- Buttons on right side -->
-      <div class="hero-buttons">
-        <a href="#book" class="hero-button">
-          <img
-            src="/design-assets/LANE TRANS 1.png"
-            alt="Book a Lane"
-            class="button-icon"
-          />
-        </a>
-        <a href="#menu" class="hero-button">
-          <img
-            src="/design-assets/BURGER TRANS 1.png"
-            alt="Menu"
-            class="button-icon"
-          />
-        </a>
-      </div>
     </section>
 
-    <!-- Venue Features Section -->
-    <section class="venue-features-section">
-      <p class="venue-features-text">
+    <!-- Welcome to Rowans Section -->
+    <section class="welcome-section">
+      <h2 class="welcome-heading">Welcome to Rowans</h2>
+      <p class="welcome-text welcome-features">
         2 levels of...<br><br>
-        World-class Sound,<br>
-        Intelligent Lighting + video,<br>
-        2 Dancefloors,<br>
-        24 Bowling lanes,<br>
-        14 Pool tables,<br>
-        6 Karaoke booths, 4 Bars,<br>
-        Garden with seating + sound,<br>
+        World-class Sound, Intelligent Lighting and video, 2 Distinct Dancefloors,<br>
+        24 bowling lanes, 14 Pool tables, 6 Private Karaoke booths,<br>
+        4 Bars, Outback Garden with seating and sound system,<br>
         Arcade
       </p>
     </section>
 
     <!-- Organise Your Party Section -->
     <section class="party-section">
+      <!-- Background Image -->
+      <img
+        src="/design-assets/GROUP HERO.png"
+        alt="Party Background"
+        class="party-background"
+      />
+
       <h2 class="party-heading">Organise your party...</h2>
       <div class="party-buttons">
         <a href="/groups" class="party-button">
@@ -87,6 +68,23 @@ definePageMeta({
       <p class="eats-text">
         Signature frozen cocktails, Authentic southern Mexican taco's, Artisan sourdough pizza
       </p>
+
+      <!-- Food Images -->
+      <div class="eats-images">
+        <div class="eats-image-wrapper">
+          <img src="/design-assets/POSTER 1.jpg" alt="Food" class="eats-image" />
+        </div>
+        <div class="eats-image-wrapper">
+          <img src="/design-assets/POSTER 2.jpg" alt="Food" class="eats-image" />
+        </div>
+        <div class="eats-image-wrapper">
+          <img src="/design-assets/POSTER 3.jpg" alt="Food" class="eats-image" />
+        </div>
+        <div class="eats-image-wrapper">
+          <img src="/design-assets/POSTER 4.jpg" alt="Food" class="eats-image" />
+        </div>
+      </div>
+
       <div class="eats-buttons">
         <a href="/birthday-cakes" class="eats-button">
           BIRTHDAY<br>CAKES
@@ -113,8 +111,8 @@ definePageMeta({
       <div class="audio-content">
         <h2 class="audio-heading">AUDIO</h2>
         <p class="audio-text">
-          Void Accoustics + Funktion One sound-systems.<br>
-          Playing Booty-shaking Classics and Big Basslines.<br>
+          Void Accoustics and Funktion One sound-systems across the venue<br>
+          Playing big basslines.<br>
           Ever evolving line-up and weekly events.
         </p>
       </div>
@@ -143,6 +141,15 @@ definePageMeta({
             <p>Sunday<br>12pm - 12am</p>
           </div>
           <a href="#location" class="visit-button">FIND US</a>
+        </div>
+        <div class="visit-card">
+          <h3>Rowans Radio</h3>
+          <div class="visit-hours">
+            <p>Monday - Thursday<br>Live DJ Sets</p>
+            <p>Friday - Saturday<br>Late Night Vibes</p>
+            <p>Sunday<br>Chill Sessions</p>
+          </div>
+          <a href="/radio" class="visit-button">LISTEN NOW</a>
         </div>
       </div>
     </section>
@@ -238,32 +245,6 @@ definePageMeta({
   z-index: 5;
 }
 
-.hero-buttons {
-  position: fixed;
-  top: 12px;
-  right: 12px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  z-index: 9999;
-}
-
-.hero-button {
-  width: 45px;
-  height: 44px;
-  display: block;
-  transition: opacity 0.2s;
-}
-
-.hero-button:hover {
-  opacity: 0.8;
-}
-
-.button-icon {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
 
 /* Desktop styles (1920px+) */
 @media (min-width: 1920px) {
@@ -277,16 +258,6 @@ definePageMeta({
     height: 180px;
   }
 
-  .hero-buttons {
-    top: 20px;
-    right: 20px;
-    gap: 16px;
-  }
-
-  .hero-button {
-    width: 60px;
-    height: 58px;
-  }
 }
 
 /* Tablet/Medium Desktop */
@@ -299,49 +270,73 @@ definePageMeta({
     height: 150px;
   }
 
-  .hero-button {
-    width: 52px;
-    height: 51px;
-  }
 }
 
-/* Venue Features Section */
-.venue-features-section {
+/* Welcome Section */
+.welcome-section {
   position: relative;
   width: 100%;
-  min-height: 60vh;
+  min-height: 50vh;
   background-color: #000000;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 4rem 2rem;
+  text-align: center;
 }
 
-.venue-features-text {
+.welcome-heading {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  font-size: 32px;
+  color: #ff0000;
+  margin-bottom: 2rem;
+  text-transform: none;
+}
+
+.welcome-text {
   font-family: 'JetBrains Mono', monospace;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 1.45;
+  font-size: 18px;
+  line-height: 1.8;
   color: #ffffff;
-  opacity: 0.9;
-  text-align: center;
+  opacity: 0.85;
   margin: 0;
-  max-width: 600px;
+  max-width: 800px;
 }
 
-/* Desktop styles for venue features */
+.welcome-intro {
+  margin-bottom: 3rem;
+}
+
+.welcome-features {
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* Desktop styles for welcome section */
 @media (min-width: 1920px) {
-  .venue-features-text {
-    font-size: 24px;
-    line-height: 1.5;
-    max-width: 1920px;
+  .welcome-heading {
+    font-size: 48px;
+    margin-bottom: 2.5rem;
+  }
+
+  .welcome-text {
+    font-size: 22px;
+    line-height: 1.7;
+    max-width: 1000px;
   }
 }
 
-/* Tablet/Medium Desktop for venue features */
+/* Tablet/Medium Desktop for welcome section */
 @media (min-width: 768px) and (max-width: 1919px) {
-  .venue-features-text {
-    font-size: 22px;
+  .welcome-heading {
+    font-size: 40px;
+  }
+
+  .welcome-text {
+    font-size: 20px;
     max-width: 900px;
   }
 }
@@ -354,9 +349,23 @@ definePageMeta({
   background-color: #000000;
   padding: 4rem 2rem;
   text-align: center;
+  overflow: hidden;
+}
+
+.party-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+  z-index: 0;
 }
 
 .party-heading {
+  position: relative;
+  z-index: 1;
   font-family: 'JetBrains Mono', monospace;
   font-weight: 400;
   font-size: 24px;
@@ -366,6 +375,8 @@ definePageMeta({
 }
 
 .party-buttons {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: row;
   gap: 2rem;
@@ -432,6 +443,49 @@ definePageMeta({
   margin-right: auto;
 }
 
+.eats-images {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.eats-image-wrapper {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.eats-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Desktop styles for eats images */
+@media (min-width: 1920px) {
+  .eats-images {
+    gap: 3rem;
+  }
+
+  .eats-image-wrapper {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+/* Tablet/Medium Desktop for eats images */
+@media (min-width: 768px) and (max-width: 1919px) {
+  .eats-image-wrapper {
+    width: 240px;
+    height: 240px;
+  }
+}
+
 .eats-buttons {
   display: flex;
   flex-direction: row;
@@ -473,7 +527,7 @@ definePageMeta({
   position: relative;
   width: 100%;
   min-height: 60vh;
-  background-color: #000000;
+  background: linear-gradient(180deg, #000000 0%, #1a0a2e 30%, #2d1b4e 50%, #1a0a2e 70%, #000000 100%);
   padding: 4rem 2rem;
   text-align: center;
 }
@@ -558,16 +612,20 @@ definePageMeta({
 
 .visit-heading {
   font-family: 'JetBrains Mono', monospace;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 24px;
-  color: #ffffff;
-  opacity: 0.9;
+  color: #ff0000;
   margin-bottom: 3rem;
 }
 
 .visit-cards {
-  max-width: 500px;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  max-width: 1100px;
   margin: 0 auto;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .visit-card {
@@ -575,6 +633,9 @@ definePageMeta({
   border: 1px solid #333;
   border-radius: 8px;
   padding: 2rem;
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
 }
 
 .visit-card h3 {

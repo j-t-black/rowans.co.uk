@@ -14,6 +14,14 @@ export default defineNuxtConfig({
     fallback: 'dark'
   },
 
+  app: {
+    head: {
+      style: [
+        { children: 'html, body { background-color: #000000 !important; }' }
+      ]
+    }
+  },
+
   ui: {
     theme: {
       colors: ['red']

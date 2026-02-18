@@ -256,10 +256,6 @@
 </template>
 
 <script setup lang="ts">
-definePageMeta({
-  layout: false
-})
-
 useSeoMeta({
   title: "Rowan's - Iconic Venue in Finsbury Park",
   description: 'World-class sound, bowling, karaoke, and events in the heart of Finsbury Park, London'

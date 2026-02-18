@@ -1,0 +1,12 @@
+{
+  "afterEdit": {
+    "command": "echo 'File edited: ${FILE_PATH}'",
+    "description": "Log file edits",
+    "enabled": true
+  },
+  "beforeCommit": {
+    "command": "npm run lint --silent || true",
+    "description": "Lint files before commit",
+    "enabled": false
+  }
+}
