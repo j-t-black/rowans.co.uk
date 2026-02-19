@@ -38,11 +38,15 @@
 
     <!-- Organise Your Party Section -->
     <section class="party-section">
-      <!-- Background Image -->
-      <img
-        src="/design-assets/GROUP HERO.png"
-        alt="Party Background"
+      <!-- Background Video -->
+      <video
         class="party-background"
+        src="/videos/party-bg.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
       />
 
       <h2 class="party-heading">Organise your party...</h2>
@@ -69,40 +73,39 @@
         Signature frozen cocktails, Authentic southern Mexican taco's, Artisan sourdough pizza
       </p>
 
-      <!-- Food Images -->
-      <div class="eats-images">
-        <div class="eats-image-wrapper">
-          <img src="/design-assets/POSTER 1.jpg" alt="Food" class="eats-image" />
+      <div class="eats-image-container">
+        <img src="/design-assets/eats-drinks-hero.png" alt="Eats and Drinks" class="eats-hero-image" />
+        <div class="eats-gradient-top" />
+        <div class="eats-gradient-bottom" />
+        <div class="eats-buttons">
+          <a href="/birthday-cakes" class="eats-button">
+            BIRTHDAY<br>CAKES
+          </a>
+          <a href="/drinks-menu" class="eats-button">
+            DRINKS MENU
+          </a>
+          <a href="/yucatan" class="eats-button">
+            YUCATAN<br>TACOS
+          </a>
+          <a href="/pizza" class="eats-button">
+            YARD SALE<br>PIZZA
+          </a>
         </div>
-        <div class="eats-image-wrapper">
-          <img src="/design-assets/POSTER 2.jpg" alt="Food" class="eats-image" />
-        </div>
-        <div class="eats-image-wrapper">
-          <img src="/design-assets/POSTER 3.jpg" alt="Food" class="eats-image" />
-        </div>
-        <div class="eats-image-wrapper">
-          <img src="/design-assets/POSTER 4.jpg" alt="Food" class="eats-image" />
-        </div>
-      </div>
-
-      <div class="eats-buttons">
-        <a href="/birthday-cakes" class="eats-button">
-          BIRTHDAY<br>CAKES
-        </a>
-        <a href="/drinks-menu" class="eats-button">
-          DRINKS MENU
-        </a>
-        <a href="/yucatan" class="eats-button">
-          YUCATAN<br>TACOS
-        </a>
-        <a href="/pizza" class="eats-button">
-          YARD SALE<br>PIZZA
-        </a>
       </div>
     </section>
 
     <!-- Audio Section -->
     <section class="audio-section">
+      <!-- Background Video -->
+      <video
+        class="audio-background"
+        src="/videos/audio-bg.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="none"
+      />
       <img
         src="/design-assets/ROWANS AUDIO LOGO.png"
         alt="Audio"
@@ -111,7 +114,7 @@
       <div class="audio-content">
         <h2 class="audio-heading">AUDIO</h2>
         <p class="audio-text">
-          Void Accoustics and Funktion One sound-systems across the venue<br>
+          Void Acoustics and Funktion One sound-systems across the venue<br>
           Playing big basslines.<br>
           Ever evolving line-up and weekly events.
         </p>
@@ -143,54 +146,31 @@
           <a href="#location" class="visit-button">FIND US</a>
         </div>
         <div class="visit-card">
-          <h3>Rowans Radio</h3>
+          <h3>Location</h3>
           <div class="visit-hours">
-            <p>Monday - Thursday<br>Live DJ Sets</p>
-            <p>Friday - Saturday<br>Late Night Vibes</p>
-            <p>Sunday<br>Chill Sessions</p>
+            <p>Rowans Tenpin Bowl<br>10 Stroud Green Road</p>
+            <p>Finsbury Park<br>London N4 2DF</p>
           </div>
-          <a href="/radio" class="visit-button">LISTEN NOW</a>
+          <a href="https://maps.google.com/?q=Rowans+Tenpin+Bowl,+10+Stroud+Green+Road,+Finsbury+Park,+London+N4+2DF" target="_blank" rel="noopener" class="visit-button">FIND US</a>
         </div>
       </div>
     </section>
 
-    <!-- Location Section -->
-    <section class="location-section" id="location">
-      <h2 class="location-heading">Location</h2>
-      <div class="location-card">
-        <h3>Finsbury Park</h3>
-        <p class="location-address">
-          10 Stroud Green Road<br>
-          Finsbury Park<br>
-          London N4 2DF
-        </p>
-        <div class="location-map">
-          <p>📍 Map View</p>
-        </div>
-      </div>
+    <!-- Map Section -->
+    <section class="map-section" id="location">
+      <a
+        href="https://maps.google.com/?q=Rowans+Tenpin+Bowl,+10+Stroud+Green+Road,+Finsbury+Park,+London+N4+2DF"
+        target="_blank"
+        rel="noopener"
+        class="map-link"
+      >
+        <span class="map-pin">📍</span>
+      </a>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-      <div class="footer-content">
-        <div class="footer-section">
-          <h3>Visit Us</h3>
-          <p>10 Stroud Green Road<br>Finsbury Park<br>London N4 2DF</p>
-        </div>
-        <div class="footer-section">
-          <h3>Opening Hours</h3>
-          <p>Mon-Thu: 5pm - 1am<br>Fri-Sat: 12pm - 3am<br>Sun: 12pm - 12am</p>
-        </div>
-        <div class="footer-section">
-          <h3>Quick Links</h3>
-          <nav>
-            <a href="/policies">Policies</a>
-          </nav>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© 2026 Rowan's. All rights reserved.</p>
-      </div>
+      <p class="footer-copy">© {{ new Date().getFullYear() }} Rowan's. All rights reserved.</p>
     </footer>
   </div>
 </template>
@@ -276,13 +256,12 @@
 .welcome-section {
   position: relative;
   width: 100%;
-  min-height: 50vh;
   background-color: #000000;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 4rem 2rem;
+  padding: 1.5rem 2rem;
   text-align: center;
 }
 
@@ -291,7 +270,7 @@
   font-weight: 700;
   font-size: 32px;
   color: #ff0000;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   text-transform: none;
 }
 
@@ -306,9 +285,6 @@
   max-width: 800px;
 }
 
-.welcome-intro {
-  margin-bottom: 3rem;
-}
 
 .welcome-features {
   line-height: 1.6;
@@ -347,7 +323,10 @@
   width: 100%;
   min-height: 60vh;
   background-color: #000000;
-  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 2rem 2rem;
   text-align: center;
   overflow: hidden;
 }
@@ -359,7 +338,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.3;
+  opacity: 0.6;
   z-index: 0;
 }
 
@@ -368,10 +347,10 @@
   z-index: 1;
   font-family: 'JetBrains Mono', monospace;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 16px;
   color: #ffffff;
   opacity: 0.9;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
 }
 
 .party-buttons {
@@ -416,9 +395,8 @@
 .eats-section {
   position: relative;
   width: 100%;
-  min-height: 60vh;
   background-color: #000000;
-  padding: 4rem 2rem;
+  padding: 1.25rem 2rem;
   text-align: center;
 }
 
@@ -426,9 +404,9 @@
   font-family: 'JetBrains Mono', monospace;
   font-weight: 400;
   font-size: 24px;
-  color: #ffffff;
+  color: #ff0000;
   opacity: 0.9;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.75rem;
 }
 
 .eats-text {
@@ -437,68 +415,62 @@
   font-size: 16px;
   color: #ffffff;
   opacity: 0.8;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.eats-images {
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
-  justify-content: center;
-  margin-bottom: 3rem;
-  flex-wrap: wrap;
-}
-
-.eats-image-wrapper {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  overflow: hidden;
-  flex-shrink: 0;
-}
-
-.eats-image {
+.eats-image-container {
+  position: relative;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
-/* Desktop styles for eats images */
-@media (min-width: 1920px) {
-  .eats-images {
-    gap: 3rem;
-  }
-
-  .eats-image-wrapper {
-    width: 280px;
-    height: 280px;
-  }
+.eats-hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
-/* Tablet/Medium Desktop for eats images */
-@media (min-width: 768px) and (max-width: 1919px) {
-  .eats-image-wrapper {
-    width: 240px;
-    height: 240px;
-  }
+.eats-gradient-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 35%;
+  background: linear-gradient(to bottom, #000000, transparent);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.eats-gradient-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 55%;
+  background: linear-gradient(to bottom, transparent, #000000);
+  pointer-events: none;
+  z-index: 1;
 }
 
 .eats-buttons {
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  right: 0;
   display: flex;
   flex-direction: row;
-  gap: 2rem;
-  max-width: 800px;
-  margin: 0 auto;
+  gap: 0.5rem;
   justify-content: center;
+  padding: 0 1rem;
+  z-index: 2;
 }
 
 .eats-button {
   position: relative;
-  width: 150px;
-  height: 150px;
+  width: 80px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -509,10 +481,10 @@
   color: #ffffff;
   font-family: 'JetBrains Mono', monospace;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 9px;
   text-align: center;
   text-decoration: none;
-  padding: 1.5rem;
+  padding: 0.75rem;
   transition: all 0.2s;
   line-height: 1.3;
 }
@@ -527,12 +499,26 @@
   position: relative;
   width: 100%;
   min-height: 60vh;
-  background: linear-gradient(180deg, #000000 0%, #1a0a2e 30%, #2d1b4e 50%, #1a0a2e 70%, #000000 100%);
+  background-color: #000;
   padding: 4rem 2rem;
   text-align: center;
+  overflow: hidden;
+}
+
+.audio-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.55;
+  z-index: 0;
 }
 
 .audio-logo {
+  position: relative;
+  z-index: 1;
   max-width: 400px;
   width: 100%;
   height: auto;
@@ -541,6 +527,8 @@
 }
 
 .audio-content {
+  position: relative;
+  z-index: 1;
   margin-bottom: 3rem;
 }
 
@@ -548,7 +536,7 @@
   font-family: 'JetBrains Mono', monospace;
   font-weight: 400;
   font-size: 24px;
-  color: #ffffff;
+  color: #ff0000;
   opacity: 0.9;
   margin-bottom: 1.5rem;
 }
@@ -565,6 +553,8 @@
 }
 
 .audio-buttons {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: row;
   gap: 2rem;
@@ -636,6 +626,8 @@
   flex: 1;
   min-width: 300px;
   max-width: 500px;
+  display: flex;
+  flex-direction: column;
 }
 
 .visit-card h3 {
@@ -670,123 +662,40 @@
   font-family: 'JetBrains Mono', monospace;
   font-weight: 400;
   transition: all 0.2s;
+  margin-top: auto;
 }
 
 .visit-button:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Location Section */
-.location-section {
-  position: relative;
-  width: 100%;
-  min-height: 50vh;
+/* Map Section */
+.map-section {
   background-color: #000000;
-  padding: 4rem 2rem;
+  padding: 3rem 2rem;
   text-align: center;
 }
 
-.location-heading {
-  font-family: 'JetBrains Mono', monospace;
-  font-weight: 400;
-  font-size: 24px;
-  color: #ffffff;
-  opacity: 0.9;
-  margin-bottom: 3rem;
+.map-link {
+  display: inline-block;
+  text-decoration: none;
 }
 
-.location-card {
-  max-width: 800px;
-  margin: 0 auto;
-  background-color: #1a1a1a;
-  border: 1px solid #333;
-  border-radius: 8px;
-  padding: 2rem;
-}
-
-.location-card h3 {
-  font-family: 'JetBrains Mono', monospace;
-  font-weight: 400;
-  font-size: 20px;
-  color: #ffffff;
-  margin-bottom: 1rem;
-}
-
-.location-address {
-  color: #9ca3af;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 14px;
-  line-height: 1.8;
-  margin-bottom: 2rem;
-}
-
-.location-map {
-  background-color: #e5e7eb;
-  height: 300px;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #6b7280;
-  font-size: 1.125rem;
+.map-pin {
+  font-size: 48px;
 }
 
 /* Footer */
 .footer {
-  background-color: #17181a;
-  color: #ffffff;
-  padding: 4rem 2rem;
-}
-
-.footer-content {
-  max-width: 1280px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 3rem;
-}
-
-.footer-section h3 {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 18px;
-  font-weight: 400;
-  margin-bottom: 1rem;
-  color: #ffffff;
-}
-
-.footer-section p {
-  color: #9ca3af;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 14px;
-  line-height: 1.8;
-}
-
-.footer-section nav {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.footer-section nav a {
-  color: #9ca3af;
-  text-decoration: none;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 14px;
-  transition: color 0.3s;
-}
-
-.footer-section nav a:hover {
-  color: #ffffff;
-}
-
-.footer-bottom {
-  margin-top: 3rem;
-  padding-top: 2rem;
-  border-top: 1px solid #374151;
+  background-color: #000000;
+  padding: 2rem;
   text-align: center;
+}
+
+.footer-copy {
   color: #9ca3af;
   font-family: 'JetBrains Mono', monospace;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 /* Desktop Responsive */
@@ -794,8 +703,7 @@
   .party-heading,
   .eats-heading,
   .audio-heading,
-  .visit-heading,
-  .location-heading {
+  .visit-heading {
     font-size: 32px;
   }
 
@@ -808,11 +716,16 @@
     gap: 3rem;
   }
 
-  .party-button,
-  .eats-button {
+  .party-button {
     width: 180px;
     height: 180px;
     font-size: 14px;
+  }
+
+  .eats-button {
+    width: 140px;
+    height: 140px;
+    font-size: 12px;
   }
 
   .audio-button {

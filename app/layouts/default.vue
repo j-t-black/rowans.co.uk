@@ -38,19 +38,22 @@ const navOpen = ref(false)
 }
 
 .icon-btn {
-  width: 45px;
-  height: 44px;
+  width: 52px;
+  height: 51px;
   background: none;
   border: none;
   padding: 0;
   cursor: pointer;
-  opacity: 0.75;
-  transition: opacity 0.2s;
+  opacity: 1;
+  filter: brightness(1.3);
+  transform: scale(1);
+  transition: filter 0.2s ease, transform 0.2s ease;
   display: block;
 }
 
 .icon-btn:hover {
-  opacity: 1;
+  filter: brightness(1.6);
+  transform: scale(1.12);
 }
 
 .btn-icon {
@@ -68,15 +71,15 @@ const navOpen = ref(false)
   }
 
   .icon-btn {
-    width: 60px;
-    height: 58px;
+    width: 69px;
+    height: 67px;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1919px) {
   .icon-btn {
-    width: 52px;
-    height: 51px;
+    width: 60px;
+    height: 59px;
   }
 }
 </style>

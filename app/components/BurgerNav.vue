@@ -16,7 +16,7 @@
           <a href="/#party" class="nav-item" @click="close">Organise your Party</a>
           <a href="/karaoke" class="nav-item" @click="close">Book Karaoke</a>
           <a href="/#audio" class="nav-item" @click="close">Audio</a>
-          <a href="/#eats" class="nav-item" @click="close">Eats + Drinks</a>
+          <a href="/eats-drinks" class="nav-item" @click="close">Eats + Drinks</a>
           <a href="/whats-on" class="nav-item" @click="close">What's On</a>
           <a href="/radio" class="nav-item" @click="close">Rowans Radio</a>
           <a href="/djs" class="nav-item" @click="close">Djs</a>

@@ -1,47 +1,129 @@
-
 <template>
-  <div class="min-h-screen bg-black">
-    <section class="hero-section">
-      <img src="/design-assets/GROUP HERO.png" alt="What's On" class="hero-background" />
-      <img src="/design-assets/MAIN LOGO.png" alt="Rowans" class="hero-logo" />
-      <h1 class="hero-heading">What's On</h1>
+  <div class="page">
+
+    <header class="page-header">
+      <h1 class="heading">What's on</h1>
+      <a href="/line-upsevents" class="click-link">
+        Click here for Rowans events and DJ line up for forthcoming weeks
+      </a>
+      <p class="id-notice">Over 21 ID Required on Fridays and Saturday nights after 7pm</p>
+    </header>
+
+    <section class="photo-grid">
+      <img src="/design-assets/whats-on-dancefloor.png" alt="Rowans dancefloor" class="photo" />
+      <img src="/design-assets/whats-on-dj.png" alt="Rowans event" class="photo" />
+      <img src="/design-assets/whats-on-underground.png" alt="Upstairs to the Underground" class="photo" />
+      <img src="/design-assets/whats-on-summer-sessions.png" alt="Rowans Summer Sessions" class="photo" />
     </section>
 
-    <section class="content-section">
-      <div class="content-container">
-        <p class="content-text">
-          Check out our upcoming events, DJ nights, and special occasions.<br><br>
-          From live music to themed parties, there's always something happening at Rowan's.
-        </p>
-      </div>
-    </section>
-
-    <footer class="footer">
-      <div class="footer-content">
-        <div class="footer-section">
-          <h3>Visit Us</h3>
-          <p>10 Stroud Green Road<br>Finsbury Park<br>London N4 2DF</p>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© 2026 Rowan's. All rights reserved.</p>
-      </div>
-    </footer>
   </div>
 </template>
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
-.hero-section { position: relative; width: 100%; min-height: 100vh; background-color: #000000; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem; overflow: hidden; }
-.hero-background { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
-.hero-logo { position: absolute; top: 60px; left: 50%; transform: translateX(-50%); height: 120px; width: auto; z-index: 10; }
-.hero-heading { position: relative; font-family: 'JetBrains Mono', monospace; font-weight: 400; font-size: 36px; color: #ffffff; opacity: 0.9; text-align: center; margin: 0; z-index: 5; }
-.content-section { background-color: #000000; padding: 4rem 2rem; min-height: 50vh; }
-.content-container { max-width: 800px; margin: 0 auto; }
-.content-text { font-family: 'JetBrains Mono', monospace; font-size: 18px; line-height: 1.8; color: #ffffff; opacity: 0.9; text-align: center; }
-.footer { background-color: #17181a; color: #ffffff; padding: 4rem 2rem; }
-.footer-content { max-width: 1280px; margin: 0 auto; display: grid; gap: 3rem; }
-.footer-section h3 { font-family: 'JetBrains Mono', monospace; font-size: 18px; margin-bottom: 1rem; }
-.footer-section p { color: #9ca3af; font-family: 'JetBrains Mono', monospace; font-size: 14px; line-height: 1.8; }
-.footer-bottom { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #374151; text-align: center; color: #9ca3af; font-family: 'JetBrains Mono', monospace; font-size: 14px; }
+
+.page {
+  min-height: 100vh;
+  background-color: #000;
+  padding: 0;
+}
+
+.page-header {
+  padding: 2.5rem 1.5rem 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.heading {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 400;
+  font-size: 28px;
+  color: #ff3333;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.click-link {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  color: #ffffff;
+  opacity: 0.9;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-align: center;
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+.click-link:hover {
+  opacity: 0.6;
+}
+
+.id-notice {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: #ffffff;
+  opacity: 0.6;
+  margin: 0;
+  text-align: center;
+  max-width: 500px;
+  line-height: 1.5;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  width: 100%;
+}
+
+.photo {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Tablet+: 2 columns */
+@media (min-width: 640px) {
+  .heading {
+    font-size: 38px;
+  }
+
+  .click-link {
+    font-size: 14px;
+  }
+
+  .id-notice {
+    font-size: 12px;
+  }
+
+  .photo-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1280px) {
+  .page-header {
+    padding: 3rem 2rem 2.5rem;
+    gap: 1rem;
+  }
+
+  .heading {
+    font-size: 60px;
+  }
+
+  .click-link {
+    font-size: 16px;
+    max-width: 800px;
+  }
+
+  .id-notice {
+    font-size: 14px;
+    max-width: 700px;
+  }
+}
 </style>
