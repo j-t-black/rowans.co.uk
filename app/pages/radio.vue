@@ -1,82 +1,67 @@
-
 <template>
   <div class="min-h-screen bg-black">
-    <!-- Hero Section -->
-    <section class="hero-section">
-      <!-- Red Speaker (half visible on left) -->
-      <img
-        src="/design-assets/ROWANS AUDIO LOGO.webp"
-        fetchpriority="high"
-        alt="Speaker"
-        class="left-speaker"
-      />
+    <!-- Compact logo header -->
+    <header class="logo-header">
+      <NuxtLink to="/">
+        <img src="/design-assets/MAIN LOGO.webp" alt="Rowans" class="site-logo" />
+      </NuxtLink>
+    </header>
 
-      <!-- Background Image -->
-      <img
-        src="/design-assets/ROWANS RADIO HERO.webp"
-        fetchpriority="high"
-        alt="Rowans Radio"
-        class="hero-background"
-      />
+    <section class="radio-content">
+      <h1 class="page-heading">Rowans Radio</h1>
 
-      <!-- Logo at top center -->
-      <img
-        src="/design-assets/MAIN LOGO.webp"
-        alt="Rowans Bowling"
-        class="hero-logo"
-      />
+      <div class="player-area">
+        <!-- Large speaker on left -->
+        <img
+          src="/design-assets/ROWANS RADIO HERO.webp"
+          alt=""
+          class="big-speaker"
+        />
 
-      <!-- Navigation Buttons -->
-      <!-- Page Title -->
-      <h1 class="hero-heading">Rowans Radio</h1>
-    </section>
-
-    <!-- Content Section -->
-    <section class="content-section">
-      <div class="content-container">
-        <p class="content-text">
-          Tune in to Rowans Radio for the best in underground music.<br><br>
-          Live sets, DJ mixes, and exclusive content from our resident artists.
-        </p>
-
-        <!-- Red Speaker Buttons -->
-        <div class="speaker-buttons">
-          <a href="/poster1" class="speaker-button">
-            <img src="/design-assets/POSTER 1.webp" loading="lazy" alt="Poster 1" />
-          </a>
-          <a href="/poster2" class="speaker-button">
-            <img src="/design-assets/POSTER 2.webp" loading="lazy" alt="Poster 2" />
-          </a>
-          <a href="/poster3" class="speaker-button">
-            <img src="/design-assets/POSTER 3.webp" loading="lazy" alt="Poster 3" />
-          </a>
+        <!-- Audio player mockup -->
+        <div class="audio-player">
+          <div class="player-top">
+            <span class="player-label">VOLUME</span>
+            <div class="volume-row">
+              <span class="volume-icon">&#x1F50A;</span>
+              <div class="slider-track">
+                <div class="slider-fill" style="width: 60%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="track-info">
+            <p>TRACK: ROWANS RADIO</p>
+            <p>ARTIST: RICK NOGLE</p>
+          </div>
+          <div class="waveform">
+            <div v-for="i in 40" :key="i" class="wave-bar" :style="{ height: Math.random() * 30 + 5 + 'px' }"></div>
+          </div>
+          <div class="progress-row">
+            <span class="play-btn">&#x25B6;</span>
+            <div class="slider-track">
+              <div class="slider-fill" style="width: 61%"></div>
+            </div>
+            <span class="time-display">02:45 / 04:30</span>
+          </div>
         </div>
+      </div>
+
+      <!-- Area buttons -->
+      <div class="area-buttons">
+        <button class="area-btn">
+          <img src="/design-assets/AUDIO BUTTON.webp" alt="" class="area-btn-icon" />
+          <span class="area-btn-label">UPSTAIRS</span>
+        </button>
+        <button class="area-btn">
+          <img src="/design-assets/AUDIO BUTTON.webp" alt="" class="area-btn-icon" />
+          <span class="area-btn-label">DOWNSTAIRS</span>
+        </button>
+        <button class="area-btn">
+          <img src="/design-assets/AUDIO BUTTON.webp" alt="" class="area-btn-icon" />
+          <span class="area-btn-label">GARDEN</span>
+        </button>
       </div>
     </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="footer-content">
-        <div class="footer-section">
-          <h3>Visit Us</h3>
-          <p>10 Stroud Green Road<br>Finsbury Park<br>London N4 2DF</p>
-        </div>
-        <div class="footer-section">
-          <h3>Opening Hours</h3>
-          <p>Mon-Thu: 5pm - 1am<br>Fri-Sat: 12pm - 3am<br>Sun: 12pm - 12am</p>
-        </div>
-        <div class="footer-section">
-          <h3>Quick Links</h3>
-          <nav>
-            <a href="/">Home</a>
-            <a href="/radio">Radio</a>
-          </nav>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© 2026 Rowan's. All rights reserved.</p>
-      </div>
-    </footer>
   </div>
 </template>
 
@@ -85,190 +70,235 @@ useHead({ title: "Rowans Radio — Rowan's" })
 </script>
 
 <style scoped>
-
-.hero-section {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  background-color: #000000;
+.logo-header {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  padding: 2rem;
-  overflow: hidden;
+  padding: 2rem 1rem 1rem;
+  background: #000;
 }
 
-.hero-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-}
-
-.left-speaker {
-  position: absolute;
-  left: -150px;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 60%;
-  width: auto;
-  z-index: 1;
-  filter: brightness(0.8) hue-rotate(-10deg) saturate(1.5);
-}
-
-.hero-logo {
-  position: absolute;
-  top: 60px;
-  left: 50%;
-  transform: translateX(-50%);
+.site-logo {
   height: 120px;
   width: auto;
-  z-index: 10;
 }
 
-.hero-heading {
+.radio-content {
+  padding: 1rem 2rem 4rem;
+  text-align: center;
   position: relative;
+  overflow: hidden;
+  min-height: 80vh;
+}
+
+.page-heading {
   font-family: 'JetBrains Mono', monospace;
   font-weight: 400;
-  font-size: 36px;
-  line-height: 1.32;
-  color: #ffffff;
-  opacity: 0.9;
-  text-align: center;
-  margin: 0;
-  z-index: 5;
+  font-size: 40px;
+  color: #ff0000;
+  margin: 0 0 2rem;
+  line-height: 1.1;
+  position: relative;
+  z-index: 1;
 }
 
-.content-section {
-  background-color: #000000;
-  padding: 4rem 2rem;
-  min-height: 50vh;
-}
-
-.content-container {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.content-text {
-  font-family: 'JetBrains Mono', monospace;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.8;
-  color: #ffffff;
-  opacity: 0.9;
-  text-align: center;
+.player-area {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
   margin-bottom: 3rem;
 }
 
-.speaker-buttons {
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
-  max-width: 900px;
-  margin: 0 auto;
-  justify-content: center;
+.big-speaker {
+  position: absolute;
+  left: -10%;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 350px;
+  width: auto;
+  opacity: 0.7;
+  z-index: 0;
 }
 
-.speaker-button {
-  width: 250px;
-  height: 250px;
+.audio-player {
+  position: relative;
+  z-index: 1;
+  background: rgba(40, 40, 40, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 1.25rem 1.5rem;
+  width: 320px;
+  text-align: left;
+  margin-left: 10%;
+}
+
+.player-top {
+  margin-bottom: 0.75rem;
+}
+
+.player-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.6);
   display: block;
-  transition: all 0.2s;
-  border-radius: 8px;
-  overflow: hidden;
+  margin-bottom: 0.25rem;
 }
 
-.speaker-button img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.speaker-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 30px rgba(255, 0, 0, 0.3);
-}
-
-.footer {
-  background-color: #17181a;
-  color: #ffffff;
-  padding: 4rem 2rem;
-}
-
-.footer-content {
-  max-width: 1280px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 3rem;
-}
-
-.footer-section h3 {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 18px;
-  font-weight: 400;
-  margin-bottom: 1rem;
-  color: #ffffff;
-}
-
-.footer-section p {
-  color: #9ca3af;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 14px;
-  line-height: 1.8;
-}
-
-.footer-section nav {
+.volume-row {
   display: flex;
-  flex-direction: column;
+  align-items: center;
   gap: 0.5rem;
 }
 
-.footer-section nav a {
-  color: #9ca3af;
-  text-decoration: none;
-  font-family: 'JetBrains Mono', monospace;
+.volume-icon {
   font-size: 14px;
-  transition: color 0.3s;
+  color: #fff;
 }
 
-.footer-section nav a:hover {
-  color: #ffffff;
+.slider-track {
+  flex: 1;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  position: relative;
 }
 
-.footer-bottom {
-  margin-top: 3rem;
-  padding-top: 2rem;
-  border-top: 1px solid #374151;
-  text-align: center;
-  color: #9ca3af;
+.slider-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.track-info {
+  margin-bottom: 0.75rem;
+}
+
+.track-info p {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 14px;
+  font-size: 12px;
+  color: #fff;
+  margin: 0.15rem 0;
 }
 
-@media (min-width: 1920px) {
-  .hero-heading {
-    font-size: 48px;
+.waveform {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 40px;
+  margin-bottom: 0.75rem;
+}
+
+.wave-bar {
+  width: 4px;
+  background: rgba(255, 255, 255, 0.5);
+  min-height: 3px;
+}
+
+.progress-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.play-btn {
+  font-size: 12px;
+  color: #fff;
+}
+
+.time-display {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.6);
+  white-space: nowrap;
+}
+
+.area-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  position: relative;
+  z-index: 1;
+}
+
+.area-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.2s;
+}
+
+.area-btn:hover {
+  transform: scale(1.05);
+}
+
+.area-btn-icon {
+  width: 100px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.area-btn-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.1em;
+}
+
+@media (min-width: 768px) {
+  .site-logo {
+    height: 150px;
   }
 
-  .hero-logo {
-    top: 100px;
-    height: 180px;
+  .page-heading {
+    font-size: 70px;
+    margin-bottom: 1rem;
   }
 
-  .left-speaker {
-    left: -200px;
-    height: 70%;
+  .big-speaker {
+    height: 450px;
+    left: -5%;
   }
 
-  .speaker-button {
-    width: 300px;
-    height: 300px;
+  .audio-player {
+    width: 380px;
+    padding: 1.5rem 2rem;
+  }
+
+  .area-btn-icon {
+    width: 130px;
+    height: 100px;
+  }
+
+  .area-btn-label {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .big-speaker {
+    height: 250px;
+    left: -20%;
+  }
+
+  .audio-player {
+    width: 260px;
+    margin-left: 5%;
+  }
+
+  .area-buttons {
+    gap: 1.5rem;
+  }
+
+  .area-btn-icon {
+    width: 70px;
+    height: 56px;
   }
 }
 </style>

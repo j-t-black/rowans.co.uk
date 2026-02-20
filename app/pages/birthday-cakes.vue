@@ -1,152 +1,156 @@
 <template>
   <div class="min-h-screen bg-black">
-    <section class="hero-section">
-      <img src="/design-assets/HERO 3 - EATS AND DRINKS.webp" fetchpriority="high" alt="Birthday Cakes" class="hero-background" />
-      <img src="/design-assets/MAIN LOGO.webp" alt="Rowans" class="hero-logo" />
-      <h1 class="hero-heading">Birthday<br>Cakes</h1>
-    </section>
+    <!-- Compact logo header -->
+    <header class="logo-header">
+      <NuxtLink to="/">
+        <img src="/design-assets/MAIN LOGO.webp" alt="Rowans" class="site-logo" />
+      </NuxtLink>
+    </header>
 
-    <section class="content-section">
-      <div class="content-container">
-        <img src="/design-assets/PUNK CAKES.webp" loading="lazy" alt="Punk Cake" class="punk-logo" />
+    <!-- Page content -->
+    <section class="page-content">
+      <h1 class="page-heading">Birthday Cake</h1>
 
-        <p class="content-text">
-          Sadly, due to H+S regulations we cannot allow cakes and other food to be brought into the centre.
-        </p>
-        <p class="content-text">
-          Sparklers, candles and knives are also not allowed.
-        </p>
-        <p class="content-subtext">
-          To facilitate your party, Rowans has links with local businesses who supply a range of delicious cupcakes. Click below for info.
-        </p>
+      <p class="intro-text">
+        To facilitate your party Rowans has links with 2 local businesses
+        who supply a range of delicious cupcakes for your birthday party.
+        Click below for info
+      </p>
 
-        <div class="supplier-buttons">
-          <a
-            href="https://www.punkcake.co.uk"
-            target="_blank"
-            rel="noopener"
-            class="supplier-btn"
-          >
-            Order Cakes
-          </a>
-        </div>
+      <div class="supplier-logos">
+        <a href="https://www.eggfreecake.co.uk" target="_blank" rel="noopener" class="supplier-link">
+          <div class="cake-box-placeholder">
+            <span>Cake Box</span>
+          </div>
+        </a>
+        <a href="https://www.punkcake.co.uk" target="_blank" rel="noopener" class="supplier-link">
+          <img src="/design-assets/PUNK CAKES.webp" loading="lazy" alt="Punk Cake" class="supplier-logo punk" />
+        </a>
       </div>
+
+      <p class="warning-text">
+        Sadly, due to H+S regulations we cannot allow other cakes and
+        food to be bought into the centre.
+      </p>
+
+      <p class="warning-text">
+        Sparklers, Candles, Knives are also obviously not allowed.
+      </p>
     </section>
   </div>
 </template>
 
 <script setup lang="ts">
-useHead({ title: "Birthday Cakes \u2014 Rowan's" })
+useHead({ title: "Birthday Cake — Rowan's" })
 </script>
 
 <style scoped>
-.hero-section {
-  position: relative;
-  width: 100%;
-  min-height: 50vh;
-  background-color: #000;
+.logo-header {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  padding: 2rem;
-  overflow: hidden;
+  padding: 2rem 1rem 1rem;
+  background: #000;
 }
 
-.hero-background {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  object-fit: cover;
-  opacity: 0.4;
-  z-index: 0;
-}
-
-.hero-logo {
-  position: absolute;
-  top: 60px;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 100px;
+.site-logo {
+  height: 120px;
   width: auto;
-  z-index: 10;
 }
 
-.hero-heading {
-  position: relative;
+.page-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem 2rem 4rem;
+  text-align: center;
+}
+
+.page-heading {
   font-family: 'JetBrains Mono', monospace;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 48px;
   color: #ff0000;
-  text-align: center;
-  margin: 0;
-  z-index: 5;
-  line-height: 1.2;
+  margin: 0 0 2rem;
+  line-height: 1.1;
 }
 
-.content-section {
-  background-color: #000;
-  padding: 4rem 2rem;
-}
-
-.content-container {
-  max-width: 700px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.punk-logo {
-  width: 160px;
-  height: 160px;
-  object-fit: contain;
-  margin: 0 auto 2.5rem;
-  display: block;
-}
-
-.content-text {
+.intro-text {
   font-family: 'JetBrains Mono', monospace;
   font-size: 16px;
-  line-height: 1.8;
-  color: #ffffff;
-  opacity: 0.85;
-  margin-bottom: 1.5rem;
+  line-height: 1.7;
+  color: #fff;
+  margin-bottom: 3rem;
+  text-align: left;
 }
 
-.content-subtext {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 14px;
-  line-height: 1.8;
-  color: #ffffff;
-  opacity: 0.6;
+.supplier-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
   margin-bottom: 3rem;
 }
 
-.supplier-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
+.supplier-link {
+  display: block;
 }
 
-.supplier-btn {
+.cake-box-placeholder {
+  width: 180px;
+  height: 180px;
+  background: #d4b8c8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: 'JetBrains Mono', monospace;
   font-size: 14px;
-  color: #ffffff;
-  border: 1px solid rgba(255,255,255,0.4);
-  padding: 0.75rem 2rem;
-  text-decoration: none;
-  letter-spacing: 0.1em;
-  transition: border-color 0.2s, opacity 0.2s;
+  color: #333;
 }
 
-.supplier-btn:hover {
-  border-color: #ffffff;
-  opacity: 0.8;
+.supplier-logo.punk {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.warning-text {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 @media (min-width: 768px) {
-  .hero-heading { font-size: 36px; }
-  .content-text { font-size: 18px; }
-  .punk-logo { width: 200px; height: 200px; }
+  .site-logo {
+    height: 150px;
+  }
+
+  .page-heading {
+    font-size: 80px;
+    margin-bottom: 2.5rem;
+  }
+
+  .intro-text {
+    font-size: 20px;
+  }
+
+  .warning-text {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .supplier-logos {
+    gap: 2rem;
+  }
+
+  .cake-box-placeholder,
+  .supplier-logo.punk {
+    width: 130px;
+    height: 130px;
+  }
 }
 </style>

@@ -13,7 +13,7 @@
           <a href="/" class="nav-item" @click="close">Home</a>
           <a href="/about" class="nav-item" @click="close">About us</a>
           <a href="https://www.mybowlingpassport.com/112/6615/book" class="nav-item" target="_blank" rel="noopener">Book a lane</a>
-          <a href="/#party" class="nav-item" @click="close">Organise your Party</a>
+          <a href="/organise" class="nav-item" @click="close">Organise your Party</a>
           <a href="/karaoke" class="nav-item" @click="close">Book Karaoke</a>
           <a href="/#audio" class="nav-item" @click="close">Audio</a>
           <a href="/eats-drinks" class="nav-item" @click="close">Eats + Drinks</a>

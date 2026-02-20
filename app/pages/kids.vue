@@ -1,40 +1,66 @@
-
 <template>
   <div class="min-h-screen bg-black">
-    <section class="hero-section">
-      <img src="/design-assets/GROUP HERO.webp" fetchpriority="high" alt="Kids Parties" class="hero-background" />
-      <img src="/design-assets/MAIN LOGO.webp" alt="Rowans Bowling" class="hero-logo" />
-      <h1 class="hero-heading">Kids Parties</h1>
-    </section>
+    <!-- Compact logo header -->
+    <header class="logo-header">
+      <NuxtLink to="/">
+        <img src="/design-assets/MAIN LOGO.webp" alt="Rowans" class="site-logo" />
+      </NuxtLink>
+    </header>
 
-    <section class="content-section">
-      <div class="content-container">
-        <p class="content-text">
-          Unforgettable birthday parties for kids of all ages.<br><br>
-          Bowling, arcade games, karaoke, and delicious party food.<br>
-          Packages include dedicated party host and private area.
-        </p>
-        <div class="cta-buttons">
-          <a href="/birthday-cakes" class="cta-button">View Birthday Cakes</a>
-        </div>
-      </div>
-    </section>
+    <!-- Page content -->
+    <section class="page-content">
+      <h1 class="page-heading">Kids parties</h1>
 
-    <footer class="footer">
-      <div class="footer-content">
-        <div class="footer-section">
-          <h3>Visit Us</h3>
-          <p>10 Stroud Green Road<br>Finsbury Park<br>London N4 2DF</p>
-        </div>
-        <div class="footer-section">
-          <h3>Opening Hours</h3>
-          <p>Mon-Thu: 5pm - 1am<br>Fri-Sat: 12pm - 3am<br>Sun: 12pm - 12am</p>
+      <div class="info-text">
+        <p>There is a Kid's DJ every Friday and Saturday 12-6.</p>
+        <p>For birthday cakes click <NuxtLink to="/birthday-cakes" class="red-link">here.</NuxtLink></p>
+        <p>For in-house Taco menu click <NuxtLink to="/yucatan" class="red-link underline">here.</NuxtLink></p>
+      </div>
+
+      <!-- Number inputs -->
+      <div class="input-row">
+        <div class="input-box">
+          <span class="input-label">Number of players</span>
+          <span class="input-value">072</span>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>© 2026 Rowan's. All rights reserved.</p>
+
+      <p class="input-note">6 players per lane - 1 game takes approximately 1hr</p>
+
+      <div class="input-row">
+        <div class="input-box">
+          <span class="input-label">Number of lanes</span>
+          <span class="input-value">009</span>
+        </div>
       </div>
-    </footer>
+
+      <!-- Calendar placeholder -->
+      <div class="calendar-placeholder">
+        <p class="placeholder-text">Calendar picker — coming soon</p>
+      </div>
+
+      <p class="peak-notice">Please note that evening and weekends are considered peak times and are more expensive</p>
+
+      <!-- Cost breakdown -->
+      <div class="cost-table">
+        <div class="cost-row">
+          <span class="cost-label">Cost per Player</span>
+          <span class="cost-value">&pound;8</span>
+        </div>
+        <div class="cost-row">
+          <span class="cost-label">Cost Per lane</span>
+          <span class="cost-value">&pound;48</span>
+        </div>
+        <div class="cost-row">
+          <span class="cost-label">Total Cost</span>
+          <span class="cost-value">&pound;432</span>
+        </div>
+      </div>
+
+      <button class="submit-btn">Submit Booking</button>
+
+      <p class="footer-notice">Sadly due to H+S regulations we cannot allow food to be bought into the centre.</p>
+    </section>
   </div>
 </template>
 
@@ -43,20 +69,199 @@ useHead({ title: "Kids Parties — Rowan's" })
 </script>
 
 <style scoped>
-.hero-section { position: relative; width: 100%; min-height: 100vh; background-color: #000000; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem; overflow: hidden; }
-.hero-background { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
-.hero-logo { position: absolute; top: 60px; left: 50%; transform: translateX(-50%); height: 120px; width: auto; z-index: 10; }
-.hero-heading { position: relative; font-family: 'JetBrains Mono', monospace; font-weight: 400; font-size: 36px; line-height: 1.32; color: #ffffff; opacity: 0.9; text-align: center; margin: 0; z-index: 5; }
-.content-section { background-color: #000000; padding: 4rem 2rem; min-height: 50vh; }
-.content-container { max-width: 800px; margin: 0 auto; }
-.content-text { font-family: 'JetBrains Mono', monospace; font-weight: 400; font-size: 18px; line-height: 1.8; color: #ffffff; opacity: 0.9; text-align: center; margin-bottom: 3rem; }
-.cta-buttons { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; }
-.cta-button { font-family: 'JetBrains Mono', monospace; font-size: 16px; padding: 1rem 2.5rem; background-color: #ffffff; color: #000000; text-decoration: none; border-radius: 4px; transition: all 0.2s; }
-.cta-button:hover { background-color: #ff0000; color: #ffffff; }
-.footer { background-color: #17181a; color: #ffffff; padding: 4rem 2rem; }
-.footer-content { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; }
-.footer-section h3 { font-family: 'JetBrains Mono', monospace; font-size: 18px; font-weight: 400; margin-bottom: 1rem; }
-.footer-section p { color: #9ca3af; font-family: 'JetBrains Mono', monospace; font-size: 14px; line-height: 1.8; }
-.footer-bottom { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #374151; text-align: center; color: #9ca3af; font-family: 'JetBrains Mono', monospace; font-size: 14px; }
-@media (min-width: 1920px) { .hero-heading { font-size: 48px; } .hero-logo { top: 100px; height: 180px; } }
+.logo-header {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem 1rem;
+  background: #000;
+}
+
+.site-logo {
+  height: 120px;
+  width: auto;
+}
+
+.page-content {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1rem 2rem 4rem;
+  text-align: center;
+}
+
+.page-heading {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 400;
+  font-size: 36px;
+  color: #ff0000;
+  margin: 0 0 1.5rem;
+  line-height: 1.1;
+}
+
+.info-text {
+  margin-bottom: 2.5rem;
+}
+
+.info-text p {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px;
+  color: #fff;
+  margin: 0.4rem 0;
+  line-height: 1.6;
+}
+
+.red-link {
+  color: #ff0000;
+  text-decoration: none;
+}
+
+.red-link.underline {
+  text-decoration: underline;
+}
+
+.red-link:hover {
+  text-decoration: underline;
+}
+
+.input-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.input-box {
+  display: flex;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px;
+  color: #fff;
+  width: 340px;
+}
+
+.input-label {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+
+.input-value {
+  padding: 0.75rem 1rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  min-width: 70px;
+  text-align: center;
+}
+
+.input-note {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.calendar-placeholder {
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+  padding: 3rem 2rem;
+  margin: 2rem auto;
+  max-width: 500px;
+}
+
+.placeholder-text {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.peak-notice {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cost-table {
+  max-width: 360px;
+  margin: 0 auto 2rem;
+}
+
+.cost-row {
+  display: flex;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: -1px;
+}
+
+.cost-label {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+
+.cost-value {
+  padding: 0.75rem 1rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  min-width: 80px;
+  text-align: left;
+}
+
+.submit-btn {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px;
+  color: #fff;
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 0.75rem 2.5rem;
+  cursor: pointer;
+  transition: border-color 0.2s, background-color 0.2s;
+  margin-bottom: 3rem;
+}
+
+.submit-btn:hover {
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.footer-notice {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px;
+  color: #fff;
+  line-height: 1.6;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .site-logo {
+    height: 150px;
+  }
+
+  .page-heading {
+    font-size: 64px;
+    margin-bottom: 2rem;
+  }
+
+  .info-text p {
+    font-size: 18px;
+  }
+
+  .input-box {
+    font-size: 18px;
+    width: 400px;
+  }
+
+  .cost-row {
+    font-size: 18px;
+  }
+
+  .cost-table {
+    max-width: 420px;
+  }
+
+  .footer-notice {
+    font-size: 18px;
+  }
+}
 </style>

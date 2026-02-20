@@ -1,67 +1,76 @@
-
 <template>
   <div class="min-h-screen bg-black">
-    <!-- Hero Section -->
-    <section class="hero-section">
-      <!-- Background Image -->
+    <!-- Compact logo header -->
+    <header class="logo-header">
+      <NuxtLink to="/">
+        <img src="/design-assets/MAIN LOGO.webp" alt="Rowans" class="site-logo" />
+      </NuxtLink>
+    </header>
+
+    <!-- Content with background image -->
+    <section class="hero-content">
       <img
         src="/design-assets/GROUP HERO.webp"
         fetchpriority="high"
-        alt="Large Groups"
-        class="hero-background"
+        alt=""
+        class="bg-image"
       />
 
-      <!-- Logo at top center -->
-      <img
-        src="/design-assets/MAIN LOGO.webp"
-        alt="Rowans Bowling"
-        class="hero-logo"
-      />
+      <div class="content-overlay">
+        <h1 class="page-heading">Large Group Bookings</h1>
+        <p class="subtitle">25-100 people</p>
 
-      <!-- Navigation Buttons -->
-      <!-- Page Title -->
-      <h1 class="hero-heading">Large Groups</h1>
-    </section>
-
-    <!-- Content Section -->
-    <section class="content-section">
-      <div class="content-container">
-        <p class="content-text">
-          Perfect for celebrations, reunions, and group outings.<br><br>
-          Book multiple lanes, pool tables, and karaoke booths for your group.<br>
-          Custom packages available for parties of 20+.
-        </p>
-
-        <div class="cta-buttons">
-          <a href="#book" class="cta-button">Book Now</a>
-          <a href="#enquire" class="cta-button-outline">Make an Enquiry</a>
+        <div class="links-section">
+          <p>For smaller groups please click <a href="https://www.mybowlingpassport.com/112/6615/book" target="_blank" rel="noopener" class="red-link">here</a></p>
+          <p>For larger groups click <a href="mailto:rick@rowans.co.uk" class="red-link">here</a></p>
+          <p>For food options click <NuxtLink to="/eats-drinks" class="red-link">here</NuxtLink></p>
         </div>
+
+        <p class="notice">Group booking cannot be made on Friday and Saturdays after 6pm</p>
+
+        <!-- Number inputs -->
+        <div class="input-row">
+          <div class="input-box">
+            <span class="input-label">Number of players</span>
+            <span class="input-value">072</span>
+          </div>
+        </div>
+
+        <p class="input-note">6 players per lane</p>
+
+        <div class="input-row">
+          <div class="input-box">
+            <span class="input-label">Number of lanes</span>
+            <span class="input-value">009</span>
+          </div>
+        </div>
+
+        <!-- Calendar placeholder -->
+        <div class="calendar-placeholder">
+          <p class="placeholder-text">Calendar picker — coming soon</p>
+        </div>
+
+        <p class="peak-notice">Please note that evening and weekends are considered peak times and are more expensive</p>
+
+        <!-- Cost breakdown -->
+        <div class="cost-table">
+          <div class="cost-row">
+            <span class="cost-label">Cost per Player</span>
+            <span class="cost-value">&pound;9</span>
+          </div>
+          <div class="cost-row">
+            <span class="cost-label">Cost Per lane</span>
+            <span class="cost-value">&pound;55</span>
+          </div>
+          <div class="cost-row">
+            <span class="cost-label">Total Cost</span>
+            <span class="cost-value">&pound;495</span>
+          </div>
+        </div>
+
+        <button class="submit-btn">Submit Booking</button>
       </div>
     </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="footer-content">
-        <div class="footer-section">
-          <h3>Visit Us</h3>
-          <p>10 Stroud Green Road<br>Finsbury Park<br>London N4 2DF</p>
-        </div>
-        <div class="footer-section">
-          <h3>Opening Hours</h3>
-          <p>Mon-Thu: 5pm - 1am<br>Fri-Sat: 12pm - 3am<br>Sun: 12pm - 12am</p>
-        </div>
-        <div class="footer-section">
-          <h3>Quick Links</h3>
-          <nav>
-            <a href="/">Home</a>
-            <a href="/groups">Groups</a>
-          </nav>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© 2026 Rowan's. All rights reserved.</p>
-      </div>
-    </footer>
   </div>
 </template>
 
@@ -70,182 +79,227 @@ useHead({ title: "Group Bookings — Rowan's" })
 </script>
 
 <style scoped>
-
-.hero-section {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  background-color: #000000;
+.logo-header {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  padding: 2rem;
+  padding: 2rem 1rem 1rem;
+  background: #000;
+}
+
+.site-logo {
+  height: 120px;
+  width: auto;
+}
+
+.hero-content {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
   overflow: hidden;
 }
 
-.hero-background {
+.bg-image {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  opacity: 0.25;
   z-index: 0;
 }
 
-.hero-logo {
-  position: absolute;
-  top: 60px;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 120px;
-  width: auto;
-  z-index: 10;
+.content-overlay {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 1rem 2rem 4rem;
+  max-width: 700px;
+  width: 100%;
 }
 
-.hero-heading {
-  position: relative;
+.page-heading {
   font-family: 'JetBrains Mono', monospace;
   font-weight: 400;
   font-size: 36px;
-  line-height: 1.32;
-  color: #ffffff;
-  opacity: 0.9;
-  text-align: center;
-  margin: 0;
-  z-index: 5;
+  color: #ff0000;
+  margin: 0 0 0.5rem;
+  line-height: 1.1;
 }
 
-.content-section {
-  background-color: #000000;
-  padding: 4rem 2rem;
-  min-height: 50vh;
-}
-
-.content-container {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.content-text {
+.subtitle {
   font-family: 'JetBrains Mono', monospace;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.8;
-  color: #ffffff;
-  opacity: 0.9;
-  text-align: center;
-  margin-bottom: 3rem;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1.5rem;
 }
 
-.cta-buttons {
-  display: flex;
-  gap: 1.5rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.cta-button {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 16px;
-  padding: 1rem 2.5rem;
-  background-color: #ffffff;
-  color: #000000;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: all 0.2s;
-  font-weight: 400;
-}
-
-.cta-button:hover {
-  background-color: #ff0000;
-  color: #ffffff;
-}
-
-.cta-button-outline {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 16px;
-  padding: 1rem 2.5rem;
-  background-color: transparent;
-  color: #ffffff;
-  text-decoration: none;
-  border: 2px solid #ffffff;
-  border-radius: 4px;
-  transition: all 0.2s;
-  font-weight: 400;
-}
-
-.cta-button-outline:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-.footer {
-  background-color: #17181a;
-  color: #ffffff;
-  padding: 4rem 2rem;
-}
-
-.footer-content {
-  max-width: 1280px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 3rem;
-}
-
-.footer-section h3 {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 18px;
-  font-weight: 400;
+.links-section {
   margin-bottom: 1rem;
-  color: #ffffff;
 }
 
-.footer-section p {
-  color: #9ca3af;
+.links-section p {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 14px;
-  line-height: 1.8;
+  font-size: 12px;
+  color: #fff;
+  margin: 0.15rem 0;
+  font-weight: 700;
 }
 
-.footer-section nav {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.footer-section nav a {
-  color: #9ca3af;
+.red-link {
+  color: #ff0000;
   text-decoration: none;
+}
+
+.red-link:hover {
+  text-decoration: underline;
+}
+
+.notice {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 14px;
-  transition: color 0.3s;
+  font-size: 12px;
+  color: #fff;
+  margin-bottom: 2rem;
+  font-style: italic;
 }
 
-.footer-section nav a:hover {
-  color: #ffffff;
+.input-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5rem;
 }
 
-.footer-bottom {
-  margin-top: 3rem;
-  padding-top: 2rem;
-  border-top: 1px solid #374151;
+.input-box {
+  display: flex;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px;
+  color: #fff;
+  width: 340px;
+}
+
+.input-label {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+
+.input-value {
+  padding: 0.75rem 1rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  min-width: 70px;
   text-align: center;
-  color: #9ca3af;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 14px;
 }
 
-@media (min-width: 1920px) {
-  .hero-heading {
-    font-size: 48px;
+.input-note {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.calendar-placeholder {
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+  padding: 3rem 2rem;
+  margin: 2rem auto;
+  max-width: 500px;
+}
+
+.placeholder-text {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.peak-notice {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: #fff;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cost-table {
+  max-width: 360px;
+  margin: 0 auto 2rem;
+}
+
+.cost-row {
+  display: flex;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: -1px;
+}
+
+.cost-label {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+
+.cost-value {
+  padding: 0.75rem 1rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  min-width: 80px;
+  text-align: left;
+}
+
+.submit-btn {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px;
+  color: #fff;
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 0.75rem 2.5rem;
+  cursor: pointer;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.submit-btn:hover {
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+@media (min-width: 768px) {
+  .site-logo {
+    height: 150px;
   }
 
-  .hero-logo {
-    top: 100px;
-    height: 180px;
+  .page-heading {
+    font-size: 64px;
+    margin-bottom: 0.5rem;
   }
 
+  .subtitle {
+    font-size: 24px;
   }
+
+  .links-section p {
+    font-size: 14px;
+  }
+
+  .notice {
+    font-size: 14px;
+  }
+
+  .input-box {
+    font-size: 18px;
+    width: 400px;
+  }
+
+  .cost-row {
+    font-size: 18px;
+  }
+
+  .cost-table {
+    max-width: 420px;
+  }
+}
 </style>
