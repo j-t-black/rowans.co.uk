@@ -65,14 +65,12 @@ node scripts/capture-figma-reference.js [section] [options]
 
 **Available sections**: hero, welcome, party, eats, audio, visit, location, full-page
 
-### Custom Skills (May Not Work in Opcode)
-If in official Claude Code CLI, these slash commands are available:
+### Custom Skills
+These slash commands are available:
 - `/figma-text` - Extract text from Figma
 - `/figma-capture [section]` - Capture Figma screenshots
 - `/verify [section]` - Screenshot current implementation
 - `/compare [section]` - Side-by-side comparison
-
-**In Opcode**: Use the scripts directly via Bash tool.
 
 ## Implementation Guidelines
 

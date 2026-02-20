@@ -38,5 +38,7 @@ tests/screenshots/
 
 # Local dev files
 memory/
-screenshot-figma-pages.mjs
-PWA-PLAN.md
+.vercel
+
+# Archived research/planning files (local reference only)
+_archive/
