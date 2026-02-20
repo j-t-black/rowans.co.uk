@@ -32,6 +32,14 @@ export default defineNuxtConfig({
     }
   },
 
+  vite: {
+    vue: {
+      template: {
+        transformAssetUrls: false
+      }
+    }
+  },
+
   ui: {
     theme: {
       colors: ['red']

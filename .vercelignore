@@ -1,0 +1,12 @@
+# Source design assets (production copies are in public/design-assets/)
+design-assets/
+
+# Test artifacts
+test-results/
+playwright-report/
+tests/screenshots/
+
+# Local dev files
+memory/
+screenshot-figma-pages.mjs
+PWA-PLAN.md
