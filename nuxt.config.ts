@@ -17,7 +17,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       style: [
-        { innerHTML: 'html, body { background-color: #000000 !important; margin: 0; padding: 0; color-scheme: dark; }' }
+        { innerHTML: 'html, body { background-color: #000000 !important; margin: 0; padding: 0; color-scheme: dark; overflow-x: hidden; } *, *::before, *::after { box-sizing: border-box; }' }
       ]
     }
   },

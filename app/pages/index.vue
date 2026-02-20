@@ -28,7 +28,9 @@
     <section class="welcome-section">
       <h2 class="welcome-heading">Welcome to Rowans</h2>
       <p class="welcome-text welcome-features">
-        2 levels of...<br><br>
+        2 levels of...
+      </p>
+      <p class="welcome-text welcome-features">
         World-class Sound, Intelligent Lighting and video, 2 Distinct Dancefloors,<br>
         24 bowling lanes, 14 Pool tables, 6 Private Karaoke booths,<br>
         4 Bars, Outback Garden with seating and sound system,<br>
@@ -66,6 +68,42 @@
       </div>
     </section>
 
+    <!-- Audio Section -->
+    <section class="audio-section">
+      <!-- Background Video -->
+      <video
+        class="audio-background"
+        src="/videos/audio-bg.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="none"
+      />
+      <img
+        src="/design-assets/ROWANS AUDIO LOGO.png"
+        alt="Audio"
+        class="audio-logo"
+      />
+      <div class="audio-content">
+        <h2 class="audio-heading">AUDIO</h2>
+        <p class="audio-text">
+          Void Acoustics and Funktion One sound-systems across the venue. Playing big basslines. Ever evolving line-up and weekly events.
+        </p>
+      </div>
+      <div class="audio-buttons">
+        <a href="/whats-on" class="audio-button">
+          WHAT'S<br>ON
+        </a>
+        <a href="/radio" class="audio-button">
+          ROWANS<br>RADIO
+        </a>
+        <a href="/djs" class="audio-button">
+          RESIDENT<br>DJ'S
+        </a>
+      </div>
+    </section>
+
     <!-- Eats + Drinks Section -->
     <section class="eats-section">
       <h2 class="eats-heading">Eats + Drinks</h2>
@@ -91,44 +129,6 @@
             YARD SALE<br>PIZZA
           </a>
         </div>
-      </div>
-    </section>
-
-    <!-- Audio Section -->
-    <section class="audio-section">
-      <!-- Background Video -->
-      <video
-        class="audio-background"
-        src="/videos/audio-bg.mp4"
-        autoplay
-        muted
-        loop
-        playsinline
-        preload="none"
-      />
-      <img
-        src="/design-assets/ROWANS AUDIO LOGO.png"
-        alt="Audio"
-        class="audio-logo"
-      />
-      <div class="audio-content">
-        <h2 class="audio-heading">AUDIO</h2>
-        <p class="audio-text">
-          Void Acoustics and Funktion One sound-systems across the venue<br>
-          Playing big basslines.<br>
-          Ever evolving line-up and weekly events.
-        </p>
-      </div>
-      <div class="audio-buttons">
-        <a href="/whats-on" class="audio-button">
-          WHAT'S<br>ON
-        </a>
-        <a href="/radio" class="audio-button">
-          ROWANS<br>RADIO
-        </a>
-        <a href="/djs" class="audio-button">
-          RESIDENT<br>DJ'S
-        </a>
       </div>
     </section>
 
@@ -696,6 +696,109 @@
   color: #9ca3af;
   font-family: 'JetBrains Mono', monospace;
   font-size: 12px;
+}
+
+/* Mobile fixes */
+@media (max-width: 767px) {
+  .welcome-heading {
+    font-size: 24px;
+  }
+
+  .welcome-text {
+    font-size: 15px;
+    width: 100%;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  .welcome-text br {
+    display: none;
+  }
+
+  /* Party: 4-in-a-row on mobile */
+  .party-section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .party-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 0.4rem;
+    max-width: none;
+    justify-content: center;
+  }
+
+  .party-button {
+    width: 78px;
+    height: 78px;
+    font-size: 9px;
+    padding: 0.5rem;
+  }
+
+  /* Audio: shrink to fit 3 across */
+  .audio-buttons {
+    gap: 1rem;
+  }
+
+  .audio-button {
+    width: 90px;
+    height: 90px;
+    font-size: 10px;
+  }
+
+  .audio-text {
+    font-size: 14px;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    padding: 0 0.5rem;
+  }
+
+  /* Visit cards: full-width stacked */
+  .visit-cards {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .visit-card {
+    min-width: unset;
+    max-width: unset;
+    width: 100%;
+  }
+
+  /* Eats: full-width image on mobile, padding only on text */
+  .eats-section {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .eats-heading,
+  .eats-text {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Eats buttons: 4-in-a-row below image */
+  .eats-buttons {
+    position: static;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 0.4rem;
+    padding: 1rem 0.5rem;
+    margin-top: -1rem;
+  }
+
+  .eats-button {
+    width: 82px;
+    height: 82px;
+    font-size: 9px;
+    padding: 0.5rem;
+  }
+
+  /* Reduce bottom gradient overlap since buttons aren't overlaid */
+  .eats-gradient-bottom {
+    height: 25%;
+  }
 }
 
 /* Desktop Responsive */
