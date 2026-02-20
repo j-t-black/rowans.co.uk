@@ -23,13 +23,11 @@ logs
 .env.*
 !.env.example
 
-# Large video files
-design-assets/WEB\ VIDS\ FINAL/
-public/design-assets/WEB\ VIDS\ FINAL/
-*.mp4
-*.mov
+# Large source video files (keep local only)
+design-assets/WEB\ VIDS\ FINAL/*.mp4
+design-assets/WEB\ VIDS\ FINAL/*.mov
 
-# Local asset folders (large binaries - keep local only)
+# Local asset folders (large binaries - source only)
 design-assets/rowans-pdf-assets/
 design-assets/rowans-yucatan-assets/
 
@@ -37,3 +35,8 @@ design-assets/rowans-yucatan-assets/
 test-results/
 playwright-report/
 tests/screenshots/
+
+# Local dev files
+memory/
+screenshot-figma-pages.mjs
+PWA-PLAN.md
