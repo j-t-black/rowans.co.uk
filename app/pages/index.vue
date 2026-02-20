@@ -68,6 +68,34 @@
       </div>
     </section>
 
+    <!-- Eats + Drinks Section -->
+    <section class="eats-section">
+      <h2 class="eats-heading">Eats + Drinks</h2>
+      <p class="eats-text">
+        Signature frozen cocktails, Authentic southern Mexican taco's, Artisan sourdough pizza
+      </p>
+
+      <div class="eats-image-container">
+        <img src="/design-assets/eats-drinks-hero.png" alt="Eats and Drinks" class="eats-hero-image" />
+        <div class="eats-gradient-top" />
+        <div class="eats-gradient-bottom" />
+        <div class="eats-buttons">
+          <a href="/birthday-cakes" class="eats-button">
+            BIRTHDAY<br>CAKES
+          </a>
+          <a href="/drinks-menu" class="eats-button">
+            DRINKS MENU
+          </a>
+          <a href="/yucatan" class="eats-button">
+            YUCATAN<br>TACOS
+          </a>
+          <a href="/pizza" class="eats-button">
+            YARD SALE<br>PIZZA
+          </a>
+        </div>
+      </div>
+    </section>
+
     <!-- Audio Section -->
     <section class="audio-section">
       <!-- Background Video -->
@@ -101,34 +129,6 @@
         <a href="/djs" class="audio-button">
           RESIDENT<br>DJ'S
         </a>
-      </div>
-    </section>
-
-    <!-- Eats + Drinks Section -->
-    <section class="eats-section">
-      <h2 class="eats-heading">Eats + Drinks</h2>
-      <p class="eats-text">
-        Signature frozen cocktails, Authentic southern Mexican taco's, Artisan sourdough pizza
-      </p>
-
-      <div class="eats-image-container">
-        <img src="/design-assets/eats-drinks-hero.png" alt="Eats and Drinks" class="eats-hero-image" />
-        <div class="eats-gradient-top" />
-        <div class="eats-gradient-bottom" />
-        <div class="eats-buttons">
-          <a href="/birthday-cakes" class="eats-button">
-            BIRTHDAY<br>CAKES
-          </a>
-          <a href="/drinks-menu" class="eats-button">
-            DRINKS MENU
-          </a>
-          <a href="/yucatan" class="eats-button">
-            YUCATAN<br>TACOS
-          </a>
-          <a href="/pizza" class="eats-button">
-            YARD SALE<br>PIZZA
-          </a>
-        </div>
       </div>
     </section>
 
