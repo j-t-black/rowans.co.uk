@@ -1,5 +1,5 @@
 # Source design assets (production copies are in public/design-assets/)
-design-assets/
+/design-assets/
 
 # Test artifacts
 test-results/
