@@ -5,14 +5,15 @@
     <section class="hero-section">
       <!-- Background Image -->
       <img
-        src="/design-assets/POLICIES HERO.png"
+        src="/design-assets/POLICIES HERO.webp"
+        fetchpriority="high"
         alt="Policies"
         class="hero-background"
       />
 
       <!-- Logo at top center -->
       <img
-        src="/design-assets/MAIN LOGO.png"
+        src="/design-assets/MAIN LOGO.webp"
         alt="Rowans Bowling"
         class="hero-logo"
       />
@@ -74,9 +75,11 @@
   </div>
 </template>
 
-<style scoped>
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+<script setup lang="ts">
+useHead({ title: "Policies + FAQ — Rowan's" })
+</script>
 
+<style scoped>
 .hero-section {
   position: relative;
   width: 100%;

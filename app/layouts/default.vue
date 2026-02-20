@@ -3,7 +3,7 @@
     <!-- Fixed button stack - top right, always visible -->
     <div class="fixed-buttons">
       <button class="icon-btn" @click="navOpen = true" aria-label="Open menu">
-        <img src="/design-assets/BURGER TRANS 1.png" alt="" class="btn-icon" />
+        <img src="/design-assets/BURGER TRANS 1.webp" alt="" class="btn-icon" />
       </button>
       <a
         href="https://www.mybowlingpassport.com/112/6615/book"
@@ -12,7 +12,7 @@
         rel="noopener"
         aria-label="Book a lane"
       >
-        <img src="/design-assets/LANE TRANS 1.png" alt="" class="btn-icon" />
+        <img src="/design-assets/LANE TRANS 1.webp" alt="" class="btn-icon" />
       </a>
     </div>
 

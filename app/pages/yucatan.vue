@@ -1,8 +1,8 @@
 <template>
   <div class="min-h-screen bg-black">
     <section class="hero-section">
-      <img src="/design-assets/rowans-yucatan-assets/Yuc_Hi_Res-24.jpg" alt="Yucatan Tacos" class="hero-background" />
-      <img src="/design-assets/MAIN LOGO.png" alt="Rowans" class="hero-logo" />
+      <img src="/design-assets/rowans-yucatan-assets/Yuc_Hi_Res-24.webp" fetchpriority="high" alt="Yucatan Tacos" class="hero-background" />
+      <img src="/design-assets/MAIN LOGO.webp" alt="Rowans" class="hero-logo" />
       <h1 class="hero-heading">Yucatan<br>Tacos</h1>
       <p class="hero-sub">Fiercely Authentic Southern Mexican</p>
     </section>
@@ -12,15 +12,16 @@
 
         <!-- Menu image -->
         <img
-          src="/design-assets/YUCATAN menu 2.jpg.jpeg"
+          src="/design-assets/YUCATAN menu 2.jpg.webp"
+          loading="lazy"
           alt="Yucatan Menu"
           class="menu-image"
         />
 
         <!-- Photos -->
         <div class="photo-grid">
-          <img src="/design-assets/rowans-yucatan-assets/Yuc_Hi_Res-17.jpg" alt="Yucatan tacos" class="photo" />
-          <img src="/design-assets/rowans-yucatan-assets/Yuc_Hi_Res-12.jpg" alt="Yucatan sides" class="photo" />
+          <img src="/design-assets/rowans-yucatan-assets/Yuc_Hi_Res-17.webp" loading="lazy" alt="Yucatan tacos" class="photo" />
+          <img src="/design-assets/rowans-yucatan-assets/Yuc_Hi_Res-12.webp" loading="lazy" alt="Yucatan sides" class="photo" />
         </div>
 
         <!-- PDF menus -->
@@ -56,8 +57,11 @@
   </div>
 </template>
 
+<script setup lang="ts">
+useHead({ title: "Yucatan Tacos \u2014 Rowan's" })
+</script>
+
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
 
 .hero-section {
   position: relative;

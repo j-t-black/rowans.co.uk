@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-screen bg-black flex flex-col items-center justify-center">
-    <img src="/design-assets/MAIN LOGO.png" alt="Rowans" class="logo" />
+    <img src="/design-assets/MAIN LOGO.webp" alt="Rowans" class="logo" />
     <h1 class="heading">Yard Sale<br>Pizza</h1>
     <p class="subtext">Taking you to the menu...</p>
     <a href="https://yardsalepizza.com/menu/" target="_blank" rel="noopener" class="menu-btn">
@@ -10,6 +10,8 @@
 </template>
 
 <script setup lang="ts">
+useHead({ title: "Yard Sale Pizza \u2014 Rowan's" })
+
 onMounted(() => {
   setTimeout(() => {
     window.open('https://yardsalepizza.com/menu/', '_blank')
@@ -18,7 +20,6 @@ onMounted(() => {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
 
 .logo {
   height: 80px;

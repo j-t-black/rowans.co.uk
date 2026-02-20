@@ -7,7 +7,7 @@
 
     <section class="menu-section">
       <img
-        src="/design-assets/YUCATAN menu 2.jpg.jpeg"
+        src="/design-assets/YUCATAN menu 2.jpg.webp"
         alt="Yucatan Tacos Menu"
         class="menu-image"
       />
@@ -36,9 +36,11 @@
   </div>
 </template>
 
-<style scoped>
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+<script setup lang="ts">
+useHead({ title: "Eats + Drinks \u2014 Rowan's" })
+</script>
 
+<style scoped>
 .page {
   min-height: 100vh;
   background-color: #000;

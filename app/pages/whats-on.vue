@@ -10,17 +10,20 @@
     </header>
 
     <section class="photo-grid">
-      <img src="/design-assets/whats-on-dancefloor.png" alt="Rowans dancefloor" class="photo" />
-      <img src="/design-assets/whats-on-dj.png" alt="Rowans event" class="photo" />
-      <img src="/design-assets/whats-on-underground.png" alt="Upstairs to the Underground" class="photo" />
-      <img src="/design-assets/whats-on-summer-sessions.png" alt="Rowans Summer Sessions" class="photo" />
+      <img src="/design-assets/whats-on-dancefloor.webp" alt="Rowans dancefloor" class="photo" />
+      <img src="/design-assets/whats-on-dj.webp" alt="Rowans event" class="photo" />
+      <img src="/design-assets/whats-on-underground.webp" alt="Upstairs to the Underground" class="photo" />
+      <img src="/design-assets/whats-on-summer-sessions.webp" alt="Rowans Summer Sessions" class="photo" />
     </section>
 
   </div>
 </template>
 
+<script setup lang="ts">
+useHead({ title: "What's On \u2014 Rowan's" })
+</script>
+
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
 
 .page {
   min-height: 100vh;

@@ -90,6 +90,8 @@
 </template>
 
 <script setup lang="ts">
+useHead({ title: "Line-ups + Events — Rowan's" })
+
 const API = '/api/schedule'
 
 // Get Monday of the current week
@@ -170,8 +172,6 @@ const activeDays = computed(() => {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
-
 .page {
   min-height: 100vh;
   background-color: #000;

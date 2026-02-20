@@ -1,14 +1,14 @@
 <template>
   <div class="min-h-screen bg-black">
     <section class="hero-section">
-      <img src="/design-assets/HERO 3 - EATS AND DRINKS.png" alt="Birthday Cakes" class="hero-background" />
-      <img src="/design-assets/MAIN LOGO.png" alt="Rowans" class="hero-logo" />
+      <img src="/design-assets/HERO 3 - EATS AND DRINKS.webp" fetchpriority="high" alt="Birthday Cakes" class="hero-background" />
+      <img src="/design-assets/MAIN LOGO.webp" alt="Rowans" class="hero-logo" />
       <h1 class="hero-heading">Birthday<br>Cakes</h1>
     </section>
 
     <section class="content-section">
       <div class="content-container">
-        <img src="/design-assets/PUNK CAKES.png" alt="Punk Cake" class="punk-logo" />
+        <img src="/design-assets/PUNK CAKES.webp" loading="lazy" alt="Punk Cake" class="punk-logo" />
 
         <p class="content-text">
           Sadly, due to H+S regulations we cannot allow cakes and other food to be brought into the centre.
@@ -35,9 +35,11 @@
   </div>
 </template>
 
-<style scoped>
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+<script setup lang="ts">
+useHead({ title: "Birthday Cakes \u2014 Rowan's" })
+</script>
 
+<style scoped>
 .hero-section {
   position: relative;
   width: 100%;

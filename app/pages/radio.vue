@@ -5,21 +5,23 @@
     <section class="hero-section">
       <!-- Red Speaker (half visible on left) -->
       <img
-        src="/design-assets/ROWANS AUDIO LOGO.png"
+        src="/design-assets/ROWANS AUDIO LOGO.webp"
+        fetchpriority="high"
         alt="Speaker"
         class="left-speaker"
       />
 
       <!-- Background Image -->
       <img
-        src="/design-assets/ROWANS RADIO HERO.png"
+        src="/design-assets/ROWANS RADIO HERO.webp"
+        fetchpriority="high"
         alt="Rowans Radio"
         class="hero-background"
       />
 
       <!-- Logo at top center -->
       <img
-        src="/design-assets/MAIN LOGO.png"
+        src="/design-assets/MAIN LOGO.webp"
         alt="Rowans Bowling"
         class="hero-logo"
       />
@@ -40,13 +42,13 @@
         <!-- Red Speaker Buttons -->
         <div class="speaker-buttons">
           <a href="/poster1" class="speaker-button">
-            <img src="/design-assets/POSTER 1.jpg" alt="Poster 1" />
+            <img src="/design-assets/POSTER 1.webp" loading="lazy" alt="Poster 1" />
           </a>
           <a href="/poster2" class="speaker-button">
-            <img src="/design-assets/POSTER 2.jpg" alt="Poster 2" />
+            <img src="/design-assets/POSTER 2.webp" loading="lazy" alt="Poster 2" />
           </a>
           <a href="/poster3" class="speaker-button">
-            <img src="/design-assets/POSTER 3.jpg" alt="Poster 3" />
+            <img src="/design-assets/POSTER 3.webp" loading="lazy" alt="Poster 3" />
           </a>
         </div>
       </div>
@@ -78,8 +80,11 @@
   </div>
 </template>
 
+<script setup lang="ts">
+useHead({ title: "Rowans Radio — Rowan's" })
+</script>
+
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
 
 .hero-section {
   position: relative;

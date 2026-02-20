@@ -5,14 +5,15 @@
     <section class="hero-section">
       <!-- Background Image -->
       <img
-        src="/design-assets/GROUP HERO.png"
+        src="/design-assets/GROUP HERO.webp"
+        fetchpriority="high"
         alt="Large Groups"
         class="hero-background"
       />
 
       <!-- Logo at top center -->
       <img
-        src="/design-assets/MAIN LOGO.png"
+        src="/design-assets/MAIN LOGO.webp"
         alt="Rowans Bowling"
         class="hero-logo"
       />
@@ -64,8 +65,11 @@
   </div>
 </template>
 
+<script setup lang="ts">
+useHead({ title: "Group Bookings — Rowan's" })
+</script>
+
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
 
 .hero-section {
   position: relative;

@@ -3,7 +3,7 @@
     <!-- Title + Logo -->
     <div class="menu-header">
       <h1 class="menu-title">Bar Menu</h1>
-      <img src="/design-assets/MAIN LOGO.png" alt="Rowans Bowl" class="menu-logo" />
+      <img src="/design-assets/MAIN LOGO.webp" alt="Rowans Bowl" class="menu-logo" />
     </div>
 
     <!-- Main content -->
@@ -468,7 +468,6 @@ const spiritsRow2: SpiritsGroup[] = [
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,700;1,300&display=swap');
 
 .menu-page {
   background: #000;

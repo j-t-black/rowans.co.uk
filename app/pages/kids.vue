@@ -2,8 +2,8 @@
 <template>
   <div class="min-h-screen bg-black">
     <section class="hero-section">
-      <img src="/design-assets/GROUP HERO.png" alt="Kids Parties" class="hero-background" />
-      <img src="/design-assets/MAIN LOGO.png" alt="Rowans Bowling" class="hero-logo" />
+      <img src="/design-assets/GROUP HERO.webp" fetchpriority="high" alt="Kids Parties" class="hero-background" />
+      <img src="/design-assets/MAIN LOGO.webp" alt="Rowans Bowling" class="hero-logo" />
       <h1 class="hero-heading">Kids Parties</h1>
     </section>
 
@@ -38,8 +38,11 @@
   </div>
 </template>
 
+<script setup lang="ts">
+useHead({ title: "Kids Parties — Rowan's" })
+</script>
+
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
 .hero-section { position: relative; width: 100%; min-height: 100vh; background-color: #000000; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem; overflow: hidden; }
 .hero-background { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
 .hero-logo { position: absolute; top: 60px; left: 50%; transform: translateX(-50%); height: 120px; width: auto; z-index: 10; }

@@ -4,14 +4,15 @@
     <section class="hero-section">
       <!-- Background Image -->
       <img
-        src="/design-assets/HERO 1.4 CLEAN LINES - NEW 16.png"
+        src="/design-assets/HERO 1.4 CLEAN LINES - NEW 16.webp"
         alt="Rowans Venue"
         class="hero-background"
+        fetchpriority="high"
       />
 
       <!-- Logo at top center -->
       <img
-        src="/design-assets/MAIN LOGO.png"
+        src="/design-assets/MAIN LOGO.webp"
         alt="Rowans Bowling"
         class="hero-logo"
       />
@@ -76,7 +77,7 @@
       </p>
 
       <div class="eats-image-container">
-        <img src="/design-assets/eats-drinks-hero.png" alt="Eats and Drinks" class="eats-hero-image" />
+        <img src="/design-assets/eats-drinks-hero.webp" alt="Eats and Drinks" class="eats-hero-image" loading="lazy" />
         <div class="eats-gradient-top" />
         <div class="eats-gradient-bottom" />
         <div class="eats-buttons">
@@ -109,9 +110,10 @@
         preload="none"
       />
       <img
-        src="/design-assets/ROWANS AUDIO LOGO.png"
+        src="/design-assets/ROWANS AUDIO LOGO.webp"
         alt="Audio"
         class="audio-logo"
+        loading="lazy"
       />
       <div class="audio-content">
         <h2 class="audio-heading">AUDIO</h2>
@@ -175,9 +177,11 @@
   </div>
 </template>
 
+<script setup lang="ts">
+useHead({ title: "Rowan's \u2014 Iconic Venue in Finsbury Park" })
+</script>
+
 <style scoped>
-/* Import JetBrains Mono font */
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
 
 .hero-section {
   position: relative;
@@ -371,7 +375,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('/design-assets/BUTTON BASE.png');
+  background-image: url('/design-assets/BUTTON BASE.webp');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -474,7 +478,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('/design-assets/BUTTON BASE.png');
+  background-image: url('/design-assets/BUTTON BASE.webp');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -570,7 +574,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('/design-assets/AUDIO BUTTON.png');
+  background-image: url('/design-assets/AUDIO BUTTON.webp');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;

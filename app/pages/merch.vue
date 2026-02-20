@@ -4,14 +4,17 @@
       <h1 class="heading">Rowans Merch</h1>
     </header>
     <div class="image-wrap">
-      <img src="/design-assets/merch-vinyl-logo.png" alt="Rowans" class="logo-image" />
+      <img src="/design-assets/merch-vinyl-logo.webp" alt="Rowans" class="logo-image" />
     </div>
     <p class="coming-soon">Coming soon.</p>
   </div>
 </template>
 
+<script setup lang="ts">
+useHead({ title: "Merch — Rowan's" })
+</script>
+
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
 
 .page {
   min-height: 100vh;
