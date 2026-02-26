@@ -501,9 +501,7 @@ const spiritsRow2: SpiritsGroup[] = [
 .menu-content {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 16px 64px 16px;
-  /* right padding bumped on mobile — fixed nav buttons sit top-right */
-  padding-right: 72px;
+  padding: 0 12px 64px 12px;
 }
 
 /* ── Grid rows ── */
@@ -691,7 +689,7 @@ const spiritsRow2: SpiritsGroup[] = [
   .menu-header { padding: 80px 24px 32px; }
   .menu-title  { font-size: 64px; }
   .menu-logo   { height: 120px; }
-  .menu-content { padding: 0 48px 80px; }
+  .menu-content { padding: 0 48px 80px 48px; }
 
   .two-col   { grid-template-columns: 1fr 1fr; }
   .three-col { grid-template-columns: 1fr 1fr 1fr; }

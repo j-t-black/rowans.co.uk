@@ -727,7 +727,7 @@ useHead({ title: "Rowan's \u2014 Iconic Venue in Finsbury Park" })
 
   .party-buttons {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     gap: 0.4rem;
     max-width: none;
     justify-content: center;
@@ -742,6 +742,7 @@ useHead({ title: "Rowan's \u2014 Iconic Venue in Finsbury Park" })
 
   /* Audio: shrink to fit 3 across */
   .audio-buttons {
+    flex-wrap: wrap;
     gap: 1rem;
   }
 

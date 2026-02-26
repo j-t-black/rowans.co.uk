@@ -135,6 +135,7 @@ useHead({ title: "Kids Parties — Rowan's" })
   font-size: 16px;
   color: #fff;
   width: 340px;
+  max-width: 100%;
 }
 
 .input-label {

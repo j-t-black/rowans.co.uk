@@ -36,7 +36,7 @@ useHead({ title: "DJs — Rowan's" })
 .hero-background { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
 .hero-logo { position: absolute; top: 60px; left: 50%; transform: translateX(-50%); height: 120px; width: auto; z-index: 10; }
 .hero-heading { position: relative; font-family: 'JetBrains Mono', monospace; font-weight: 400; font-size: 36px; color: #ffffff; opacity: 0.9; text-align: center; margin: 0; z-index: 5; }
-.content-section { background-color: #000000; padding: 4rem 2rem; min-height: 50vh; }
+.content-section { background-color: #000000; padding: 2rem; }
 .content-container { max-width: 800px; margin: 0 auto; }
 .content-text { font-family: 'JetBrains Mono', monospace; font-size: 18px; line-height: 1.8; color: #ffffff; opacity: 0.9; text-align: center; }
 .footer { background-color: #17181a; color: #ffffff; padding: 4rem 2rem; }

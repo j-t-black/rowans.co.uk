@@ -173,6 +173,10 @@ useHead({ title: "Yucatan Tacos \u2014 Rowan's" })
   border-color: #ffffff;
 }
 
+@media (max-width: 767px) {
+  .hero-section { min-height: 40vh; }
+}
+
 @media (min-width: 768px) {
   .hero-heading { font-size: 48px; }
   .hero-sub { font-size: 14px; }

@@ -12,7 +12,11 @@
     "figma:match-assets": "node scripts/match-assets.js",
     "figma:generate-code": "node scripts/generate-code.js",
     "figma:download-references": "node scripts/download-figma-references.js",
-    "test:visual": "node scripts/visual-check.js"
+    "test:visual": "node scripts/visual-check.js",
+    "capture:page": "node scripts/capture-page.js",
+    "capture:batch": "node scripts/capture-batch.js",
+    "capture:report": "node scripts/comparison-report.js",
+    "capture:mobile": "node scripts/capture-batch.js both --viewport=375x812"
   },
   "dependencies": {
     "@nuxt/ui": "^4.3.0",

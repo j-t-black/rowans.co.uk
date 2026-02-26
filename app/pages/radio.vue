@@ -128,6 +128,7 @@ useHead({ title: "Rowans Radio — Rowan's" })
   border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 1.25rem 1.5rem;
   width: 320px;
+  max-width: 100%;
   text-align: left;
   margin-left: 10%;
 }
@@ -282,6 +283,10 @@ useHead({ title: "Rowans Radio — Rowan's" })
 }
 
 @media (max-width: 600px) {
+  .page-heading {
+    font-size: 30px;
+  }
+
   .big-speaker {
     height: 250px;
     left: -20%;
@@ -289,6 +294,7 @@ useHead({ title: "Rowans Radio — Rowan's" })
 
   .audio-player {
     width: 260px;
+    max-width: 100%;
     margin-left: 5%;
   }
 

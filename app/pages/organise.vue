@@ -128,7 +128,8 @@ useHead({ title: "Organise Your Party — Rowan's" })
 
 @media (max-width: 600px) {
   .party-buttons {
-    gap: 0.4rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
   }
 
   .party-button {
