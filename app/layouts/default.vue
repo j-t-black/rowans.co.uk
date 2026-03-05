@@ -2,18 +2,24 @@
   <div>
     <!-- Fixed button stack - top right, always visible -->
     <div class="fixed-buttons">
-      <button class="icon-btn" @click="navOpen = true" aria-label="Open menu">
-        <img src="/design-assets/BURGER TRANS 1.webp" alt="" class="btn-icon" />
-      </button>
-      <a
-        href="https://www.mybowlingpassport.com/112/6615/book"
-        class="icon-btn"
-        target="_blank"
-        rel="noopener"
-        aria-label="Book a lane"
-      >
-        <img src="/design-assets/LANE TRANS 1.webp" alt="" class="btn-icon" />
-      </a>
+      <div class="btn-group">
+        <button class="icon-btn" @click="navOpen = true" aria-label="Open menu">
+          <img src="/design-assets/BURGER TRANS 1.webp" alt="" class="btn-icon" />
+        </button>
+        <span class="btn-label">menu</span>
+      </div>
+      <div class="btn-group">
+        <a
+          href="https://www.mybowlingpassport.com/112/6615/book"
+          class="icon-btn"
+          target="_blank"
+          rel="noopener"
+          aria-label="Book a lane"
+        >
+          <img src="/design-assets/LANE TRANS 1.webp" alt="" class="btn-icon" />
+        </a>
+        <span class="btn-label">book a<br>lane</span>
+      </div>
     </div>
 
     <BurgerNav :is-open="navOpen" @close="navOpen = false" />
@@ -29,8 +35,8 @@ const navOpen = ref(false)
 <style scoped>
 .fixed-buttons {
   position: fixed;
-  top: 12px;
-  right: 12px;
+  top: 22px;
+  right: 22px;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -56,6 +62,23 @@ const navOpen = ref(false)
   transform: scale(1.12);
 }
 
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 8px;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 3px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  opacity: 0.9;
+}
+
 .btn-icon {
   width: 100%;
   height: 100%;
@@ -65,8 +88,8 @@ const navOpen = ref(false)
 
 @media (min-width: 1920px) {
   .fixed-buttons {
-    top: 20px;
-    right: 20px;
+    top: 30px;
+    right: 30px;
     gap: 16px;
   }
 
@@ -74,12 +97,21 @@ const navOpen = ref(false)
     width: 69px;
     height: 67px;
   }
+
+  .btn-label {
+    font-size: 10px;
+    margin-top: 4px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1919px) {
   .icon-btn {
     width: 60px;
     height: 59px;
+  }
+
+  .btn-label {
+    font-size: 9px;
   }
 }
 </style>

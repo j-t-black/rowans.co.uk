@@ -2,22 +2,95 @@
 @import "@nuxt/ui";
 
 @theme {
+  /* === Font Family === */
   --font-mono: 'JetBrains Mono', monospace;
 
-  /* Custom breakpoint for large desktop */
+  /* === Breakpoints === */
   --breakpoint-3xl: 1920px;
 
-  /* Custom colors */
-  --color-dark-bg: #17181a;
+  /* === Brand Colors (from Figma screenshots) === */
+  --color-rowans-black: #000000;
+  --color-rowans-dark: #17181a;
+  --color-rowans-red: #ff0000;
+  --color-rowans-white: #ffffff;
+  --color-rowans-border: rgba(255, 255, 255, 0.4);
+  --color-rowans-border-subtle: rgba(255, 255, 255, 0.15);
+  --color-rowans-muted: rgba(255, 255, 255, 0.7);
+  --color-rowans-overlay: rgba(0, 0, 0, 0.6);
+
+  /* === Font Sizes (static desktop reference — use for Tailwind utilities) === */
+  --text-page-title: 64px;
+  --text-section-title: 48px;
+  --text-subtitle: 24px;
+  --text-body: 18px;
+  --text-label: 14px;
+  --text-fine: 11px;
+
+  /* === Spacing (section/component level) === */
+  --spacing-section: 4rem;
+  --spacing-block: 2rem;
+  --spacing-element: 1rem;
+  --spacing-tight: 0.5rem;
+  --spacing-card: 1.25rem;
+
+  /* === Border Radius === */
+  --radius-card: 8px;
+  --radius-button: 4px;
 }
 
-/* Dark-only site — override NuxtUI body defaults */
+/* === NuxtUI Overrides (dark-only site) === */
 :root {
   --ui-bg: #000000;
   --ui-text: #ffffff;
+  --ui-text-muted: rgba(255, 255, 255, 0.7);
+  --ui-border: rgba(255, 255, 255, 0.4);
+  --ui-radius: 8px;
 }
 
-/* Global resets (moved from nuxt.config.ts innerHTML) */
+/* === Brand Tokens (always available via var()) === */
+:root {
+  --color-bg: #000000;
+  --color-bg-card: #17181a;
+  --color-text: #ffffff;
+  --color-heading: #ff0000;
+  --color-link: #ff0000;
+  --color-muted: rgba(255, 255, 255, 0.7);
+  --color-border: rgba(255, 255, 255, 0.4);
+  --color-border-subtle: rgba(255, 255, 255, 0.15);
+  --color-overlay: rgba(0, 0, 0, 0.6);
+  --radius-card: 8px;
+  --radius-button: 4px;
+
+  /* Section heading defaults (reusable across all pages) */
+  --section-heading-size: 46px;
+  --section-heading-weight: 400;
+}
+
+/* === Responsive Typography (clamp-based, scales between mobile and desktop) === */
+:root {
+  /* Page titles: 36px mobile → 70px desktop (Figma: 64-80px desktop, 36-40px mobile) */
+  --heading-xl: clamp(36px, 5vw, 70px);
+
+  /* Section titles: 28px mobile → 48px desktop */
+  --heading-lg: clamp(28px, 4vw, 48px);
+
+  /* Subtitles: 18px mobile → 24px desktop */
+  --heading-md: clamp(18px, 2.5vw, 24px);
+
+  /* Body text: 14px mobile → 18px desktop */
+  --text-base: clamp(14px, 1.5vw, 18px);
+
+  /* Small text: 12px mobile → 14px desktop */
+  --text-small: clamp(12px, 1.2vw, 14px);
+
+  /* Section padding: 2rem mobile → 4rem desktop */
+  --section-padding: clamp(2rem, 5vw, 4rem);
+
+  /* Block padding: 1rem mobile → 2rem desktop */
+  --block-padding: clamp(1rem, 3vw, 2rem);
+}
+
+/* === Global Resets === */
 html, body {
   background-color: #000000 !important;
   margin: 0;
@@ -28,13 +101,4 @@ html, body {
 
 *, *::before, *::after {
   box-sizing: border-box;
-}
-
-/* Responsive typography custom properties */
-:root {
-  --heading-xl: clamp(28px, 5vw, 64px);
-  --heading-lg: clamp(24px, 4vw, 48px);
-  --heading-md: clamp(20px, 3vw, 36px);
-  --text-base: clamp(14px, 2vw, 18px);
-  --section-padding: clamp(1rem, 3vw, 3rem);
 }

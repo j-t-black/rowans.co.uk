@@ -28,7 +28,7 @@
     <!-- Welcome to Rowans Section -->
     <section class="welcome-section">
       <h2 class="welcome-heading">Welcome to Rowans</h2>
-      <p class="welcome-text welcome-features">
+      <p class="welcome-text welcome-features welcome-levels">
         2 levels of...
       </p>
       <p class="welcome-text welcome-features">
@@ -73,7 +73,8 @@
     <section class="eats-section">
       <h2 class="eats-heading">Eats + Drinks</h2>
       <p class="eats-text">
-        Signature frozen cocktails, Authentic southern Mexican taco's, Artisan sourdough pizza
+        Signature Frozen Cocktails, Authentic Southern Mexican Tacos<br>
+        Artisan Sourdough Pizza
       </p>
 
       <div class="eats-image-container">
@@ -118,7 +119,9 @@
       <div class="audio-content">
         <h2 class="audio-heading">AUDIO</h2>
         <p class="audio-text">
-          Void Acoustics and Funktion One sound-systems across the venue. Playing big basslines. Ever evolving line-up and weekly events.
+          Void Acoustics and Funktion One sound-systems across the venue.<br>
+          Playing big basslines.<br>
+          Ever evolving line-up and weekly events.
         </p>
       </div>
       <div class="audio-buttons">
@@ -139,7 +142,7 @@
       <h2 class="visit-heading">Visit Us</h2>
       <div class="visit-cards">
         <div class="visit-card">
-          <h3>Finsbury Park</h3>
+          <h3>Opening Hours</h3>
           <div class="visit-hours">
             <p>Monday - Thursday<br>5pm - 1am</p>
             <p>Friday - Saturday<br>12pm - 3am</p>
@@ -191,8 +194,9 @@ useHead({ title: "Rowan's \u2014 Iconic Venue in Finsbury Park" })
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 2rem;
+  padding-top: 20px;
   overflow: hidden;
 }
 
@@ -203,14 +207,12 @@ useHead({ title: "Rowan's \u2014 Iconic Venue in Finsbury Park" })
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center calc(50% - 20px);
   z-index: 0;
 }
 
 .hero-logo {
-  position: absolute;
-  top: 60px;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
   height: 120px;
   width: auto;
   z-index: 10;
@@ -220,40 +222,36 @@ useHead({ title: "Rowan's \u2014 Iconic Venue in Finsbury Park" })
   position: relative;
   font-family: 'JetBrains Mono', monospace;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 1.32;
+  font-size: 17px;
+  line-height: 1.4;
   color: #ffffff;
   opacity: 0.8;
   text-align: center;
-  margin: 0;
+  margin: 15px 0 0 0;
   z-index: 5;
 }
 
 
 /* Desktop styles (1920px+) */
 @media (min-width: 1920px) {
-  .hero-heading {
-    font-size: 36px;
-    line-height: 1.32;
+  .hero-section {
+    padding-top: 28px;
   }
 
   .hero-logo {
-    top: 100px;
     height: 180px;
   }
-
 }
 
 /* Tablet/Medium Desktop */
 @media (min-width: 768px) and (max-width: 1919px) {
-  .hero-heading {
-    font-size: 28px;
+  .hero-section {
+    padding-top: 22px;
   }
 
   .hero-logo {
     height: 150px;
   }
-
 }
 
 /* Welcome Section */
@@ -271,9 +269,9 @@ useHead({ title: "Rowan's \u2014 Iconic Venue in Finsbury Park" })
 
 .welcome-heading {
   font-family: 'JetBrains Mono', monospace;
-  font-weight: 700;
-  font-size: 32px;
-  color: #ff0000;
+  font-weight: var(--section-heading-weight, 400);
+  font-size: var(--section-heading-size, 46px);
+  color: var(--color-heading, #ff0000);
   margin-bottom: 1rem;
   text-transform: none;
 }
@@ -281,7 +279,7 @@ useHead({ title: "Rowan's \u2014 Iconic Venue in Finsbury Park" })
 .welcome-text {
   font-family: 'JetBrains Mono', monospace;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 12px;
   line-height: 1.8;
   color: #ffffff;
   opacity: 0.85;
@@ -295,15 +293,17 @@ useHead({ title: "Rowan's \u2014 Iconic Venue in Finsbury Park" })
   opacity: 0.9;
 }
 
+.welcome-levels {
+  margin-bottom: 0.75rem;
+}
+
 /* Desktop styles for welcome section */
 @media (min-width: 1920px) {
   .welcome-heading {
-    font-size: 48px;
     margin-bottom: 2.5rem;
   }
 
   .welcome-text {
-    font-size: 22px;
     line-height: 1.7;
     max-width: 1000px;
   }
@@ -311,12 +311,7 @@ useHead({ title: "Rowan's \u2014 Iconic Venue in Finsbury Park" })
 
 /* Tablet/Medium Desktop for welcome section */
 @media (min-width: 768px) and (max-width: 1919px) {
-  .welcome-heading {
-    font-size: 40px;
-  }
-
   .welcome-text {
-    font-size: 20px;
     max-width: 900px;
   }
 }
@@ -325,7 +320,7 @@ useHead({ title: "Rowan's \u2014 Iconic Venue in Finsbury Park" })
 .party-section {
   position: relative;
   width: 100%;
-  min-height: 60vh;
+  min-height: calc(60vh + 180px);
   background-color: #000000;
   display: flex;
   flex-direction: column;
@@ -351,7 +346,7 @@ useHead({ title: "Rowan's \u2014 Iconic Venue in Finsbury Park" })
   z-index: 1;
   font-family: 'JetBrains Mono', monospace;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 18px;
   color: #ffffff;
   opacity: 0.9;
   margin-bottom: 1.5rem;
@@ -370,8 +365,8 @@ useHead({ title: "Rowan's \u2014 Iconic Venue in Finsbury Park" })
 
 .party-button {
   position: relative;
-  width: 150px;
-  height: 150px;
+  width: 105px;
+  height: 105px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -382,10 +377,10 @@ useHead({ title: "Rowan's \u2014 Iconic Venue in Finsbury Park" })
   color: #ffffff;
   font-family: 'JetBrains Mono', monospace;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 16px;
   text-align: center;
   text-decoration: none;
-  padding: 1.5rem;
+  padding: 1.2rem;
   transition: all 0.2s;
   line-height: 1.3;
 }
@@ -400,22 +395,32 @@ useHead({ title: "Rowan's \u2014 Iconic Venue in Finsbury Park" })
   position: relative;
   width: 100%;
   background-color: #000000;
-  padding: 1.25rem 2rem;
+  padding: 0;
   text-align: center;
 }
 
 .eats-heading {
+  position: absolute;
+  top: 2rem;
+  left: 0;
+  right: 0;
+  z-index: 2;
   font-family: 'JetBrains Mono', monospace;
-  font-weight: 400;
-  font-size: 24px;
-  color: #ff0000;
+  font-weight: var(--section-heading-weight, 400);
+  font-size: var(--section-heading-size, 46px);
+  color: var(--color-heading, #ff0000);
   opacity: 0.9;
   margin-bottom: 0.75rem;
 }
 
 .eats-text {
+  position: absolute;
+  top: 6.5rem;
+  left: 0;
+  right: 0;
+  z-index: 2;
   font-family: 'JetBrains Mono', monospace;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 16px;
   color: #ffffff;
   opacity: 0.8;
@@ -428,6 +433,7 @@ useHead({ title: "Rowan's \u2014 Iconic Venue in Finsbury Park" })
 .eats-image-container {
   position: relative;
   width: 100%;
+  margin-top: 15px;
 }
 
 .eats-hero-image {
@@ -460,12 +466,12 @@ useHead({ title: "Rowan's \u2014 Iconic Venue in Finsbury Park" })
 
 .eats-buttons {
   position: absolute;
-  bottom: 1rem;
+  bottom: calc(2rem + 20px);
   left: 0;
   right: 0;
   display: flex;
   flex-direction: row;
-  gap: 0.5rem;
+  gap: 1.5rem;
   justify-content: center;
   padding: 0 1rem;
   z-index: 2;
@@ -473,8 +479,8 @@ useHead({ title: "Rowan's \u2014 Iconic Venue in Finsbury Park" })
 
 .eats-button {
   position: relative;
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -485,7 +491,7 @@ useHead({ title: "Rowan's \u2014 Iconic Venue in Finsbury Park" })
   color: #ffffff;
   font-family: 'JetBrains Mono', monospace;
   font-weight: 400;
-  font-size: 9px;
+  font-size: 15px;
   text-align: center;
   text-decoration: none;
   padding: 0.75rem;
@@ -533,26 +539,27 @@ useHead({ title: "Rowan's \u2014 Iconic Venue in Finsbury Park" })
 .audio-content {
   position: relative;
   z-index: 1;
+  margin-top: -90px;
   margin-bottom: 3rem;
 }
 
 .audio-heading {
   font-family: 'JetBrains Mono', monospace;
-  font-weight: 400;
-  font-size: 24px;
-  color: #ff0000;
+  font-weight: var(--section-heading-weight, 400);
+  font-size: var(--section-heading-size, 46px);
+  color: var(--color-heading, #ff0000);
   opacity: 0.9;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.4rem;
 }
 
 .audio-text {
   font-family: 'JetBrains Mono', monospace;
-  font-weight: 400;
-  font-size: 16px;
+  font-weight: 700;
+  font-size: 10px;
   color: #ffffff;
   opacity: 0.8;
   margin: 0 auto;
-  max-width: 700px;
+  max-width: 400px;
   line-height: 1.6;
 }
 
@@ -569,8 +576,8 @@ useHead({ title: "Rowan's \u2014 Iconic Venue in Finsbury Park" })
 
 .audio-button {
   position: relative;
-  width: 150px;
-  height: 150px;
+  width: 110px;
+  height: 110px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -580,8 +587,8 @@ useHead({ title: "Rowan's \u2014 Iconic Venue in Finsbury Park" })
   background-position: center;
   color: #ffffff;
   font-family: 'JetBrains Mono', monospace;
-  font-weight: 400;
-  font-size: 12px;
+  font-weight: 700;
+  font-size: 16px;
   text-align: center;
   text-decoration: none;
   padding: 1.5rem;
@@ -606,9 +613,9 @@ useHead({ title: "Rowan's \u2014 Iconic Venue in Finsbury Park" })
 
 .visit-heading {
   font-family: 'JetBrains Mono', monospace;
-  font-weight: 700;
-  font-size: 24px;
-  color: #ff0000;
+  font-weight: var(--section-heading-weight, 400);
+  font-size: var(--section-heading-size, 46px);
+  color: var(--color-heading, #ff0000);
   margin-bottom: 3rem;
 }
 
@@ -637,8 +644,8 @@ useHead({ title: "Rowan's \u2014 Iconic Venue in Finsbury Park" })
 .visit-card h3 {
   font-family: 'JetBrains Mono', monospace;
   font-weight: 400;
-  font-size: 20px;
-  color: #ffffff;
+  font-size: 22px;
+  color: var(--color-heading, #ff0000);
   margin-bottom: 1.5rem;
 }
 
@@ -700,6 +707,13 @@ useHead({ title: "Rowan's \u2014 Iconic Venue in Finsbury Park" })
   color: #9ca3af;
   font-family: 'JetBrains Mono', monospace;
   font-size: 12px;
+}
+
+/* Mobile: shift hero background to center the building */
+@media (max-width: 500px) {
+  .hero-background {
+    object-position: calc(50% + 220px) calc(50% - 20px);
+  }
 }
 
 /* Mobile fixes */
@@ -808,13 +822,6 @@ useHead({ title: "Rowan's \u2014 Iconic Venue in Finsbury Park" })
 
 /* Desktop Responsive */
 @media (min-width: 1920px) {
-  .party-heading,
-  .eats-heading,
-  .audio-heading,
-  .visit-heading {
-    font-size: 32px;
-  }
-
   .party-buttons,
   .eats-buttons {
     gap: 3rem;
@@ -825,21 +832,18 @@ useHead({ title: "Rowan's \u2014 Iconic Venue in Finsbury Park" })
   }
 
   .party-button {
-    width: 180px;
-    height: 180px;
-    font-size: 14px;
+    width: 130px;
+    height: 130px;
   }
 
   .eats-button {
     width: 140px;
     height: 140px;
-    font-size: 12px;
   }
 
   .audio-button {
     width: 180px;
     height: 180px;
-    font-size: 14px;
   }
 
   .audio-logo {
