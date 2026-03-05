@@ -84,9 +84,9 @@ useHead({ title: "Organise Your Party — Rowan's" })
   position: relative;
   z-index: 1;
   font-family: 'JetBrains Mono', monospace;
-  font-weight: 400;
-  font-size: 40px;
-  color: #ff0000;
+  font-weight: var(--section-heading-weight, 400);
+  font-size: var(--section-heading-size, 46px);
+  color: var(--color-heading, #ff0000);
   text-align: center;
   margin-bottom: 2.5rem;
 }

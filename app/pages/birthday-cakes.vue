@@ -66,9 +66,9 @@ useHead({ title: "Birthday Cake — Rowan's" })
 
 .page-heading {
   font-family: 'JetBrains Mono', monospace;
-  font-weight: 400;
-  font-size: 36px;
-  color: #ff0000;
+  font-weight: var(--section-heading-weight, 400);
+  font-size: var(--section-heading-size, 46px);
+  color: var(--color-heading, #ff0000);
   margin: 0 0 2rem;
   line-height: 1.1;
 }

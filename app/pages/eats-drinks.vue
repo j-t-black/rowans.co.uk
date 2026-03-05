@@ -53,9 +53,9 @@ useHead({ title: "Eats + Drinks \u2014 Rowan's" })
 
 .heading {
   font-family: 'JetBrains Mono', monospace;
-  font-weight: 400;
-  font-size: 28px;
-  color: #ff3333;
+  font-weight: var(--section-heading-weight, 400);
+  font-size: var(--section-heading-size, 46px);
+  color: var(--color-heading, #ff0000);
   margin: 0;
   line-height: 1.1;
 }
