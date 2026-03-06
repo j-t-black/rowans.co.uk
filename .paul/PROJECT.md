@@ -35,13 +35,13 @@ Rewriting and updating the Rowan's brand for the future — letting younger cust
 - [x] BurgerNav overflow fix at 1920px — Phase 3
 
 ### Active (In Progress)
-- [ ] Stub pages need real content (about, karaoke, merch, contact)
+- [ ] Desktop Figma verification pass (all polished pages vs Figma at 1920px)
 - [ ] Intermediate breakpoints (768-1919px) tuning
-- [ ] Mobile verification pass (post-desktop work)
+- [ ] Mobile verification and polish pass
 
 ### Planned (Next)
-- [ ] Missing eats-drinks hub page
-- [ ] Pages without Figma frames need polish (yucatan, pizza, organise)
+- [ ] Deferred items reappraisal (stub pages, missing hub pages, pages without Figma frames)
+- [ ] Final QA & launch
 
 ### Out of Scope
 - Booking system backend — external provider handles this

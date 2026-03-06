@@ -5,29 +5,29 @@
 See: .paul/PROJECT.md (updated 2026-03-06)
 
 **Core value:** Rewriting and updating the Rowan's brand for the future — letting younger customers know that bowling and Rowan's is still really cool.
-**Current focus:** Phase 4 — Stub Pages Build (about, karaoke, merch, contact)
+**Current focus:** Phase 4 — Desktop Figma Verification (all polished pages vs Figma)
 
 ## Current Position
 
 Milestone: v1.0 Pixel-Perfect Launch
-Phase: 4 of 5 (Stub Pages Build) — Not started
-Plan: Not started
-Status: Ready to plan
-Last activity: 2026-03-06 — Phase 3 complete, transitioned to Phase 4
+Phase: 4 of 8 (Desktop Figma Verification) — In progress
+Plan: 04-01 partially executed (verification found pages look good, minor fixes applied)
+Status: Mid-APPLY, paused for session break
+Last activity: 2026-03-06 — Fixed home eats text + restyled drinks-menu at 1920px
 
 Progress:
-- Milestone: [██████░░░░] 60%
+- Milestone: [████░░░░░░] 42%
 - Phase 1: [██████████] 100%
 - Phase 2: [██████████] 100%
 - Phase 3: [██████████] 100%
-- Phase 4: [░░░░░░░░░░] 0%
+- Phase 4: [██░░░░░░░░] 20%
 
 ## Loop Position
 
 Current loop state:
 ```
 PLAN ──▶ APPLY ──▶ UNIFY
-  ○        ○        ○     [Phase 4 — ready to plan]
+  ✓        ~        ○     [APPLY in progress, paused mid-session]
 ```
 
 ## Accumulated Context
@@ -44,6 +44,9 @@ PLAN ──▶ APPLY ──▶ UNIFY
 - BurgerNav: flex-start + scroll for overflow safety at 1920px
 - Sub-agents cannot use Figma MCP — capture screenshots from main context
 - CSS vars (--section-heading-size, etc.) for cross-page heading consistency
+- Playwright fullPage screenshots are UNRELIABLE for visual comparison (video bg, absolute pos issues)
+- Drinks-menu Figma is 3 stacked images; we chose HTML approach restyled to match look
+- User's real browser is ground truth — don't over-report discrepancies from headless screenshots
 
 ### Pages Polished (1920px breakpoint added)
 1. / (home), /whats-on, /radio, /policies, /groups, /kids
@@ -52,7 +55,7 @@ PLAN ──▶ APPLY ──▶ UNIFY
 ### Pages NOT polished (no Figma Desktop frame)
 - /eats-drinks (hub), /organise, /yucatan, /pizza, /line-upsevents
 
-### Stub Pages (Phase 4 targets)
+### Stub Pages (deferred to Phase 7)
 - /about, /karaoke, /merch (content TBD), /contact
 
 ### Git State
@@ -72,9 +75,10 @@ Feature branches merged: none
 ## Session Continuity
 
 Last session: 2026-03-06
-Stopped at: Phase 3 complete, ready to plan Phase 4
-Next action: /paul:plan for Phase 4
-Resume file: .paul/ROADMAP.md
+Stopped at: Phase 4 APPLY mid-execution. Fixed home eats text + drinks-menu restyle. Uncommitted changes.
+Next action: /paul:resume — review drinks-menu in browser, commit fixes, continue verifying remaining pages (batch 2: corporate, launch, birthday-cakes, merch)
+Resume file: .paul/phases/04-desktop-figma-verification/04-01-PLAN.md
+Uncommitted files: app/pages/index.vue (eats max-width fix), app/pages/drinks-menu.vue (1920px restyle)
 
 ---
 *STATE.md — Updated after every significant action*
