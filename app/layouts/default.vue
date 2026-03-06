@@ -90,19 +90,19 @@ const hideLaneButton = computed(() => ['/groups', '/kids'].includes(route.path))
 
 @media (min-width: 1920px) {
   .fixed-buttons {
-    top: 30px;
+    top: 33px;
     right: 30px;
     gap: 16px;
   }
 
   .icon-btn {
-    width: 69px;
-    height: 67px;
+    width: 99px;
+    height: 98px;
   }
 
   .btn-label {
-    font-size: 10px;
-    margin-top: 4px;
+    font-size: 16px;
+    margin-top: 6px;
   }
 }
 

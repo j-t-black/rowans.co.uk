@@ -66,7 +66,7 @@ useHead({ title: "Policies — Rowan's" })
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.3;
+  opacity: 0.35;
   z-index: 0;
 }
 
@@ -153,6 +153,43 @@ useHead({ title: "Policies — Rowan's" })
   .policy-btn {
     font-size: 18px;
     padding: 2rem 1.5rem;
+  }
+}
+
+/* 1920px Figma Desktop */
+@media (min-width: 1920px) {
+  .page-heading {
+    font-size: 68px;
+    margin-bottom: 2rem;
+  }
+
+  .info-text {
+    font-size: 36px;
+  }
+
+  .content-overlay {
+    max-width: 1400px;
+    padding-top: 5rem;
+  }
+
+  .policy-grid {
+    max-width: 1200px;
+    gap: 2rem;
+    margin-top: 4rem;
+  }
+
+  .policy-btn {
+    font-size: 35px;
+    width: 367px;
+    height: 119px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #17181a;
+    border: 1px solid #535353;
+    border-radius: 10px;
+    padding: 12px 16px;
+    line-height: 36px;
   }
 }
 

@@ -704,4 +704,16 @@ const spiritsRow2: SpiritsGroup[] = [
   .item-row { font-size: 13px; }
   .item-price { font-size: 13px; }
 }
+
+/* 1920px Figma Desktop */
+@media (min-width: 1920px) {
+  .menu-title {
+    font-size: 96px;
+  }
+
+  .menu-content {
+    max-width: 1756px;
+    padding: 0 82px 80px;
+  }
+}
 </style>

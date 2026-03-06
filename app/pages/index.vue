@@ -189,7 +189,7 @@ useHead({ title: "Rowan's \u2014 Iconic Venue in Finsbury Park" })
 .hero-section {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   background-color: #000000;
   display: flex;
   flex-direction: column;
@@ -216,6 +216,8 @@ useHead({ title: "Rowan's \u2014 Iconic Venue in Finsbury Park" })
   height: 120px;
   width: auto;
   z-index: 10;
+  opacity: 0.8;
+  mix-blend-mode: screen;
 }
 
 .hero-heading {
@@ -232,14 +234,18 @@ useHead({ title: "Rowan's \u2014 Iconic Venue in Finsbury Park" })
 }
 
 
-/* Desktop styles (1920px+) */
+/* Desktop styles (1920px+) — Hero */
 @media (min-width: 1920px) {
   .hero-section {
     padding-top: 28px;
   }
 
   .hero-logo {
-    height: 180px;
+    height: 319px;
+  }
+
+  .hero-heading {
+    font-size: 36px;
   }
 }
 
@@ -300,12 +306,14 @@ useHead({ title: "Rowan's \u2014 Iconic Venue in Finsbury Park" })
 /* Desktop styles for welcome section */
 @media (min-width: 1920px) {
   .welcome-heading {
+    font-size: 96px;
     margin-bottom: 2.5rem;
   }
 
   .welcome-text {
+    font-size: 24px;
     line-height: 1.7;
-    max-width: 1000px;
+    max-width: 1200px;
   }
 }
 
@@ -820,34 +828,79 @@ useHead({ title: "Rowan's \u2014 Iconic Venue in Finsbury Park" })
   }
 }
 
-/* Desktop Responsive */
+/* Desktop Responsive — 1920px Figma breakpoint */
 @media (min-width: 1920px) {
-  .party-buttons,
-  .eats-buttons {
-    gap: 3rem;
+  /* Party section */
+  .party-heading {
+    font-size: 40px;
   }
 
-  .audio-buttons {
-    gap: 3rem;
+  .party-buttons {
+    gap: 2.5rem;
+    max-width: 1200px;
   }
 
   .party-button {
-    width: 130px;
-    height: 130px;
+    width: 219px;
+    height: 216px;
+    font-size: 20px;
+  }
+
+  /* Eats section */
+  .eats-heading {
+    font-size: 96px;
+  }
+
+  .eats-text {
+    font-size: 24px;
+    top: 11rem;
+  }
+
+  .eats-buttons {
+    gap: 2.5rem;
   }
 
   .eats-button {
-    width: 140px;
-    height: 140px;
+    width: 219px;
+    height: 216px;
+    font-size: 20px;
+  }
+
+  /* Audio section */
+  .audio-logo {
+    max-width: 798px;
+  }
+
+  .audio-heading {
+    font-size: 96px;
+  }
+
+  .audio-text {
+    font-size: 20px;
+    max-width: 600px;
+  }
+
+  .audio-buttons {
+    gap: 2.5rem;
   }
 
   .audio-button {
-    width: 180px;
-    height: 180px;
+    width: 219px;
+    height: 229px;
+    font-size: 20px;
   }
 
-  .audio-logo {
-    max-width: 500px;
+  /* Visit section */
+  .visit-heading {
+    font-size: 96px;
+  }
+
+  .visit-cards {
+    max-width: 1600px;
+  }
+
+  .visit-card {
+    max-width: 751px;
   }
 }
 </style>

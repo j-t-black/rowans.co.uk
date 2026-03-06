@@ -287,4 +287,64 @@ useHead({ title: "Group Bookings — Rowan's" })
     font-size: 64px;
   }
 }
+
+/* 1920px Figma Desktop */
+@media (min-width: 1920px) {
+  .page-heading {
+    font-size: 96px;
+  }
+
+  .subtitle {
+    font-size: 40px;
+  }
+
+  .links-section p {
+    font-size: 24px;
+  }
+
+  .notice {
+    font-size: 24px;
+  }
+
+  .input-box {
+    font-size: 35px;
+    width: 550px;
+  }
+
+  .input-note {
+    font-size: 24px;
+  }
+
+  .calendar-placeholder {
+    max-width: 919px;
+    padding: 2rem 3rem;
+  }
+
+  .peak-notice {
+    font-size: 24px;
+    max-width: 700px;
+  }
+
+  .cost-row {
+    font-size: 35px;
+  }
+
+  .cost-table {
+    max-width: 550px;
+  }
+
+  .submit-btn {
+    font-size: 35px;
+    background: #17181a;
+    border: 1px solid #535353;
+    border-radius: 10px;
+    padding: 12px 16px;
+    width: 367px;
+    height: 119px;
+  }
+
+  .content-overlay {
+    max-width: 1000px;
+  }
+}
 </style>

@@ -59,6 +59,7 @@ onUnmounted(() => {
   align-items: center;
   justify-content: center;
   padding: 2rem;
+  height: 100vh;
   overflow-y: auto;
 }
 
@@ -114,14 +115,14 @@ onUnmounted(() => {
 .nav-item {
   font-family: 'JetBrains Mono', monospace;
   font-weight: 400;
-  font-size: 38px;
+  font-size: 28px;
   line-height: 1.2;
   color: #ffffff;
   text-decoration: none;
   text-align: center;
   opacity: 0.9;
   transition: opacity 0.15s;
-  padding: 0.25rem 1rem;
+  padding: 0.15rem 1rem;
   white-space: nowrap;
 }
 
@@ -140,8 +141,14 @@ onUnmounted(() => {
 
 /* Desktop */
 @media (min-width: 1920px) {
+  .burger-overlay {
+    justify-content: flex-start;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
   .nav-item {
-    font-size: 68px;
+    font-size: 48px;
   }
 
   .close-btn {

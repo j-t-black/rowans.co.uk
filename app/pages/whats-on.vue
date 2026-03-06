@@ -4,7 +4,7 @@
     <header class="page-header">
       <h1 class="heading">What's on</h1>
       <a href="/line-upsevents" class="click-link">
-        Click here for Rowans events and DJ line up for forthcoming weeks
+        Click <strong class="here-link">here</strong> for Rowans events and DJ line up for forthcoming weeks
       </a>
       <p class="id-notice">Over 21 ID Required on Fridays and Saturday nights after 7pm</p>
     </header>
@@ -63,6 +63,11 @@ useHead({ title: "What's On \u2014 Rowan's" })
 
 .click-link:hover {
   opacity: 0.6;
+}
+
+.here-link {
+  color: #ff0000;
+  font-weight: 700;
 }
 
 .id-notice {
@@ -127,6 +132,40 @@ useHead({ title: "What's On \u2014 Rowan's" })
   .id-notice {
     font-size: 14px;
     max-width: 700px;
+  }
+}
+
+/* 1920px Figma Desktop */
+@media (min-width: 1920px) {
+  .page-header {
+    padding: 0 2rem 2.5rem;
+    gap: 1.25rem;
+  }
+
+  .heading {
+    font-size: 68px;
+  }
+
+  .click-link {
+    font-size: 36px;
+    max-width: 1200px;
+  }
+
+  .id-notice {
+    font-size: 36px;
+    max-width: 1200px;
+  }
+
+  .photo-grid {
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .photo {
+    height: 813px;
+    object-fit: cover;
   }
 }
 </style>

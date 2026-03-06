@@ -134,4 +134,43 @@ useHead({ title: "Corporate + Office — Rowan's" })
     font-size: 20px;
   }
 }
+
+/* 1920px Figma Desktop */
+@media (min-width: 1920px) {
+  .page-heading {
+    font-size: 96px;
+  }
+
+  .subtitle {
+    font-size: 36px;
+    opacity: 0.9;
+  }
+
+  .features-list {
+    font-size: 36px;
+  }
+
+  .bg-image {
+    opacity: 0.5;
+  }
+
+  .content-overlay {
+    max-width: 1000px;
+  }
+
+  .contact-box {
+    width: 595px;
+    height: 178px;
+    background: #17181a;
+    border: 1px solid #535353;
+    border-radius: 10px;
+    padding: 12px 16px;
+    justify-content: center;
+  }
+
+  .contact-link {
+    font-size: 48px;
+    line-height: 49px;
+  }
+}
 </style>

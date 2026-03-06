@@ -262,6 +262,58 @@ useHead({ title: "Rowans Radio — Rowan's" })
   }
 }
 
+/* 1920px Figma Desktop */
+@media (min-width: 1920px) {
+  .page-heading {
+    font-size: 68px;
+  }
+
+  .big-speaker {
+    height: 744px;
+    opacity: 0.6;
+  }
+
+  .audio-player {
+    width: 669px;
+    padding: 2rem 2.5rem;
+    opacity: 0.75;
+  }
+
+  .player-label {
+    font-size: 14px;
+  }
+
+  .track-info p {
+    font-size: 16px;
+  }
+
+  .waveform {
+    height: 60px;
+  }
+
+  .time-display {
+    font-size: 14px;
+  }
+
+  .area-btn-img {
+    width: 235px;
+    height: 148px;
+    object-fit: cover;
+    opacity: 0.75;
+  }
+
+  .area-btn-label {
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: normal;
+  }
+
+  .area-buttons {
+    gap: 4rem;
+    bottom: 117px;
+  }
+}
+
 @media (max-width: 600px) {
   .page-heading {
     font-size: 30px;

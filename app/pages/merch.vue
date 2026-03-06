@@ -75,4 +75,19 @@ useHead({ title: "Merch — Rowan's" })
     padding: 3rem 2rem 1.5rem;
   }
 }
+
+/* 1920px Figma Desktop */
+@media (min-width: 1920px) {
+  .heading {
+    font-size: 68px;
+  }
+
+  .logo-image {
+    opacity: 0.35;
+  }
+
+  .image-wrap {
+    max-width: 1200px;
+  }
+}
 </style>
