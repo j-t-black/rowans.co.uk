@@ -1,19 +1,20 @@
 <template>
   <div class="menu-page">
-    <!-- Title + Logo -->
+    <!-- Title -->
     <div class="menu-header">
       <h1 class="menu-title">Bar Menu</h1>
-      <img src="/design-assets/MAIN LOGO.webp" alt="Rowans Bowl" class="menu-logo" />
     </div>
 
     <!-- Main content -->
     <div class="menu-content">
 
+      <!-- Decorative logo peeks from left edge -->
+      <img src="/design-assets/MAIN LOGO.webp" alt="Rowans Bowl" class="menu-logo" />
+
       <!-- Row 1: Draught | Guest Cans -->
       <div class="row two-col">
         <div class="section">
           <h2 class="section-heading">Draught</h2>
-          <p class="section-note">Price is per pint · 10% discount on 4 Pint Pitchers</p>
           <div class="item-list">
             <div v-for="item in draught" :key="item.name" class="item-row">
               <span class="item-name">{{ item.name }}</span>
@@ -21,6 +22,7 @@
               <span class="item-price">{{ item.price }}</span>
             </div>
           </div>
+          <p class="section-note">Price is per pint<br>10% discount on 4 Pint Pitchers</p>
         </div>
 
         <div class="section">
@@ -197,14 +199,34 @@
         </div>
       </div>
 
-      <!-- Row 5: Gin | Whisky | Brandy | Liquors -->
-      <div class="row four-col">
-        <div v-for="group in spiritsRow2" :key="group.title" class="section">
-          <h2 class="section-heading">{{ group.title }}</h2>
+      <!-- Row 5: Gin | Whisky | Brandy + Liquors -->
+      <div class="row three-col">
+        <div class="section">
+          <h2 class="section-heading">{{ spiritsRow2[0].title }}</h2>
           <div class="item-list">
-            <div v-for="item in group.items" :key="item.name" class="item-row">
+            <div v-for="item in spiritsRow2[0].items" :key="item.name" class="item-row">
               <span class="item-name">{{ item.name }}</span>
               <span class="item-price">{{ item.price }}</span>
+            </div>
+          </div>
+        </div>
+        <div class="section">
+          <h2 class="section-heading">{{ spiritsRow2[1].title }}</h2>
+          <div class="item-list">
+            <div v-for="item in spiritsRow2[1].items" :key="item.name" class="item-row">
+              <span class="item-name">{{ item.name }}</span>
+              <span class="item-price">{{ item.price }}</span>
+            </div>
+          </div>
+        </div>
+        <div class="combined-col">
+          <div v-for="group in spiritsRow2.slice(2)" :key="group.title" class="section">
+            <h2 class="section-heading">{{ group.title }}</h2>
+            <div class="item-list">
+              <div v-for="item in group.items" :key="item.name" class="item-row">
+                <span class="item-name">{{ item.name }}</span>
+                <span class="item-price">{{ item.price }}</span>
+              </div>
             </div>
           </div>
         </div>
@@ -491,10 +513,7 @@ const spiritsRow2: SpiritsGroup[] = [
 }
 
 .menu-logo {
-  height: 90px;
-  width: auto;
-  display: block;
-  margin: 0 auto;
+  display: none;
 }
 
 /* ── Content wrapper ── */
@@ -513,7 +532,6 @@ const spiritsRow2: SpiritsGroup[] = [
 
 .two-col   { grid-template-columns: 1fr; }
 .three-col { grid-template-columns: 1fr; }
-.four-col  { grid-template-columns: 1fr; }
 
 /* ── Section block ── */
 .section {
@@ -537,7 +555,7 @@ const spiritsRow2: SpiritsGroup[] = [
   color: #888;
   font-style: italic;
   text-align: center;
-  margin: -4px 0 10px;
+  margin: 8px 0 10px;
   letter-spacing: 0.05em;
 }
 
@@ -688,12 +706,11 @@ const spiritsRow2: SpiritsGroup[] = [
 @media (min-width: 768px) {
   .menu-header { padding: 80px 24px 32px; }
   .menu-title  { font-size: 64px; }
-  .menu-logo   { height: 120px; }
+  .menu-logo   { display: block; max-width: 200px; margin: 0 auto; }
   .menu-content { padding: 0 48px 80px 48px; }
 
   .two-col   { grid-template-columns: 1fr 1fr; }
   .three-col { grid-template-columns: 1fr 1fr 1fr; }
-  .four-col  { grid-template-columns: 1fr 1fr 1fr 1fr; }
 
   .item-row   { font-size: 12px; }
   .item-price { font-size: 12px; }
@@ -707,13 +724,117 @@ const spiritsRow2: SpiritsGroup[] = [
 
 /* 1920px Figma Desktop */
 @media (min-width: 1920px) {
+  .menu-header {
+    text-align: center;
+    padding: 32px 24px 16px;
+  }
+
   .menu-title {
-    font-size: 96px;
+    font-size: 56px;
+    margin: 0;
   }
 
   .menu-content {
-    max-width: 1756px;
-    padding: 0 82px 80px;
+    position: relative;
+    max-width: 960px;
+    padding: 0 24px 40px;
+    overflow: visible;
+  }
+
+  /* Logo peeks from the left edge, half visible */
+  .menu-logo {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: -160px;
+    width: 320px;
+    height: auto;
+    margin: 0;
+    opacity: 0.9;
+  }
+
+  /* Rows 1-2: use full 3-col grid but content in cols 2-3 */
+  .two-col {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .two-col > .section:first-child {
+    grid-column: 2;
+  }
+
+  .two-col > .section:last-child {
+    grid-column: 3;
+  }
+
+  .row {
+    gap: 32px;
+    margin-bottom: 32px;
+  }
+
+  .section {
+    margin-bottom: 8px;
+  }
+
+  .section-heading {
+    font-size: 18px;
+    margin-bottom: 8px;
+    padding-bottom: 4px;
+    border-bottom: none;
+  }
+
+  .section-note {
+    font-size: 10px;
+    margin: 6px 0 4px;
+  }
+
+  .item-list {
+    gap: 2px;
+  }
+
+  .item-row {
+    font-size: 13px;
+    line-height: 1.6;
+    gap: 8px;
+  }
+
+  .item-price {
+    font-size: 13px;
+  }
+
+  .item-detail {
+    font-size: 11px;
+  }
+
+  .item-sublabel {
+    font-size: 9px;
+    margin-bottom: 2px;
+  }
+
+  .sparkling-row {
+    font-size: 13px;
+    margin-bottom: 3px;
+  }
+
+  .wine-row {
+    font-size: 13px;
+    margin-bottom: 3px;
+  }
+
+  .cocktail-row {
+    margin-bottom: 5px;
+  }
+
+  .cocktail-top {
+    font-size: 13px;
+  }
+
+  .menu-footer {
+    padding: 32px 0 16px;
+    border-top: none;
+  }
+
+  .menu-footer p {
+    font-size: 16px;
   }
 }
 </style>

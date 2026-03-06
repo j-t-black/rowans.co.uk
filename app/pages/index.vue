@@ -854,6 +854,7 @@ useHead({ title: "Rowan's \u2014 Iconic Venue in Finsbury Park" })
   .eats-text {
     font-size: 24px;
     top: 11rem;
+    max-width: 1000px;
   }
 
   .eats-buttons {
