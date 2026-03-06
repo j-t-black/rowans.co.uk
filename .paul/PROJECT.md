@@ -12,9 +12,9 @@ Rewriting and updating the Rowan's brand for the future — letting younger cust
 
 | Attribute | Value |
 |-----------|-------|
-| Version | 0.1.0 |
+| Version | 0.3.0 |
 | Status | Beta |
-| Last Updated | 2026-03-03 |
+| Last Updated | 2026-03-06 |
 
 **Production URLs:**
 - rowans.co.uk: Live site (Vercel deployment)
@@ -29,15 +29,19 @@ Rewriting and updating the Rowan's brand for the future — letting younger cust
 - [x] 12+ sub-pages with content (whats-on, radio, djs, policies, groups, kids, corporate, launch, birthday-cakes, drinks-menu, yucatan, pizza)
 - [x] Mobile responsiveness pass across all pages
 - [x] Vercel deployment pipeline
+- [x] Root-level CSS foundation (CSS variables for headings, colors, spacing) — Phase 1
+- [x] Home page pixel-perfect 1920px match — Phase 2
+- [x] 10 content pages pixel-perfect 1920px match — Phase 3
+- [x] BurgerNav overflow fix at 1920px — Phase 3
 
 ### Active (In Progress)
-- [ ] Pixel-perfect visual match to Figma across all pages
-- [ ] Root-level CSS foundation (use CSS variables, standardise breakpoints/colors/spacing)
 - [ ] Stub pages need real content (about, karaoke, merch, contact)
+- [ ] Intermediate breakpoints (768-1919px) tuning
+- [ ] Mobile verification pass (post-desktop work)
 
 ### Planned (Next)
 - [ ] Missing eats-drinks hub page
-- [ ] Global navigation on all pages (currently only home)
+- [ ] Pages without Figma frames need polish (yucatan, pizza, organise)
 
 ### Out of Scope
 - Booking system backend — external provider handles this
@@ -98,5 +102,16 @@ Rowan's is an established bowling venue in Finsbury Park, London. The brand refr
 | Production | rowans.co.uk |
 | Figma Site | https://story-method-86424349.figma.site |
 
+## Key Decisions
+
+| Decision | Phase | Rationale |
+|----------|-------|-----------|
+| Desktop-first (1920px then mobile) | 2 | Figma has Desktop + Mobile frames; start with larger |
+| CSS vars for headings | 1-3 | Site-wide tuning from main.css |
+| Two heading tiers (68px/96px) | 3 | Matches Figma per-page intent |
+| mix-blend-mode:screen for hero logo | 3 | Knocks out black bg, better than opacity |
+| flex-start+scroll for BurgerNav | 3 | Prevents overflow clipping at large viewports |
+
 ---
 *Created: 2026-03-03*
+*Updated: 2026-03-06 after Phase 3*

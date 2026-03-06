@@ -2,31 +2,32 @@
 
 ## Project Reference
 
-See: .paul/PROJECT.md (updated 2026-03-03)
+See: .paul/PROJECT.md (updated 2026-03-06)
 
 **Core value:** Rewriting and updating the Rowan's brand for the future — letting younger customers know that bowling and Rowan's is still really cool.
-**Current focus:** Phase 3 — Content pages 1920px polish (10 of ~14 pages done)
+**Current focus:** Phase 4 — Stub Pages Build (about, karaoke, merch, contact)
 
 ## Current Position
 
 Milestone: v1.0 Pixel-Perfect Launch
-Phase: 3 of 5 (Content Pages Polish) — In Progress
-Plan: 03-02 APPLY complete, awaiting human verification
-Status: 03-01 expanded to 10 pages (needs UNIFY later). 03-02 regression fixes applied.
-Last activity: 2026-03-06 — Applied 03-02 fixes (BurgerNav, eats overlap, radio buttons)
+Phase: 4 of 5 (Stub Pages Build) — Not started
+Plan: Not started
+Status: Ready to plan
+Last activity: 2026-03-06 — Phase 3 complete, transitioned to Phase 4
 
 Progress:
-- Milestone: [████░░░░░░] 40%
+- Milestone: [██████░░░░] 60%
 - Phase 1: [██████████] 100%
 - Phase 2: [██████████] 100%
-- Phase 3: [███████░░░] 70%
+- Phase 3: [██████████] 100%
+- Phase 4: [░░░░░░░░░░] 0%
 
 ## Loop Position
 
 Current loop state:
 ```
 PLAN ──▶ APPLY ──▶ UNIFY
-  ✓        ✓        ○     [03-02 Applied, awaiting human verification]
+  ○        ○        ○     [Phase 4 — ready to plan]
 ```
 
 ## Accumulated Context
@@ -38,33 +39,32 @@ PLAN ──▶ APPLY ──▶ UNIFY
 - Figma design file key: P0kpMV8kbGuwNJmuoS3Xxy
 - Plans must scope ALL visible files (layouts, components, not just page files)
 - Use Figma MCP get_design_context for exact values before coding
-- Phase 3 split into multiple plans: 2-3 pages per plan
-- eats-drinks hub + organise have NO Figma Desktop frames — replaced with radio + policies
-- All headings at 1920px are either 68px or 96px depending on page
+- Two heading tiers: 68px (whats-on, radio, policies, merch) and 96px (groups, kids, etc.)
+- mix-blend-mode:screen for hero logo knockout
+- BurgerNav: flex-start + scroll for overflow safety at 1920px
+- Sub-agents cannot use Figma MCP — capture screenshots from main context
+- CSS vars (--section-heading-size, etc.) for cross-page heading consistency
 
 ### Pages Polished (1920px breakpoint added)
-1. /whats-on — 68px heading, 36px text, bold red "here" link, 2x2 photo grid
-2. /radio — 68px heading, 669px player, 235x148 buttons, 32px labels
-3. /policies — 68px heading, 36px text, 367x119 buttons, opacity 0.35
-4. /groups — 96px heading, 40px subtitle, 35px inputs/costs, styled submit
-5. /kids — 96px heading, 36px info text, 35px inputs/costs, 36px footer
-6. /corporate — 96px heading, 36px features, 595x178 contact box at 48px
-7. /launch — 96px heading, 36px subtitle, styled CTA + contact box
-8. /birthday-cakes — 96px heading, 36px text, sized supplier images
-9. /drinks-menu — 96px heading, 1756px content with 82px margins
-10. /merch — 68px heading, 0.35 logo opacity, wider container
+1. / (home), /whats-on, /radio, /policies, /groups, /kids
+2. /corporate, /launch, /birthday-cakes, /drinks-menu, /merch
 
 ### Pages NOT polished (no Figma Desktop frame)
-- /eats-drinks (hub) — Figma section 9:1082 shows Yucatan Tacos, not hub
-- /organise — only exists as home page section, no standalone Figma page
-- /yucatan — Figma section labeled /eats-drinks contains this content
-- /pizza — no dedicated Figma section found
-- /line-upsevents — Figma frame is just a screenshot placeholder
+- /eats-drinks (hub), /organise, /yucatan, /pizza, /line-upsevents
+
+### Stub Pages (Phase 4 targets)
+- /about, /karaoke, /merch (content TBD), /contact
+
+### Git State
+Last commit: b930aaa
+Branch: main
+Feature branches merged: none
 
 ### Deferred Issues
 - Intermediate breakpoints (768-1919px) need tuning
 - Mobile verification pass after all desktop work complete
-- Pages without Figma frames need alternative reference (published site screenshots?)
+- Pages without Figma frames need alternative reference
+- Figma reference PNGs not captured (node IDs in README)
 
 ### Blockers/Concerns
 - None
@@ -72,11 +72,9 @@ PLAN ──▶ APPLY ──▶ UNIFY
 ## Session Continuity
 
 Last session: 2026-03-06
-Stopped at: 03-02 APPLY complete, checkpoint pending
-Next action:
-  1. Human verification of 4 fixes
-  2. Run /paul:unify on 03-02
-Resume file: .paul/phases/03-content-pages/03-02-PLAN.md
+Stopped at: Phase 3 complete, ready to plan Phase 4
+Next action: /paul:plan for Phase 4
+Resume file: .paul/ROADMAP.md
 
 ---
 *STATE.md — Updated after every significant action*
