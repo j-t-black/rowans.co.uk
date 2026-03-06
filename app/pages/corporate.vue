@@ -1,12 +1,5 @@
 <template>
   <div class="min-h-screen bg-black">
-    <!-- Compact logo header -->
-    <header class="logo-header">
-      <NuxtLink to="/">
-        <img src="/design-assets/MAIN LOGO.webp" alt="Rowans" class="site-logo" />
-      </NuxtLink>
-    </header>
-
     <!-- Content with background image -->
     <section class="hero-content">
       <img
@@ -42,18 +35,6 @@ useHead({ title: "Corporate + Office — Rowan's" })
 </script>
 
 <style scoped>
-.logo-header {
-  display: flex;
-  justify-content: center;
-  padding: 2rem 1rem 1rem;
-  background: #000;
-}
-
-.site-logo {
-  height: 120px;
-  width: auto;
-}
-
 .hero-content {
   position: relative;
   min-height: 80vh;
@@ -130,9 +111,6 @@ useHead({ title: "Corporate + Office — Rowan's" })
 }
 
 @media (min-width: 768px) {
-  .site-logo {
-    height: 150px;
-  }
 
   .page-heading {
     font-size: 70px;

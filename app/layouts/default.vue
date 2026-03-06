@@ -8,7 +8,7 @@
         </button>
         <span class="btn-label">menu</span>
       </div>
-      <div class="btn-group">
+      <div v-if="!hideLaneButton" class="btn-group">
         <a
           href="https://www.mybowlingpassport.com/112/6615/book"
           class="icon-btn"
@@ -30,6 +30,8 @@
 
 <script setup lang="ts">
 const navOpen = ref(false)
+const route = useRoute()
+const hideLaneButton = computed(() => ['/groups', '/kids'].includes(route.path))
 </script>
 
 <style scoped>

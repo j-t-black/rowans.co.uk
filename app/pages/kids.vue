@@ -1,12 +1,5 @@
 <template>
   <div class="min-h-screen bg-black">
-    <!-- Compact logo header -->
-    <header class="logo-header">
-      <NuxtLink to="/">
-        <img src="/design-assets/MAIN LOGO.webp" alt="Rowans" class="site-logo" />
-      </NuxtLink>
-    </header>
-
     <!-- Page content -->
     <section class="page-content">
       <h1 class="page-heading">Kids parties</h1>
@@ -69,18 +62,6 @@ useHead({ title: "Kids Parties — Rowan's" })
 </script>
 
 <style scoped>
-.logo-header {
-  display: flex;
-  justify-content: center;
-  padding: 2rem 1rem 1rem;
-  background: #000;
-}
-
-.site-logo {
-  height: 120px;
-  width: auto;
-}
-
 .page-content {
   max-width: 700px;
   margin: 0 auto;
@@ -91,22 +72,24 @@ useHead({ title: "Kids Parties — Rowan's" })
 .page-heading {
   font-family: 'JetBrains Mono', monospace;
   font-weight: var(--section-heading-weight, 400);
-  font-size: var(--section-heading-size, 46px);
+  font-size: 24px;
   color: var(--color-heading, #ff0000);
-  margin: 0 0 1.5rem;
+  margin: 0 0 0.5rem;
   line-height: 1.1;
+  white-space: nowrap;
 }
 
 .info-text {
-  margin-bottom: 2.5rem;
+  margin-bottom: 1rem;
 }
 
 .info-text p {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 16px;
+  font-size: 12px;
   color: #fff;
-  margin: 0.4rem 0;
+  margin: 0.15rem 0;
   line-height: 1.6;
+  font-weight: 700;
 }
 
 .red-link {
@@ -132,22 +115,22 @@ useHead({ title: "Kids Parties — Rowan's" })
   display: flex;
   border: 1px solid rgba(255, 255, 255, 0.5);
   font-family: 'JetBrains Mono', monospace;
-  font-size: 16px;
+  font-size: 14px;
   color: #fff;
-  width: 340px;
+  width: 320px;
   max-width: 100%;
 }
 
 .input-label {
   flex: 1;
-  padding: 0.75rem 1rem;
+  padding: 0.5rem 1rem;
   text-align: left;
 }
 
 .input-value {
-  padding: 0.75rem 1rem;
+  padding: 0.5rem 1rem;
   border-left: 1px solid rgba(255, 255, 255, 0.5);
-  min-width: 70px;
+  min-width: 60px;
   text-align: center;
 }
 
@@ -155,13 +138,13 @@ useHead({ title: "Kids Parties — Rowan's" })
   font-family: 'JetBrains Mono', monospace;
   font-size: 12px;
   color: #fff;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .calendar-placeholder {
   border: 1px dashed rgba(255, 255, 255, 0.3);
-  padding: 3rem 2rem;
-  margin: 2rem auto;
+  padding: 1.5rem 2rem;
+  margin: 1rem auto;
   max-width: 500px;
 }
 
@@ -175,49 +158,50 @@ useHead({ title: "Kids Parties — Rowan's" })
   font-family: 'JetBrains Mono', monospace;
   font-size: 12px;
   color: #fff;
-  margin-bottom: 1.5rem;
+  font-style: italic;
+  margin-bottom: 0.75rem;
   max-width: 400px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .cost-table {
-  max-width: 360px;
-  margin: 0 auto 2rem;
+  max-width: 320px;
+  margin: 0 auto 1rem;
 }
 
 .cost-row {
   display: flex;
   border: 1px solid rgba(255, 255, 255, 0.5);
   font-family: 'JetBrains Mono', monospace;
-  font-size: 16px;
+  font-size: 14px;
   color: #fff;
   margin-bottom: -1px;
 }
 
 .cost-label {
   flex: 1;
-  padding: 0.75rem 1rem;
+  padding: 0.5rem 1rem;
   text-align: left;
 }
 
 .cost-value {
-  padding: 0.75rem 1rem;
+  padding: 0.5rem 1rem;
   border-left: 1px solid rgba(255, 255, 255, 0.5);
-  min-width: 80px;
+  min-width: 70px;
   text-align: left;
 }
 
 .submit-btn {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 16px;
+  font-size: 14px;
   color: #fff;
   background: none;
   border: 1px solid rgba(255, 255, 255, 0.5);
-  padding: 0.75rem 2.5rem;
+  padding: 0.5rem 2rem;
   cursor: pointer;
   transition: border-color 0.2s, background-color 0.2s;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .submit-btn:hover {
@@ -235,34 +219,36 @@ useHead({ title: "Kids Parties — Rowan's" })
 }
 
 @media (min-width: 768px) {
-  .site-logo {
-    height: 150px;
-  }
-
   .page-heading {
-    font-size: 64px;
-    margin-bottom: 2rem;
+    font-size: 46px;
+    margin-bottom: 0.5rem;
   }
 
   .info-text p {
-    font-size: 18px;
+    font-size: 14px;
   }
 
   .input-box {
-    font-size: 18px;
-    width: 400px;
+    font-size: 16px;
+    width: 360px;
   }
 
   .cost-row {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .cost-table {
-    max-width: 420px;
+    max-width: 360px;
   }
 
   .footer-notice {
-    font-size: 18px;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .page-heading {
+    font-size: 64px;
   }
 }
 </style>
