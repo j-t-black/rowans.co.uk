@@ -13,9 +13,9 @@ useHead({ title: "Book Karaoke — Rowan's" })
 <style scoped>
 .heading {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 36px;
-  color: #ffffff;
-  opacity: 0.9;
+  font-weight: 400;
+  font-size: var(--section-heading-size, 46px);
+  color: var(--color-heading, #ff0000);
   margin-bottom: 1rem;
 }
 .body-text {
@@ -23,5 +23,11 @@ useHead({ title: "Book Karaoke — Rowan's" })
   font-size: 16px;
   color: #ffffff;
   opacity: 0.5;
+}
+
+@media (min-width: 1920px) {
+  .heading {
+    font-size: 68px;
+  }
 }
 </style>

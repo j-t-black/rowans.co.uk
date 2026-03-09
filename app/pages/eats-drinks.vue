@@ -110,7 +110,7 @@ useHead({ title: "Eats + Drinks — Rowan's" })
   color: #fff;
   font-family: 'JetBrains Mono', monospace;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 16px;
   text-align: center;
   text-decoration: none;
   padding: 1.5rem;

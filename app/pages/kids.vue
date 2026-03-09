@@ -259,7 +259,7 @@ useHead({ title: "Kids Parties — Rowan's" })
   }
 
   .page-heading {
-    font-size: 96px;
+    font-size: 68px;
   }
 
   .info-text p {

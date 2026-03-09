@@ -430,5 +430,11 @@ const activeDays = computed(() => {
     font-size: 52px;
   }
 }
+
+@media (min-width: 1920px) {
+  .heading {
+    font-size: 68px;
+  }
+}
 </style>
 

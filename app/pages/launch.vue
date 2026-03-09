@@ -136,7 +136,7 @@ useHead({ title: "Launch Parties — Rowan's" })
 /* 1920px Figma Desktop */
 @media (min-width: 1920px) {
   .page-heading {
-    font-size: 96px;
+    font-size: 68px;
   }
 
   .subtitle {
