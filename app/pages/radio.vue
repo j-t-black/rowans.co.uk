@@ -10,44 +10,48 @@
 
       <h1 class="page-heading">Rowans Radio</h1>
 
-      <!-- Audio player mockup -->
+      <!-- Hidden audio element for stream playback -->
+      <audio ref="audioEl" :src="currentStream" preload="none" />
+
+      <!-- Audio player -->
       <div class="audio-player">
         <div class="player-top">
           <span class="player-label">VOLUME</span>
           <div class="volume-row">
             <span class="volume-icon">&#x1F50A;</span>
-            <div class="slider-track">
-              <div class="slider-fill" style="width: 60%"></div>
+            <div class="slider-track" @click="setVolume">
+              <div class="slider-fill" :style="{ width: volume * 100 + '%' }"></div>
             </div>
           </div>
         </div>
         <div class="track-info">
-          <p>TRACK: ROWANS RADIO</p>
-          <p>ARTIST: RICK NOGLE</p>
+          <p>STREAM: {{ currentArea }}</p>
+          <p>{{ isPlaying ? 'LIVE' : 'STOPPED' }}</p>
         </div>
-        <div class="waveform">
-          <div v-for="i in 40" :key="i" class="wave-bar" :style="{ height: Math.random() * 30 + 5 + 'px' }"></div>
+        <div class="waveform" :class="{ 'waveform-active': isPlaying }">
+          <div v-for="i in 40" :key="i" class="wave-bar" :style="{ height: waveBars[i - 1] + 'px' }"></div>
         </div>
         <div class="progress-row">
-          <span class="play-btn">&#x25B6;</span>
-          <div class="slider-track">
-            <div class="slider-fill" style="width: 61%"></div>
+          <span class="play-btn" @click="togglePlay">{{ isPlaying ? '&#x23F8;' : '&#x25B6;' }}</span>
+          <div class="live-indicator" :class="{ active: isPlaying }">
+            <span class="live-dot"></span>
+            <span class="live-text">LIVE</span>
           </div>
-          <span class="time-display">02:45 / 04:30</span>
+          <span class="time-display">{{ currentArea }}</span>
         </div>
       </div>
 
-      <!-- Area buttons -->
+      <!-- Area buttons — stream URLs for sonic.onlineaudience.co.uk -->
       <div class="area-buttons">
-        <button class="area-btn">
+        <button class="area-btn" data-stream="https://sonic.onlineaudience.co.uk/8162/stream" @click="selectStream('https://sonic.onlineaudience.co.uk/8162/stream', 'UPSTAIRS')">
           <img src="/design-assets/ROWANS RADIO HERO.webp" alt="" class="area-btn-img" />
           <span class="area-btn-label">UPSTAIRS</span>
         </button>
-        <button class="area-btn">
+        <button class="area-btn" data-stream="https://sonic.onlineaudience.co.uk/8074/;" @click="selectStream('https://sonic.onlineaudience.co.uk/8074/;', 'DOWNSTAIRS')">
           <img src="/design-assets/ROWANS RADIO HERO.webp" alt="" class="area-btn-img" />
           <span class="area-btn-label">DOWNSTAIRS</span>
         </button>
-        <button class="area-btn">
+        <button class="area-btn" data-stream="https://sonic.onlineaudience.co.uk:8254" @click="selectStream('https://sonic.onlineaudience.co.uk:8254', 'GARDEN')">
           <img src="/design-assets/ROWANS RADIO HERO.webp" alt="" class="area-btn-img" />
           <span class="area-btn-label">GARDEN</span>
         </button>
@@ -58,6 +62,149 @@
 
 <script setup lang="ts">
 useHead({ title: "Rowans Radio — Rowan's" })
+
+const audioEl = ref<HTMLAudioElement | null>(null)
+const currentStream = ref('')
+const currentArea = ref('ROWANS RADIO')
+const isPlaying = ref(false)
+const volume = ref(0.6)
+
+// Web Audio API analyser for real waveform
+let audioCtx: AudioContext | null = null
+let analyser: AnalyserNode | null = null
+let sourceNode: MediaElementAudioSourceNode | null = null
+let animFrameId: number | null = null
+let analyserWorking = false
+
+const BAR_COUNT = 40
+const waveBars = ref(Array.from({ length: BAR_COUNT }, () => Math.random() * 30 + 5))
+
+function initAudioContext() {
+  if (audioCtx || !audioEl.value) return
+  audioCtx = new AudioContext()
+  analyser = audioCtx.createAnalyser()
+  analyser.fftSize = 128 // 64 frequency bins — enough for 40 bars
+  sourceNode = audioCtx.createMediaElementSource(audioEl.value)
+  sourceNode.connect(analyser)
+  analyser.connect(audioCtx.destination)
+}
+
+function updateWaveform() {
+  if (!analyser) return
+  const data = new Uint8Array(analyser.frequencyBinCount)
+  analyser.getByteFrequencyData(data)
+
+  // Check if analyser is returning real data (CORS may block it)
+  const hasData = data.some(v => v > 0)
+  if (hasData) analyserWorking = true
+
+  if (analyserWorking) {
+    // Map frequency bins to bar heights (5–35px range)
+    const step = data.length / BAR_COUNT
+    for (let i = 0; i < BAR_COUNT; i++) {
+      const idx = Math.floor(i * step)
+      waveBars.value[i] = (data[idx] / 255) * 30 + 5
+    }
+  } else {
+    // Fallback: random bars if CORS blocks frequency data
+    for (let i = 0; i < BAR_COUNT; i++) {
+      waveBars.value[i] = Math.random() * 30 + 5
+    }
+  }
+
+  animFrameId = requestAnimationFrame(updateWaveform)
+}
+
+function startWaveform() {
+  if (animFrameId) return
+  initAudioContext()
+  if (audioCtx?.state === 'suspended') audioCtx.resume()
+  analyserWorking = false
+  updateWaveform()
+}
+
+function stopWaveform() {
+  if (animFrameId) {
+    cancelAnimationFrame(animFrameId)
+    animFrameId = null
+  }
+  // Settle bars to low idle
+  for (let i = 0; i < BAR_COUNT; i++) {
+    waveBars.value[i] = 5
+  }
+}
+
+function selectStream(url: string, area: string) {
+  const wasPlaying = isPlaying.value
+  // Stop current playback
+  if (audioEl.value) {
+    audioEl.value.pause()
+    isPlaying.value = false
+    stopWaveform()
+  }
+
+  currentStream.value = url
+  currentArea.value = area
+
+  // Auto-play the new stream
+  nextTick(() => {
+    if (audioEl.value && wasPlaying) {
+      audioEl.value.load()
+      audioEl.value.volume = volume.value
+      audioEl.value.play().catch(() => {
+        isPlaying.value = false
+        stopWaveform()
+      })
+      isPlaying.value = true
+      startWaveform()
+    }
+  })
+}
+
+function togglePlay() {
+  if (!audioEl.value) return
+
+  if (!currentStream.value) {
+    // Default to downstairs if nothing selected
+    selectStream('https://sonic.onlineaudience.co.uk/8074/;', 'DOWNSTAIRS')
+  }
+
+  if (isPlaying.value) {
+    audioEl.value.pause()
+    isPlaying.value = false
+    stopWaveform()
+  } else {
+    audioEl.value.load()
+    audioEl.value.volume = volume.value
+    audioEl.value.play().catch(() => {
+      isPlaying.value = false
+      stopWaveform()
+    })
+    isPlaying.value = true
+    animateWaveform()
+  }
+}
+
+function setVolume(e: MouseEvent) {
+  const track = e.currentTarget as HTMLElement
+  const rect = track.getBoundingClientRect()
+  const pct = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width))
+  volume.value = pct
+  if (audioEl.value) {
+    audioEl.value.volume = pct
+  }
+}
+
+onBeforeUnmount(() => {
+  stopWaveform()
+  if (audioEl.value) {
+    audioEl.value.pause()
+  }
+  if (audioCtx) {
+    audioCtx.close()
+    audioCtx = null
+  }
+})
 </script>
 
 <style scoped>
@@ -82,7 +229,7 @@ useHead({ title: "Rowans Radio — Rowan's" })
 
 .big-speaker {
   position: absolute;
-  left: 0;
+  left: -40px;
   top: 50%;
   transform: translate(-50%, -50%);
   height: 250px;
@@ -177,6 +324,56 @@ useHead({ title: "Rowans Radio — Rowan's" })
 .play-btn {
   font-size: 12px;
   color: #fff;
+  cursor: pointer;
+  user-select: none;
+}
+
+.play-btn:hover {
+  color: #e8000d;
+}
+
+.slider-track {
+  cursor: pointer;
+}
+
+.live-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  opacity: 0.3;
+  transition: opacity 0.3s;
+}
+
+.live-indicator.active {
+  opacity: 1;
+}
+
+.live-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #e8000d;
+}
+
+.live-indicator.active .live-dot {
+  animation: pulse-dot 1.5s infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.live-text {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: #e8000d;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.waveform-active .wave-bar {
+  transition: height 0.15s ease;
 }
 
 .time-display {

@@ -1,10 +1,9 @@
 <template>
   <div class="min-h-screen bg-black">
     <section class="hero-section">
-      <img src="/design-assets/rowans-yucatan-assets/Yuc_Hi_Res-24.webp" fetchpriority="high" alt="Yucatan Tacos" class="hero-background" />
-      <img src="/design-assets/MAIN LOGO.webp" alt="Rowans" class="hero-logo" />
-      <h1 class="hero-heading">Yucatan<br>Tacos</h1>
-      <p class="hero-sub">Fiercely Authentic Southern Mexican</p>
+      <h1 class="hero-heading">Yucatan Tacos</h1>
+      <p class="hero-sub">Pre-Order for your party.</p>
+      <a href="mailto:yucatanldntacos@gmail.com" class="contact-btn">Contact Yucatan Tacos</a>
     </section>
 
     <section class="content-section">
@@ -64,65 +63,52 @@ useHead({ title: "Yucatan Tacos \u2014 Rowan's" })
 <style scoped>
 
 .hero-section {
-  position: relative;
   width: 100%;
-  min-height: 60vh;
   background-color: #000;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  overflow: hidden;
-}
-
-.hero-background {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  object-fit: cover;
-  opacity: 0.5;
-  z-index: 0;
-}
-
-.hero-logo {
-  position: absolute;
-  top: 60px;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 100px;
-  width: auto;
-  z-index: 10;
+  padding: 24px 2rem 48px;
+  gap: 3rem;
 }
 
 .hero-heading {
-  position: relative;
   font-family: 'JetBrains Mono', monospace;
   font-weight: 400;
-  font-size: 24px;
-  color: #ffffff;
-  opacity: 0.9;
+  font-size: 48px;
+  color: #e8000d;
   text-align: center;
-  margin: 0 0 0.5rem;
-  z-index: 5;
-  line-height: 1.2;
+  margin: 0;
+  line-height: 1.1;
+  letter-spacing: 0.06em;
 }
 
 .hero-sub {
-  position: relative;
   font-family: 'JetBrains Mono', monospace;
-  font-size: 12px;
+  font-size: 20px;
   color: #ffffff;
-  opacity: 0.5;
   text-align: center;
-  letter-spacing: 0.1em;
-  z-index: 5;
   margin: 0;
+}
+
+.contact-btn {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 18px;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 1.25rem 2.5rem;
+  text-decoration: none;
+  text-align: center;
+  transition: border-color 0.2s;
+}
+
+.contact-btn:hover {
+  border-color: #ffffff;
 }
 
 .content-section {
   background-color: #000;
-  padding: 3rem 1.5rem 4rem;
+  padding: 1.5rem 1.5rem 4rem;
 }
 
 .content-container {
@@ -173,13 +159,11 @@ useHead({ title: "Yucatan Tacos \u2014 Rowan's" })
   border-color: #ffffff;
 }
 
-@media (max-width: 767px) {
-  .hero-section { min-height: 40vh; }
-}
-
 @media (min-width: 768px) {
-  .hero-heading { font-size: 48px; }
-  .hero-sub { font-size: 14px; }
+  .hero-section { padding: 32px 2rem 140px; gap: 3.5rem; }
+  .hero-heading { font-size: 96px; }
+  .hero-sub { font-size: 28px; }
+  .contact-btn { font-size: 22px; padding: 1.5rem 3rem; }
   .photo-grid { gap: 2rem; }
   .menu-btn { font-size: 14px; }
 }

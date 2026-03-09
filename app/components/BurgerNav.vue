@@ -15,11 +15,11 @@
           <a href="https://www.mybowlingpassport.com/112/6615/book" class="nav-item" target="_blank" rel="noopener">Book a lane</a>
           <a href="/organise" class="nav-item" @click="close">Organise your Party</a>
           <a href="/karaoke" class="nav-item" @click="close">Book Karaoke</a>
-          <a href="/#audio" class="nav-item" @click="close">Audio</a>
+          <a href="/radio" class="nav-item" @click="close">Audio</a>
           <a href="/eats-drinks" class="nav-item" @click="close">Eats + Drinks</a>
           <a href="/whats-on" class="nav-item" @click="close">What's On</a>
           <a href="/radio" class="nav-item" @click="close">Rowans Radio</a>
-          <a href="/djs" class="nav-item" @click="close">Djs</a>
+          <a href="/line-upsevents" class="nav-item" @click="close">Lineup + Events</a>
           <a href="/merch" class="nav-item" @click="close">Merch</a>
           <a href="/policies" class="nav-item" @click="close">Policies + FAQ</a>
           <a href="/contact" class="nav-item" @click="close">Contact us</a>

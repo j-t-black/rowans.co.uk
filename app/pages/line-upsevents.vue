@@ -43,6 +43,9 @@
           <div v-if="day.lower.length === 0" class="slot-empty">—</div>
         </div>
 
+        <!-- Divider between bowls -->
+        <div class="bowl-divider"></div>
+
         <!-- Upper Bowl row -->
         <div class="bowl-label">Upper Bowl</div>
         <div v-for="day in activeDays" :key="'upper-' + day.date" class="bowl-cell">
@@ -321,7 +324,7 @@ const activeDays = computed(() => {
 
 .slot-empty {
   padding: 0.75rem 1rem;
-  font-size: 12px;
+  font-size: 14px;
   color: rgba(255, 255, 255, 0.2);
 }
 
@@ -373,15 +376,15 @@ const activeDays = computed(() => {
 }
 
 .day-header .day-name {
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .day-header .day-date {
-  font-size: 11px;
+  font-size: 13px;
 }
 
 .bowl-label {
-  font-size: 11px;
+  font-size: 14px;
   color: rgba(255, 255, 255, 0.4);
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -403,16 +406,23 @@ const activeDays = computed(() => {
   min-width: 110px;
 }
 
+/* Separator line between Lower Bowl and Upper Bowl rows */
+.bowl-divider {
+  grid-column: 1 / -1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
 .bowl-cell .slot {
   padding: 0.35rem 0.6rem;
 }
 
 .bowl-cell .slot-dj {
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .bowl-cell .slot-time {
-  font-size: 10px;
+  font-size: 12px;
 }
 
 @media (min-width: 1280px) {

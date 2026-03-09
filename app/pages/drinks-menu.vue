@@ -741,16 +741,19 @@ const spiritsRow2: SpiritsGroup[] = [
     overflow: visible;
   }
 
-  /* Logo peeks from the left edge, half visible */
+  /* Logo bisected at viewport left edge — right half visible, faded like merch page */
   .menu-logo {
     display: block;
-    position: absolute;
-    top: 10px;
-    left: -160px;
-    width: 320px;
+    position: fixed;
+    left: 0;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    width: 1400px;
+    max-width: none;
     height: auto;
     margin: 0;
-    opacity: 0.9;
+    opacity: 0.35;
+    pointer-events: none;
   }
 
   /* Rows 1-2: use full 3-col grid but content in cols 2-3 */

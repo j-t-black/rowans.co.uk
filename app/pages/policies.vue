@@ -1,12 +1,5 @@
 <template>
   <div class="min-h-screen bg-black">
-    <!-- Compact logo header -->
-    <header class="logo-header">
-      <NuxtLink to="/">
-        <img src="/design-assets/MAIN LOGO.webp" alt="Rowans" class="site-logo" />
-      </NuxtLink>
-    </header>
-
     <!-- Content with background image -->
     <section class="hero-content">
       <img

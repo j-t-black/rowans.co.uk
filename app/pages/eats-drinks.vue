@@ -45,9 +45,9 @@ useHead({ title: "Eats + Drinks — Rowan's" })
   background-color: #000;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  padding: 2rem;
+  padding: 24px 2rem 2rem;
   overflow: hidden;
 }
 
@@ -86,7 +86,10 @@ useHead({ title: "Eats + Drinks — Rowan's" })
 }
 
 .hero-buttons {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 1;
   display: flex;
   flex-direction: row;
