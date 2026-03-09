@@ -1,12 +1,5 @@
 <template>
   <div class="min-h-screen bg-black">
-    <!-- Compact logo header -->
-    <header class="logo-header">
-      <NuxtLink to="/">
-        <img src="/design-assets/MAIN LOGO.webp" alt="Rowans" class="site-logo" />
-      </NuxtLink>
-    </header>
-
     <!-- Party section with video background -->
     <section class="party-section">
       <video
@@ -59,7 +52,7 @@ useHead({ title: "Organise Your Party — Rowan's" })
 .party-section {
   position: relative;
   width: 100%;
-  min-height: 70vh;
+  height: 100vh;
   background-color: #000;
   display: flex;
   flex-direction: column;

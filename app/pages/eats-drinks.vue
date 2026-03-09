@@ -1,158 +1,171 @@
 <template>
-  <div class="page">
-
-    <header class="page-header">
-      <h1 class="heading">Eats + Drinks</h1>
-    </header>
-
-    <section class="menu-section">
+  <div class="min-h-screen bg-black">
+    <section class="hero-section">
       <img
-        src="/design-assets/YUCATAN menu 2.jpg.webp"
-        alt="Yucatan Tacos Menu"
-        class="menu-image"
+        src="/design-assets/eats-drinks-hero.webp"
+        alt="Eats and Drinks"
+        class="hero-background"
+        loading="lazy"
       />
-      <p class="pre-order">Pre-Order for your party.</p>
+
+      <h2 class="page-heading">Eats + Drinks</h2>
+
+      <p class="hero-text">
+        Signature Frozen Cocktails, Authentic Southern Mexican Tacos<br>
+        Artisan Sourdough Pizza
+      </p>
+
+      <div class="hero-buttons">
+        <a href="/birthday-cakes" class="hero-button">
+          BIRTHDAY<br>CAKES
+        </a>
+        <a href="/drinks-menu" class="hero-button">
+          DRINKS MENU
+        </a>
+        <a href="/yucatan" class="hero-button">
+          YUCATAN<br>TACOS
+        </a>
+        <a href="/pizza" class="hero-button">
+          YARD SALE<br>PIZZA
+        </a>
+      </div>
     </section>
-
-    <nav class="links-section">
-      <a href="/yucatan" class="link-item">
-        <span class="link-title">Yucatan Tacos</span>
-        <span class="link-arrow">→</span>
-      </a>
-      <a href="/drinks-menu" class="link-item">
-        <span class="link-title">Drinks Menu</span>
-        <span class="link-arrow">→</span>
-      </a>
-      <a href="/birthday-cakes" class="link-item">
-        <span class="link-title">Birthday Cakes</span>
-        <span class="link-arrow">→</span>
-      </a>
-      <a href="/pizza" class="link-item">
-        <span class="link-title">Pizza</span>
-        <span class="link-arrow">→</span>
-      </a>
-    </nav>
-
   </div>
 </template>
 
 <script setup lang="ts">
-useHead({ title: "Eats + Drinks \u2014 Rowan's" })
+useHead({ title: "Eats + Drinks — Rowan's" })
 </script>
 
 <style scoped>
-.page {
-  min-height: 100vh;
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
   background-color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  overflow: hidden;
 }
 
-.page-header {
-  padding: 2.5rem 1.5rem 1.5rem;
-  text-align: center;
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+  z-index: 0;
 }
 
-.heading {
+.page-heading {
+  position: relative;
+  z-index: 1;
   font-family: 'JetBrains Mono', monospace;
   font-weight: var(--section-heading-weight, 400);
   font-size: var(--section-heading-size, 46px);
   color: var(--color-heading, #ff0000);
-  margin: 0;
-  line-height: 1.1;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
-.menu-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 1.5rem 2rem;
-  gap: 1.5rem;
-}
-
-.menu-image {
-  width: 100%;
-  max-width: 500px;
-  display: block;
-}
-
-.pre-order {
+.hero-text {
+  position: relative;
+  z-index: 1;
   font-family: 'JetBrains Mono', monospace;
   font-size: 14px;
   color: #ffffff;
   opacity: 0.8;
-  margin: 0;
   text-align: center;
+  margin: 0 0 2.5rem;
+  line-height: 1.6;
 }
 
-.links-section {
+.hero-buttons {
+  position: relative;
+  z-index: 1;
   display: flex;
-  flex-direction: column;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-  max-width: 600px;
-  margin: 0 auto;
-  width: 100%;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: center;
 }
 
-.link-item {
+.hero-button {
+  width: 150px;
+  height: 150px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 1.25rem 1.5rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  justify-content: center;
+  background-image: url('/design-assets/BUTTON BASE.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #fff;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 400;
+  font-size: 12px;
+  text-align: center;
   text-decoration: none;
-  transition: background-color 0.15s;
+  padding: 1.5rem;
+  transition: all 0.2s;
+  line-height: 1.3;
 }
 
-.link-item:hover {
-  background-color: rgba(255, 255, 255, 0.05);
+.hero-button:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
 }
 
-.link-title {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 16px;
-  color: #ffffff;
-  opacity: 0.9;
-}
-
-.link-arrow {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 18px;
-  color: #ffffff;
-  opacity: 0.5;
-}
-
-@media (min-width: 640px) {
-  .heading {
-    font-size: 42px;
+@media (max-width: 600px) {
+  .hero-buttons {
+    flex-wrap: wrap;
+    gap: 0.5rem;
   }
 
-  .link-title {
-    font-size: 18px;
+  .hero-button {
+    width: 78px;
+    height: 78px;
+    font-size: 9px;
+    padding: 0.5rem;
+  }
+
+  .page-heading {
+    font-size: 28px;
+  }
+
+  .hero-text {
+    font-size: 12px;
   }
 }
 
-@media (min-width: 1280px) {
-  .heading {
-    font-size: 60px;
+@media (min-width: 768px) {
+  .page-heading {
+    font-size: 70px;
+    margin-bottom: 1.5rem;
   }
 
-  .menu-image {
-    max-width: 600px;
-  }
-
-  .pre-order {
+  .hero-text {
     font-size: 16px;
   }
+}
 
-  .links-section {
-    max-width: 800px;
+@media (min-width: 1920px) {
+  .hero-buttons {
+    gap: 3rem;
   }
 
-  .link-item {
-    padding: 1.5rem 2rem;
+  .hero-button {
+    width: 180px;
+    height: 180px;
+    font-size: 14px;
   }
 
-  .link-title {
-    font-size: 22px;
+  .hero-text {
+    font-size: 18px;
   }
 }
 </style>

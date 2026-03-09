@@ -78,16 +78,41 @@ useHead({ title: "Merch — Rowan's" })
 
 /* 1920px Figma Desktop */
 @media (min-width: 1920px) {
+  .page {
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Heading: centered across full viewport — explicit width + text-align */
+  .page-header {
+    width: 100%;
+    text-align: center;
+    align-self: center;
+    padding: 2rem 0 0;
+  }
+
   .heading {
     font-size: 68px;
   }
 
-  .logo-image {
-    opacity: 0.35;
+  /* Logo: positioned at left edge, half-clipped, filling viewport height */
+  .image-wrap {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%) translateX(-50%);
+    width: 70%;
+    max-width: none;
+    padding: 0;
   }
 
-  .image-wrap {
-    max-width: 1200px;
+  .logo-image {
+    opacity: 0.35;
+    width: 100%;
+  }
+
+  .coming-soon {
+    display: none;
   }
 }
 </style>
