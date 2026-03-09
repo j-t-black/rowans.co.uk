@@ -8,18 +8,19 @@
         </button>
         <span class="btn-label">menu</span>
       </div>
-      <div v-if="!hideLaneButton" class="btn-group">
-        <a
-          href="https://www.mybowlingpassport.com/112/6615/book"
-          class="icon-btn"
-          target="_blank"
-          rel="noopener"
-          aria-label="Book a lane"
-        >
-          <img src="/design-assets/LANE TRANS 1.webp" alt="" class="btn-icon" />
-        </a>
-        <span class="btn-label">book a<br>lane</span>
-      </div>
+    </div>
+
+    <div v-if="!hideLaneButton" class="lane-button btn-group">
+      <a
+        href="https://www.mybowlingpassport.com/112/6615/book"
+        class="icon-btn"
+        target="_blank"
+        rel="noopener"
+        aria-label="Book a lane"
+      >
+        <img src="/design-assets/LANE TRANS 1.webp" alt="" class="btn-icon" />
+      </a>
+      <span class="btn-label">book a<br>lane</span>
     </div>
 
     <BurgerNav :is-open="navOpen" @close="navOpen = false" />
@@ -88,6 +89,23 @@ const hideLaneButton = computed(() => ['/groups', '/kids'].includes(route.path))
   display: block;
 }
 
+.lane-button {
+  position: fixed;
+  top: 22px;
+  left: 22px;
+  z-index: 9000;
+}
+
+@media (min-width: 768px) {
+  .lane-button {
+    position: fixed;
+    top: auto;
+    left: auto;
+    top: 90px;
+    right: 22px;
+  }
+}
+
 @media (min-width: 768px) and (max-width: 1023px) {
   .icon-btn {
     width: 60px;
@@ -104,6 +122,11 @@ const hideLaneButton = computed(() => ['/groups', '/kids'].includes(route.path))
     top: 33px;
     right: 30px;
     gap: 16px;
+  }
+
+  .lane-button {
+    top: 150px;
+    right: 30px;
   }
 
   .icon-btn {

@@ -213,7 +213,7 @@ useHead({ title: "Rowan's \u2014 Iconic Venue in Finsbury Park" })
 
 .hero-logo {
   position: relative;
-  height: 120px;
+  height: 110px;
   width: auto;
   z-index: 10;
   opacity: 0.8;
@@ -732,12 +732,16 @@ useHead({ title: "Rowan's \u2014 Iconic Venue in Finsbury Park" })
 /* Mobile: shift hero background to center the building */
 @media (max-width: 500px) {
   .hero-background {
-    object-position: calc(50% + 220px) calc(50% - 20px);
+    object-position: calc(50% + 360px) calc(50% - 20px);
   }
 }
 
 /* Mobile fixes */
 @media (max-width: 767px) {
+  .hero-logo {
+    margin-top: 70px;
+  }
+
   .welcome-heading {
     font-size: 24px;
   }
