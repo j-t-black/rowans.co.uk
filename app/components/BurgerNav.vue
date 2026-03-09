@@ -140,7 +140,7 @@ onUnmounted(() => {
 }
 
 /* Desktop */
-@media (min-width: 1920px) {
+@media (min-width: 1440px) {
   .burger-overlay {
     justify-content: flex-start;
     padding-top: 1rem;

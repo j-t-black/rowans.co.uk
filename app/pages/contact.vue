@@ -25,7 +25,7 @@ useHead({ title: "Contact Us — Rowan's" })
   opacity: 0.5;
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1440px) {
   .heading {
     font-size: 68px;
   }

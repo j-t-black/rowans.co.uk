@@ -113,6 +113,23 @@ useHead({ title: "What's On \u2014 Rowan's" })
   }
 }
 
+/* 1024px intermediate */
+@media (min-width: 1024px) {
+  .heading {
+    font-size: 52px;
+  }
+
+  .click-link {
+    font-size: 18px;
+    max-width: 700px;
+  }
+
+  .id-notice {
+    font-size: 14px;
+    max-width: 600px;
+  }
+}
+
 /* Desktop */
 @media (min-width: 1280px) {
   .page-header {
@@ -135,8 +152,8 @@ useHead({ title: "What's On \u2014 Rowan's" })
   }
 }
 
-/* 1920px Figma Desktop */
-@media (min-width: 1920px) {
+/* 1440px+ Figma Desktop */
+@media (min-width: 1440px) {
   .page-header {
     padding: 0 2rem 2.5rem;
     gap: 1.25rem;

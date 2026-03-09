@@ -88,7 +88,18 @@ const hideLaneButton = computed(() => ['/groups', '/kids'].includes(route.path))
   display: block;
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 768px) and (max-width: 1023px) {
+  .icon-btn {
+    width: 60px;
+    height: 59px;
+  }
+
+  .btn-label {
+    font-size: 9px;
+  }
+}
+
+@media (min-width: 1024px) {
   .fixed-buttons {
     top: 33px;
     right: 30px;
@@ -103,17 +114,6 @@ const hideLaneButton = computed(() => ['/groups', '/kids'].includes(route.path))
   .btn-label {
     font-size: 16px;
     margin-top: 6px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1919px) {
-  .icon-btn {
-    width: 60px;
-    height: 59px;
-  }
-
-  .btn-label {
-    font-size: 9px;
   }
 }
 </style>

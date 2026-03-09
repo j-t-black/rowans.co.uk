@@ -148,7 +148,20 @@ useHead({ title: "Organise Your Party — Rowan's" })
   }
 }
 
-@media (min-width: 1920px) {
+/* 1024px — tablet/small laptop */
+@media (min-width: 1024px) {
+  .party-button {
+    width: 160px;
+    height: 160px;
+    font-size: 16px;
+  }
+  .party-buttons {
+    gap: 2.5rem;
+  }
+}
+
+/* 1440px+ Desktop */
+@media (min-width: 1440px) {
   .party-buttons {
     gap: 3rem;
   }

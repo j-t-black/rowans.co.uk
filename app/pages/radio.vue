@@ -459,8 +459,53 @@ onBeforeUnmount(() => {
   }
 }
 
-/* 1920px Figma Desktop */
-@media (min-width: 1920px) {
+/* 1024px intermediate */
+@media (min-width: 1024px) {
+  .page-heading {
+    font-size: 68px;
+  }
+
+  .big-speaker {
+    height: 450px;
+  }
+
+  .audio-player {
+    width: 450px;
+    padding: 1.5rem 2rem;
+  }
+
+  .player-label {
+    font-size: 12px;
+  }
+
+  .track-info p {
+    font-size: 13px;
+  }
+
+  .waveform {
+    height: 45px;
+  }
+
+  .time-display {
+    font-size: 12px;
+  }
+
+  .area-btn-img {
+    width: 150px;
+    height: auto;
+  }
+
+  .area-btn-label {
+    font-size: 16px;
+  }
+
+  .area-buttons {
+    gap: 3rem;
+  }
+}
+
+/* 1440px+ Figma Desktop */
+@media (min-width: 1440px) {
   .page-heading {
     font-size: 68px;
   }

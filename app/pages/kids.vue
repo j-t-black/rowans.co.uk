@@ -246,14 +246,58 @@ useHead({ title: "Kids Parties — Rowan's" })
   }
 }
 
+@media (min-width: 1024px) {
+  .info-text p {
+    font-size: 16px;
+  }
+
+  .input-box {
+    font-size: 18px;
+    width: 420px;
+  }
+
+  .input-note {
+    font-size: 16px;
+  }
+
+  .peak-notice {
+    font-size: 16px;
+    max-width: 500px;
+  }
+
+  .cost-row {
+    font-size: 18px;
+  }
+
+  .cost-table {
+    max-width: 420px;
+  }
+
+  .calendar-placeholder {
+    max-width: 600px;
+  }
+
+  .submit-btn {
+    font-size: 18px;
+  }
+
+  .footer-notice {
+    font-size: 20px;
+  }
+
+  .page-content {
+    max-width: 800px;
+  }
+}
+
 @media (min-width: 1100px) {
   .page-heading {
     font-size: 64px;
   }
 }
 
-/* 1920px Figma Desktop */
-@media (min-width: 1920px) {
+/* 1440px+ Figma Desktop */
+@media (min-width: 1440px) {
   .page-content {
     max-width: 1000px;
   }

@@ -167,4 +167,20 @@ useHead({ title: "Yucatan Tacos \u2014 Rowan's" })
   .photo-grid { gap: 2rem; }
   .menu-btn { font-size: 14px; }
 }
+
+@media (min-width: 1024px) {
+  .hero-sub { font-size: 24px; }
+  .contact-btn { font-size: 22px; }
+  .content-container { max-width: 800px; }
+  .menu-image { max-width: 600px; }
+  .menu-btn { font-size: 16px; padding: 0.85rem 1.75rem; }
+}
+
+@media (min-width: 1440px) {
+  .hero-sub { font-size: 28px; }
+  .contact-btn { font-size: 28px; padding: 1.5rem 3.5rem; }
+  .content-container { max-width: 1000px; }
+  .menu-image { max-width: 750px; }
+  .menu-btn { font-size: 20px; padding: 1rem 2rem; }
+}
 </style>

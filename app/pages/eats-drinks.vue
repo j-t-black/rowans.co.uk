@@ -156,7 +156,23 @@ useHead({ title: "Eats + Drinks — Rowan's" })
   }
 }
 
-@media (min-width: 1920px) {
+/* 1024px — tablet/small laptop */
+@media (min-width: 1024px) {
+  .hero-text {
+    font-size: 16px;
+  }
+  .hero-button {
+    width: 160px;
+    height: 160px;
+    font-size: 16px;
+  }
+  .hero-buttons {
+    gap: 2.5rem;
+  }
+}
+
+/* 1440px+ Desktop */
+@media (min-width: 1440px) {
   .hero-buttons {
     gap: 3rem;
   }

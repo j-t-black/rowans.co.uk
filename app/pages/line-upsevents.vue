@@ -425,13 +425,51 @@ const activeDays = computed(() => {
   font-size: 12px;
 }
 
+@media (min-width: 1024px) {
+  .heading {
+    font-size: 46px;
+  }
+
+  .week-label {
+    font-size: 16px;
+    min-width: 240px;
+  }
+
+  .nav-btn {
+    font-size: 18px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .day-header .day-name {
+    font-size: 18px;
+  }
+
+  .day-header .day-date {
+    font-size: 14px;
+  }
+
+  .bowl-label {
+    font-size: 16px;
+  }
+
+  .bowl-cell .slot-dj {
+    font-size: 18px;
+  }
+
+  .bowl-cell .slot-time {
+    font-size: 13px;
+  }
+}
+
 @media (min-width: 1280px) {
   .heading {
     font-size: 52px;
   }
 }
 
-@media (min-width: 1920px) {
+/* 1440px+ Figma Desktop */
+@media (min-width: 1440px) {
   .heading {
     font-size: 68px;
   }

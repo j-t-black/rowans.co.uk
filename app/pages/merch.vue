@@ -65,6 +65,21 @@ useHead({ title: "Merch — Rowan's" })
   }
 }
 
+@media (min-width: 1024px) {
+  .heading {
+    font-size: 42px;
+  }
+
+  .image-wrap {
+    max-width: 700px;
+    padding: 2.5rem 1.5rem 1rem;
+  }
+
+  .coming-soon {
+    font-size: 16px;
+  }
+}
+
 @media (min-width: 1280px) {
   .heading {
     font-size: 48px;
@@ -76,8 +91,8 @@ useHead({ title: "Merch — Rowan's" })
   }
 }
 
-/* 1920px Figma Desktop */
-@media (min-width: 1920px) {
+/* 1440px+ Figma Desktop */
+@media (min-width: 1440px) {
   .page {
     position: relative;
     overflow: hidden;

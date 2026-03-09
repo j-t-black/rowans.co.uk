@@ -234,8 +234,8 @@ useHead({ title: "Rowan's \u2014 Iconic Venue in Finsbury Park" })
 }
 
 
-/* Desktop styles (1920px+) — Hero */
-@media (min-width: 1920px) {
+/* Desktop styles (1440px+) — Hero */
+@media (min-width: 1440px) {
   .hero-section {
     padding-top: 28px;
   }
@@ -250,13 +250,25 @@ useHead({ title: "Rowan's \u2014 Iconic Venue in Finsbury Park" })
 }
 
 /* Tablet/Medium Desktop */
-@media (min-width: 768px) and (max-width: 1919px) {
+@media (min-width: 768px) and (max-width: 1439px) {
   .hero-section {
     padding-top: 22px;
   }
+}
 
+@media (min-width: 768px) and (max-width: 1023px) {
   .hero-logo {
     height: 150px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .hero-logo {
+    height: 240px;
+  }
+
+  .hero-heading {
+    font-size: 28px;
   }
 }
 
@@ -304,7 +316,7 @@ useHead({ title: "Rowan's \u2014 Iconic Venue in Finsbury Park" })
 }
 
 /* Desktop styles for welcome section */
-@media (min-width: 1920px) {
+@media (min-width: 1440px) {
   .welcome-heading {
     font-size: 96px;
     margin-bottom: 2.5rem;
@@ -318,7 +330,7 @@ useHead({ title: "Rowan's \u2014 Iconic Venue in Finsbury Park" })
 }
 
 /* Tablet/Medium Desktop for welcome section */
-@media (min-width: 768px) and (max-width: 1919px) {
+@media (min-width: 768px) and (max-width: 1439px) {
   .welcome-text {
     max-width: 900px;
   }
@@ -828,8 +840,70 @@ useHead({ title: "Rowan's \u2014 Iconic Venue in Finsbury Park" })
   }
 }
 
-/* Desktop Responsive — 1920px Figma breakpoint */
-@media (min-width: 1920px) {
+/* 1024px — tablet/small laptop */
+@media (min-width: 1024px) {
+  /* Welcome */
+  .welcome-text {
+    font-size: 16px;
+  }
+
+  /* Party */
+  .party-heading {
+    font-size: 24px;
+  }
+
+  .party-buttons {
+    gap: 2rem;
+  }
+
+  .party-button {
+    width: 140px;
+    height: 140px;
+    font-size: 14px;
+  }
+
+  /* Eats */
+  .eats-text {
+    font-size: 18px;
+  }
+
+  .eats-buttons {
+    gap: 2rem;
+  }
+
+  .eats-button {
+    width: 140px;
+    height: 140px;
+    font-size: 14px;
+  }
+
+  /* Audio */
+  .audio-logo {
+    max-width: 500px;
+  }
+
+  .audio-text {
+    font-size: 14px;
+  }
+
+  .audio-button {
+    width: 140px;
+    height: 140px;
+    font-size: 14px;
+  }
+
+  /* Visit */
+  .visit-hours {
+    font-size: 16px;
+  }
+
+  .visit-card h3 {
+    font-size: 26px;
+  }
+}
+
+/* Desktop Responsive — 1440px+ Desktop */
+@media (min-width: 1440px) {
   /* Party section */
   .party-heading {
     font-size: 40px;

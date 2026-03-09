@@ -149,8 +149,28 @@ useHead({ title: "Policies — Rowan's" })
   }
 }
 
-/* 1920px Figma Desktop */
-@media (min-width: 1920px) {
+/* 1024px intermediate */
+@media (min-width: 1024px) {
+  .info-text {
+    font-size: 24px;
+  }
+
+  .content-overlay {
+    max-width: 1000px;
+  }
+
+  .policy-grid {
+    max-width: 800px;
+  }
+
+  .policy-btn {
+    font-size: 22px;
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* 1440px+ Figma Desktop */
+@media (min-width: 1440px) {
   .page-heading {
     font-size: 68px;
     margin-bottom: 2rem;

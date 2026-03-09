@@ -142,8 +142,42 @@ useHead({ title: "Birthday Cake — Rowan's" })
   }
 }
 
-/* 1920px Figma Desktop */
-@media (min-width: 1920px) {
+/* 1024px intermediate */
+@media (min-width: 1024px) {
+  .page-content {
+    max-width: 800px;
+  }
+
+  .page-heading {
+    font-size: 80px;
+  }
+
+  .intro-text {
+    font-size: 24px;
+  }
+
+  .warning-text {
+    font-size: 24px;
+  }
+
+  .cake-box-placeholder {
+    width: 190px;
+    height: 190px;
+    font-size: 16px;
+  }
+
+  .supplier-logo.punk {
+    width: 190px;
+    height: 190px;
+  }
+
+  .supplier-logos {
+    gap: 5rem;
+  }
+}
+
+/* 1440px+ Figma Desktop */
+@media (min-width: 1440px) {
   .page-heading {
     font-size: 96px;
   }

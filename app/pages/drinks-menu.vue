@@ -718,12 +718,29 @@ const spiritsRow2: SpiritsGroup[] = [
 }
 
 @media (min-width: 1024px) {
+  .menu-content {
+    max-width: 900px;
+    padding: 0 36px 80px 36px;
+  }
+
+  .section-heading {
+    font-size: 16px;
+  }
+
   .item-row { font-size: 13px; }
   .item-price { font-size: 13px; }
+  .item-detail { font-size: 11px; }
+
+  .sparkling-row { font-size: 13px; }
+  .wine-row { font-size: 13px; }
+  .cocktail-top { font-size: 13px; }
+
+  .section-note { font-size: 10px; }
+  .menu-footer p { font-size: 15px; }
 }
 
-/* 1920px Figma Desktop */
-@media (min-width: 1920px) {
+/* 1440px+ Figma Desktop */
+@media (min-width: 1440px) {
   .menu-header {
     text-align: center;
     padding: 32px 24px 16px;
