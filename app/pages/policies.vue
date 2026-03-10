@@ -206,6 +206,16 @@ useHead({ title: "Policies — Rowan's" })
   }
 }
 
+@media (max-width: 767px) {
+  .content-overlay {
+    padding-top: calc(4rem + 45px);
+  }
+
+  .page-heading {
+    font-size: 30px;
+  }
+}
+
 @media (max-width: 600px) {
   .policy-grid {
     grid-template-columns: 1fr 1fr;

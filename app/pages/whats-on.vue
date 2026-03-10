@@ -94,6 +94,18 @@ useHead({ title: "What's On \u2014 Rowan's" })
   object-fit: cover;
 }
 
+/* Mobile */
+@media (max-width: 767px) {
+  .page-header {
+    padding-top: calc(4rem + 30px);
+  }
+
+  .photo-grid {
+    gap: 1rem;
+    padding: 0 0.5rem;
+  }
+}
+
 /* Tablet+: 2 columns */
 @media (min-width: 640px) {
   .heading {

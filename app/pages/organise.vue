@@ -119,10 +119,10 @@ useHead({ title: "Organise Your Party — Rowan's" })
   transform: scale(1.05);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
   .party-buttons {
-    flex-wrap: wrap;
-    gap: 0.5rem;
+    flex-wrap: nowrap;
+    gap: 0.4rem;
   }
 
   .party-button {

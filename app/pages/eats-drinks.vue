@@ -123,10 +123,38 @@ useHead({ title: "Eats + Drinks — Rowan's" })
   transform: scale(1.05);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
+  .hero-section {
+    height: auto;
+    padding: 0 1rem 2rem;
+    justify-content: flex-start;
+  }
+
+  .hero-background {
+    position: relative;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    opacity: 0.8;
+  }
+
+  .page-heading {
+    font-size: 28px;
+    margin-top: calc(3rem + 60px);
+    order: -2;
+  }
+
+  .hero-text {
+    font-size: 12px;
+    order: -1;
+  }
+
   .hero-buttons {
-    flex-wrap: wrap;
-    gap: 0.5rem;
+    position: static;
+    transform: none;
+    flex-wrap: nowrap;
+    gap: 0.4rem;
+    margin-top: 1.5rem;
   }
 
   .hero-button {
@@ -134,14 +162,6 @@ useHead({ title: "Eats + Drinks — Rowan's" })
     height: 78px;
     font-size: 9px;
     padding: 0.5rem;
-  }
-
-  .page-heading {
-    font-size: 28px;
-  }
-
-  .hero-text {
-    font-size: 12px;
   }
 }
 

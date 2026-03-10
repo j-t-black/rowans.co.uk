@@ -328,6 +328,17 @@ const activeDays = computed(() => {
   color: rgba(255, 255, 255, 0.2);
 }
 
+/* Mobile */
+@media (max-width: 767px) {
+  .page-header {
+    padding-top: calc(4rem + 45px);
+  }
+
+  .heading {
+    font-size: 30px;
+  }
+}
+
 /* ── Desktop (640px+) ── */
 @media (min-width: 640px) {
   .heading {

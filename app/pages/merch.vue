@@ -59,6 +59,17 @@ useHead({ title: "Merch — Rowan's" })
   margin: 0 0 3rem;
 }
 
+@media (max-width: 767px) {
+  .page-header {
+    padding-top: calc(4rem + 45px);
+    align-self: center;
+  }
+
+  .heading {
+    font-size: 30px;
+  }
+}
+
 @media (min-width: 640px) {
   .heading {
     font-size: 32px;

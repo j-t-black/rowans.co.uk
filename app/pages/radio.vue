@@ -556,30 +556,45 @@ onBeforeUnmount(() => {
   }
 }
 
-@media (max-width: 600px) {
-  .page-heading {
-    font-size: 30px;
+@media (max-width: 767px) {
+  .radio-content {
+    padding-top: calc(4rem + 50px);
   }
 
   .big-speaker {
-    height: 180px;
+    display: none;
+  }
+
+  .page-heading {
+    font-size: 30px;
+    margin-bottom: 40px;
   }
 
   .audio-player {
-    width: 260px;
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 100%;
     max-width: 100%;
+    margin: 0 auto;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
 
   .area-buttons {
-    gap: 1.5rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
   }
 
   .area-btn-img {
-    width: 65px;
+    width: 85px;
+    height: 85px;
   }
 
   .area-btn-label {
-    font-size: 9px;
+    font-size: 11px;
   }
 }
 </style>
