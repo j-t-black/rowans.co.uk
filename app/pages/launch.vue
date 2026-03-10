@@ -53,7 +53,7 @@ useHead({ title: "Launch Parties — Rowan's" })
   position: relative;
   z-index: 1;
   text-align: center;
-  padding: 2rem 2rem 4rem;
+  padding: calc(4rem + 45px) 2rem 4rem;
   max-width: 700px;
   display: flex;
   flex-direction: column;
@@ -63,7 +63,7 @@ useHead({ title: "Launch Parties — Rowan's" })
 .page-heading {
   font-family: 'JetBrains Mono', monospace;
   font-weight: var(--section-heading-weight, 400);
-  font-size: var(--section-heading-size, 46px);
+  font-size: 30px;
   color: var(--color-heading, #ff0000);
   margin: 0 0 1.5rem;
   line-height: 1.1;

@@ -65,7 +65,7 @@ useHead({ title: "Kids Parties — Rowan's" })
 .page-content {
   max-width: 700px;
   margin: 0 auto;
-  padding: 1rem 2rem 4rem;
+  padding: calc(4rem + 45px) 2rem 4rem;
   text-align: center;
 }
 

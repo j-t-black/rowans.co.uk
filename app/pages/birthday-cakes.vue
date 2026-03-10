@@ -1,12 +1,5 @@
 <template>
   <div class="min-h-screen bg-black">
-    <!-- Compact logo header -->
-    <header class="logo-header">
-      <NuxtLink to="/">
-        <img src="/design-assets/MAIN LOGO.webp" alt="Rowans" class="site-logo" />
-      </NuxtLink>
-    </header>
-
     <!-- Page content -->
     <section class="page-content">
       <h1 class="page-heading">Birthday Cake</h1>
@@ -45,22 +38,10 @@ useHead({ title: "Birthday Cake — Rowan's" })
 </script>
 
 <style scoped>
-.logo-header {
-  display: flex;
-  justify-content: center;
-  padding: 2rem 1rem 1rem;
-  background: #000;
-}
-
-.site-logo {
-  height: 120px;
-  width: auto;
-}
-
 .page-content {
   max-width: 900px;
   margin: 0 auto;
-  padding: 1rem 2rem 4rem;
+  padding: calc(4rem + 45px) 2rem 4rem;
   text-align: center;
 }
 
@@ -124,10 +105,6 @@ useHead({ title: "Birthday Cake — Rowan's" })
 }
 
 @media (min-width: 768px) {
-  .site-logo {
-    height: 150px;
-  }
-
   .page-heading {
     font-size: 80px;
     margin-bottom: 2.5rem;

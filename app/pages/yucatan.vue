@@ -68,14 +68,14 @@ useHead({ title: "Yucatan Tacos \u2014 Rowan's" })
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 24px 2rem 48px;
+  padding: calc(4rem + 45px) 2rem 48px;
   gap: 3rem;
 }
 
 .hero-heading {
   font-family: 'JetBrains Mono', monospace;
   font-weight: 400;
-  font-size: 48px;
+  font-size: 30px;
   color: #e8000d;
   text-align: center;
   margin: 0;

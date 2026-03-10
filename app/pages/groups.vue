@@ -95,7 +95,7 @@ useHead({ title: "Group Bookings — Rowan's" })
   position: relative;
   z-index: 1;
   text-align: center;
-  padding: 1rem 2rem 4rem;
+  padding: calc(4rem + 45px) 2rem 4rem;
   max-width: 700px;
   width: 100%;
 }
@@ -103,7 +103,7 @@ useHead({ title: "Group Bookings — Rowan's" })
 .page-heading {
   font-family: 'JetBrains Mono', monospace;
   font-weight: var(--section-heading-weight, 400);
-  font-size: 24px;
+  font-size: 30px;
   color: var(--color-heading, #ff0000);
   margin: 0 0 0.5rem;
   line-height: 1.1;
