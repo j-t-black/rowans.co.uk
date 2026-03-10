@@ -13,7 +13,7 @@
         <h1 class="page-heading">Rowans Policies</h1>
 
         <p class="info-text">Over 21 ID Required on Fridays and Saturday nights after 7pm</p>
-        <p class="info-text">Please Click on the links below for Rowans downloadable policy documents</p>
+        <p class="info-text second-info">Please Click on the links below for Rowans downloadable policy documents</p>
 
         <div class="policy-grid">
           <a href="#" class="policy-btn">Admission<br>Policy</a>
@@ -214,11 +214,30 @@ useHead({ title: "Policies — Rowan's" })
   .page-heading {
     font-size: 30px;
   }
+
+  .second-info {
+    margin-top: 0.5rem;
+  }
+
+  .policy-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    max-width: 250px;
+    margin: calc(1.5rem + 20px) auto 0;
+  }
+
+  .policy-btn {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1rem;
+  }
 }
 
 @media (max-width: 600px) {
   .policy-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 
   .policy-btn:nth-child(4) {
