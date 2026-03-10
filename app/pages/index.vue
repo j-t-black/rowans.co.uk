@@ -757,10 +757,24 @@ useHead({ title: "Rowan's \u2014 Iconic Venue in Finsbury Park" })
     display: none;
   }
 
-  /* Party: 4-in-a-row on mobile */
+  /* Party: video above, text+buttons below on mobile */
   .party-section {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    min-height: auto;
+    padding: 0 1rem 2rem;
+    justify-content: flex-start;
+  }
+
+  .party-background {
+    position: relative;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    opacity: 0.8;
+    border-radius: 0;
+  }
+
+  .party-heading {
+    margin-top: 1.5rem;
   }
 
   .party-buttons {
@@ -809,16 +823,32 @@ useHead({ title: "Rowan's \u2014 Iconic Venue in Finsbury Park" })
     width: 100%;
   }
 
-  /* Eats: full-width image on mobile, padding only on text */
+  /* Eats: normal flow on mobile — heading, text, image, buttons */
   .eats-section {
     padding-left: 0;
     padding-right: 0;
   }
 
-  .eats-heading,
+  .eats-heading {
+    position: relative;
+    top: auto;
+    padding: 0 1rem;
+    margin-bottom: 0.75rem;
+  }
+
   .eats-text {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    position: relative;
+    top: auto;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .eats-gradient-top {
+    display: none;
+  }
+
+  .eats-gradient-bottom {
+    height: 15%;
   }
 
   /* Eats buttons: 4-in-a-row below image */
@@ -827,7 +857,7 @@ useHead({ title: "Rowan's \u2014 Iconic Venue in Finsbury Park" })
     flex-wrap: nowrap;
     justify-content: center;
     gap: 0.4rem;
-    padding: 1rem 0.5rem;
+    padding: 1rem 0.5rem 3rem;
     margin-top: -1rem;
   }
 
@@ -836,11 +866,6 @@ useHead({ title: "Rowan's \u2014 Iconic Venue in Finsbury Park" })
     height: 82px;
     font-size: 9px;
     padding: 0.5rem;
-  }
-
-  /* Reduce bottom gradient overlap since buttons aren't overlaid */
-  .eats-gradient-bottom {
-    height: 25%;
   }
 }
 
