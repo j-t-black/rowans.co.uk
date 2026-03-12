@@ -1,1010 +1,1005 @@
 <template>
-  <div class="min-h-screen bg-black">
-    <!-- Hero Section -->
-    <section class="hero-section">
-      <!-- Background Image -->
-      <img
-        src="/design-assets/HERO 1.4 CLEAN LINES - NEW 16.webp"
-        alt="Rowans Venue"
-        class="hero-background"
-        fetchpriority="high"
-      />
+    <div class="min-h-screen bg-black">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <!-- Background Image -->
+            <img
+                src="/design-assets/HERO 1.4 CLEAN LINES - NEW 16.webp"
+                alt="Rowans Venue"
+                class="hero-background"
+                fetchpriority="high"
+            />
 
-      <!-- Logo at top center -->
-      <img
-        src="/design-assets/MAIN LOGO.webp"
-        alt="Rowans Bowling"
-        class="hero-logo"
-      />
+            <!-- Logo at top center -->
+            <img
+                src="/design-assets/MAIN LOGO.webp"
+                alt="Rowans Bowling"
+                class="hero-logo"
+            />
 
-      <!-- Heading -->
-      <h1 class="hero-heading">
-        Iconic Venue in<br>
-        London's Finsbury Park
-      </h1>
+            <!-- Heading -->
+            <h1 class="hero-heading">
+                Iconic Venue in<br />
+                London's Finsbury Park
+            </h1>
+        </section>
 
-    </section>
+        <!-- Welcome to Rowans Section -->
+        <section class="welcome-section">
+            <h2 class="welcome-heading">Welcome to Rowans</h2>
+            <p class="welcome-text welcome-features welcome-levels">
+                2 levels of...
+            </p>
+            <p class="welcome-text welcome-features">
+                World-class Sound, Intelligent Lighting and video, 2 Distinct
+                Dancefloors,<br />
+                24 bowling lanes, 14 Pool tables, 6 Private Karaoke booths,<br />
+                4 Bars, Outback Garden with seating and sound system,<br />
+                Arcade
+            </p>
+        </section>
 
-    <!-- Welcome to Rowans Section -->
-    <section class="welcome-section">
-      <h2 class="welcome-heading">Welcome to Rowans</h2>
-      <p class="welcome-text welcome-features welcome-levels">
-        2 levels of...
-      </p>
-      <p class="welcome-text welcome-features">
-        World-class Sound, Intelligent Lighting and video, 2 Distinct Dancefloors,<br>
-        24 bowling lanes, 14 Pool tables, 6 Private Karaoke booths,<br>
-        4 Bars, Outback Garden with seating and sound system,<br>
-        Arcade
-      </p>
-    </section>
+        <!-- Organise Your Party Section -->
+        <section class="party-section">
+            <!-- Background Video -->
+            <video
+                class="party-background"
+                src="/videos/party-bg.mp4"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+            />
 
-    <!-- Organise Your Party Section -->
-    <section class="party-section">
-      <!-- Background Video -->
-      <video
-        class="party-background"
-        src="/videos/party-bg.mp4"
-        autoplay
-        muted
-        loop
-        playsinline
-        preload="metadata"
-      />
+            <h2 class="party-heading">Organise your party...</h2>
+            <div class="party-buttons">
+                <a href="/groups" class="party-button"> LARGE<br />GROUPS </a>
+                <a href="/kids" class="party-button"> KIDS </a>
+                <a href="/corporate" class="party-button"> CORPORATE </a>
+                <a href="/launch" class="party-button"> LAUNCH<br />PARTIES </a>
+            </div>
+        </section>
 
-      <h2 class="party-heading">Organise your party...</h2>
-      <div class="party-buttons">
-        <a href="/groups" class="party-button">
-          LARGE<br>GROUPS
-        </a>
-        <a href="/kids" class="party-button">
-          KIDS
-        </a>
-        <a href="/corporate" class="party-button">
-          CORPORATE
-        </a>
-        <a href="/launch" class="party-button">
-          LAUNCH<br>PARTIES
-        </a>
-      </div>
-    </section>
+        <!-- Eats + Drinks Section -->
+        <section class="eats-section">
+            <h2 class="eats-heading">Eats + Drinks</h2>
+            <p class="eats-text">
+                Signature Frozen Cocktails, Authentic Southern Mexican Tacos<br />
+                Artisan Sourdough Pizza
+            </p>
 
-    <!-- Eats + Drinks Section -->
-    <section class="eats-section">
-      <h2 class="eats-heading">Eats + Drinks</h2>
-      <p class="eats-text">
-        Signature Frozen Cocktails, Authentic Southern Mexican Tacos<br>
-        Artisan Sourdough Pizza
-      </p>
+            <div class="eats-image-container">
+                <img
+                    src="/design-assets/eats-drinks-hero.webp"
+                    alt="Eats and Drinks"
+                    class="eats-hero-image"
+                    loading="lazy"
+                />
+                <div class="eats-gradient-top" />
+                <div class="eats-gradient-bottom" />
+                <div class="eats-buttons">
+                    <a href="/birthday-cakes" class="eats-button">
+                        BIRTHDAY<br />CAKES
+                    </a>
+                    <a href="/drinks-menu" class="eats-button"> DRINKS MENU </a>
+                    <a href="/yucatan" class="eats-button">
+                        YUCATAN<br />TACOS
+                    </a>
+                    <a href="/pizza" class="eats-button">
+                        YARD SALE<br />PIZZA
+                    </a>
+                </div>
+            </div>
+        </section>
 
-      <div class="eats-image-container">
-        <img src="/design-assets/eats-drinks-hero.webp" alt="Eats and Drinks" class="eats-hero-image" loading="lazy" />
-        <div class="eats-gradient-top" />
-        <div class="eats-gradient-bottom" />
-        <div class="eats-buttons">
-          <a href="/birthday-cakes" class="eats-button">
-            BIRTHDAY<br>CAKES
-          </a>
-          <a href="/drinks-menu" class="eats-button">
-            DRINKS MENU
-          </a>
-          <a href="/yucatan" class="eats-button">
-            YUCATAN<br>TACOS
-          </a>
-          <a href="/pizza" class="eats-button">
-            YARD SALE<br>PIZZA
-          </a>
-        </div>
-      </div>
-    </section>
+        <!-- Audio Section -->
+        <section class="audio-section">
+            <!-- Background Video -->
+            <video
+                class="audio-background"
+                src="/videos/audio-bg.mp4"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="none"
+            />
+            <img
+                src="/design-assets/ROWANS AUDIO LOGO.webp"
+                alt="Audio"
+                class="audio-logo"
+                loading="lazy"
+            />
+            <div class="audio-content">
+                <h2 class="audio-heading">AUDIO</h2>
+                <p class="audio-text">
+                    Void Acoustics and Funktion One sound-systems across the
+                    venue.<br />
+                    Playing big basslines.<br />
+                    Ever evolving line-up and weekly events.
+                </p>
+            </div>
+            <div class="audio-buttons">
+                <a href="/whats-on" class="audio-button"> WHAT'S<br />ON </a>
+                <a href="/radio" class="audio-button"> ROWANS<br />RADIO </a>
+                <a href="/djs" class="audio-button"> RESIDENT<br />DJ'S </a>
+            </div>
+        </section>
 
-    <!-- Audio Section -->
-    <section class="audio-section">
-      <!-- Background Video -->
-      <video
-        class="audio-background"
-        src="/videos/audio-bg.mp4"
-        autoplay
-        muted
-        loop
-        playsinline
-        preload="none"
-      />
-      <img
-        src="/design-assets/ROWANS AUDIO LOGO.webp"
-        alt="Audio"
-        class="audio-logo"
-        loading="lazy"
-      />
-      <div class="audio-content">
-        <h2 class="audio-heading">AUDIO</h2>
-        <p class="audio-text">
-          Void Acoustics and Funktion One sound-systems across the venue.<br>
-          Playing big basslines.<br>
-          Ever evolving line-up and weekly events.
-        </p>
-      </div>
-      <div class="audio-buttons">
-        <a href="/whats-on" class="audio-button">
-          WHAT'S<br>ON
-        </a>
-        <a href="/radio" class="audio-button">
-          ROWANS<br>RADIO
-        </a>
-        <a href="/djs" class="audio-button">
-          RESIDENT<br>DJ'S
-        </a>
-      </div>
-    </section>
+        <!-- Visit Us Section -->
+        <section class="visit-section">
+            <h2 class="visit-heading">Visit Us</h2>
+            <div class="visit-cards">
+                <div class="visit-card">
+                    <h3>Opening Hours</h3>
+                    <div class="visit-hours">
+                        <p>Monday - Thursday<br />5pm - 1am</p>
+                        <p>Friday - Saturday<br />12pm - 3am</p>
+                        <p>Sunday<br />12pm - 12am</p>
+                    </div>
+                    <a href="#location" class="visit-button">FIND US</a>
+                </div>
+                <div class="visit-card">
+                    <h3>Location</h3>
+                    <div class="visit-hours">
+                        <p>Rowans Tenpin Bowl<br />10 Stroud Green Road</p>
+                        <p>Finsbury Park<br />London N4 2DF</p>
+                    </div>
+                    <a
+                        href="https://maps.google.com/?q=Rowans+Tenpin+Bowl,+10+Stroud+Green+Road,+Finsbury+Park,+London+N4+2DF"
+                        target="_blank"
+                        rel="noopener"
+                        class="visit-button"
+                        >FIND US</a
+                    >
+                </div>
+            </div>
+        </section>
 
-    <!-- Visit Us Section -->
-    <section class="visit-section">
-      <h2 class="visit-heading">Visit Us</h2>
-      <div class="visit-cards">
-        <div class="visit-card">
-          <h3>Opening Hours</h3>
-          <div class="visit-hours">
-            <p>Monday - Thursday<br>5pm - 1am</p>
-            <p>Friday - Saturday<br>12pm - 3am</p>
-            <p>Sunday<br>12pm - 12am</p>
-          </div>
-          <a href="#location" class="visit-button">FIND US</a>
-        </div>
-        <div class="visit-card">
-          <h3>Location</h3>
-          <div class="visit-hours">
-            <p>Rowans Tenpin Bowl<br>10 Stroud Green Road</p>
-            <p>Finsbury Park<br>London N4 2DF</p>
-          </div>
-          <a href="https://maps.google.com/?q=Rowans+Tenpin+Bowl,+10+Stroud+Green+Road,+Finsbury+Park,+London+N4+2DF" target="_blank" rel="noopener" class="visit-button">FIND US</a>
-        </div>
-      </div>
-    </section>
+        <!-- Map Section -->
+        <section class="map-section" id="location">
+            <a
+                href="https://maps.google.com/?q=Rowans+Tenpin+Bowl,+10+Stroud+Green+Road,+Finsbury+Park,+London+N4+2DF"
+                target="_blank"
+                rel="noopener"
+                class="map-link"
+            >
+                <span class="map-pin">📍</span>
+            </a>
+        </section>
 
-    <!-- Map Section -->
-    <section class="map-section" id="location">
-      <a
-        href="https://maps.google.com/?q=Rowans+Tenpin+Bowl,+10+Stroud+Green+Road,+Finsbury+Park,+London+N4+2DF"
-        target="_blank"
-        rel="noopener"
-        class="map-link"
-      >
-        <span class="map-pin">📍</span>
-      </a>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <p class="footer-copy">© {{ new Date().getFullYear() }} Rowan's. All rights reserved.</p>
-    </footer>
-  </div>
+        <!-- Footer -->
+        <footer class="footer">
+            <p class="footer-copy">
+                © {{ new Date().getFullYear() }} Rowan's. All rights reserved.
+            </p>
+        </footer>
+    </div>
 </template>
 
 <script setup lang="ts">
-useHead({ title: "Rowan's \u2014 Iconic Venue in Finsbury Park" })
+useHead({ title: "Rowan's \u2014 Iconic Venue in Finsbury Park" });
 </script>
 
 <style scoped>
-
 .hero-section {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  background-color: #000000;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 2rem;
-  padding-top: 20px;
-  overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2rem;
+    padding-top: 20px;
+    overflow: hidden;
 }
 
 .hero-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center calc(50% - 20px);
-  z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center calc(50% - 20px);
+    z-index: 0;
 }
 
 .hero-logo {
-  position: relative;
-  height: 110px;
-  width: auto;
-  z-index: 10;
-  opacity: 0.8;
-  mix-blend-mode: screen;
+    position: relative;
+    height: 110px;
+    width: auto;
+    z-index: 10;
+    opacity: 0.8;
+    mix-blend-mode: screen;
 }
 
 .hero-heading {
-  position: relative;
-  font-family: 'JetBrains Mono', monospace;
-  font-weight: 400;
-  font-size: 17px;
-  line-height: 1.4;
-  color: #ffffff;
-  opacity: 0.8;
-  text-align: center;
-  margin: 15px 0 0 0;
-  z-index: 5;
+    position: relative;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 1.4;
+    color: #ffffff;
+    opacity: 0.8;
+    text-align: center;
+    margin: 15px 0 0 0;
+    z-index: 5;
 }
-
 
 /* Desktop styles (1440px+) — Hero */
 @media (min-width: 1440px) {
-  .hero-section {
-    padding-top: 28px;
-  }
+    .hero-section {
+        padding-top: 28px;
+    }
 
-  .hero-logo {
-    height: 319px;
-  }
+    .hero-logo {
+        height: 319px;
+    }
 
-  .hero-heading {
-    font-size: 36px;
-  }
+    .hero-heading {
+        font-size: 36px;
+    }
 }
 
 /* Tablet/Medium Desktop */
 @media (min-width: 768px) and (max-width: 1439px) {
-  .hero-section {
-    padding-top: 22px;
-  }
+    .hero-section {
+        padding-top: 22px;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-  .hero-logo {
-    height: 150px;
-  }
+    .hero-logo {
+        height: 150px;
+    }
 }
 
 @media (min-width: 1024px) and (max-width: 1439px) {
-  .hero-logo {
-    height: 240px;
-  }
+    .hero-logo {
+        height: 240px;
+    }
 
-  .hero-heading {
-    font-size: 28px;
-  }
+    .hero-heading {
+        font-size: 28px;
+    }
 }
 
 /* Welcome Section */
 .welcome-section {
-  position: relative;
-  width: 100%;
-  background-color: #000000;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 1.5rem 2rem;
-  text-align: center;
+    position: relative;
+    width: 100%;
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 2rem;
+    text-align: center;
 }
 
 .welcome-heading {
-  font-family: 'JetBrains Mono', monospace;
-  font-weight: var(--section-heading-weight, 400);
-  font-size: var(--section-heading-size, 46px);
-  color: var(--color-heading, #ff0000);
-  margin-bottom: 1rem;
-  text-transform: none;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: var(--section-heading-weight, 400);
+    font-size: var(--section-heading-size, 46px);
+    color: var(--color-heading, #ff0000);
+    margin-bottom: 1rem;
+    text-transform: none;
 }
 
 .welcome-text {
-  font-family: 'JetBrains Mono', monospace;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.8;
-  color: #ffffff;
-  opacity: 0.85;
-  margin: 0;
-  max-width: 800px;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.8;
+    color: #ffffff;
+    opacity: 0.85;
+    margin: 0;
+    max-width: 800px;
 }
 
-
 .welcome-features {
-  line-height: 1.6;
-  opacity: 0.9;
+    line-height: 1.6;
+    opacity: 0.9;
 }
 
 .welcome-levels {
-  margin-bottom: 0.75rem;
+    margin-bottom: 0.75rem;
 }
 
 /* Desktop styles for welcome section */
 @media (min-width: 1440px) {
-  .welcome-heading {
-    font-size: 96px;
-    margin-bottom: 2.5rem;
-  }
+    .welcome-heading {
+        font-size: 96px;
+        margin-bottom: 2.5rem;
+    }
 
-  .welcome-text {
-    font-size: 24px;
-    line-height: 1.7;
-    max-width: 1200px;
-  }
+    .welcome-text {
+        font-size: 24px;
+        line-height: 1.7;
+        max-width: 1200px;
+    }
 }
 
 /* Tablet/Medium Desktop for welcome section */
 @media (min-width: 768px) and (max-width: 1439px) {
-  .welcome-text {
-    max-width: 900px;
-  }
+    .welcome-text {
+        max-width: 900px;
+    }
 }
 
 /* Party Section */
 .party-section {
-  position: relative;
-  width: 100%;
-  min-height: calc(60vh + 180px);
-  background-color: #000000;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 0 2rem 2rem;
-  text-align: center;
-  overflow: hidden;
+    position: relative;
+    width: 100%;
+    min-height: calc(60vh + 180px);
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 2rem 2rem;
+    text-align: center;
+    overflow: hidden;
 }
 
 .party-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.6;
-  z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+    z-index: 0;
 }
 
 .party-heading {
-  position: relative;
-  z-index: 1;
-  font-family: 'JetBrains Mono', monospace;
-  font-weight: 400;
-  font-size: 18px;
-  color: #ffffff;
-  opacity: 0.9;
-  margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 400;
+    font-size: 18px;
+    color: #ffffff;
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
 }
 
 .party-buttons {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
-  max-width: 800px;
-  margin: 0 auto;
-  justify-content: center;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    justify-content: center;
 }
 
 .party-button {
-  position: relative;
-  width: 105px;
-  height: 105px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image: url('/design-assets/BUTTON BASE.webp');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  color: #ffffff;
-  font-family: 'JetBrains Mono', monospace;
-  font-weight: 400;
-  font-size: 16px;
-  text-align: center;
-  text-decoration: none;
-  padding: 1.2rem;
-  transition: all 0.2s;
-  line-height: 1.3;
+    position: relative;
+    width: 105px;
+    height: 105px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("/design-assets/BUTTON BASE.webp");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #ffffff;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    padding: 1.2rem;
+    transition: all 0.2s;
+    line-height: 1.3;
 }
 
 .party-button:hover {
-  opacity: 0.8;
-  transform: scale(1.05);
+    opacity: 0.8;
+    transform: scale(1.05);
 }
 
 /* Eats Section */
 .eats-section {
-  position: relative;
-  width: 100%;
-  background-color: #000000;
-  padding: 0;
-  text-align: center;
+    position: relative;
+    width: 100%;
+    background-color: #000000;
+    padding: 0;
+    text-align: center;
 }
 
 .eats-heading {
-  position: absolute;
-  top: 2rem;
-  left: 0;
-  right: 0;
-  z-index: 2;
-  font-family: 'JetBrains Mono', monospace;
-  font-weight: var(--section-heading-weight, 400);
-  font-size: var(--section-heading-size, 46px);
-  color: var(--color-heading, #ff0000);
-  opacity: 0.9;
-  margin-bottom: 0.75rem;
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: var(--section-heading-weight, 400);
+    font-size: var(--section-heading-size, 46px);
+    color: var(--color-heading, #ff0000);
+    opacity: 0.9;
+    margin-bottom: 0.75rem;
 }
 
 .eats-text {
-  position: absolute;
-  top: 6.5rem;
-  left: 0;
-  right: 0;
-  z-index: 2;
-  font-family: 'JetBrains Mono', monospace;
-  font-weight: 700;
-  font-size: 16px;
-  color: #ffffff;
-  opacity: 0.8;
-  margin-bottom: 1rem;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+    position: absolute;
+    top: 6.5rem;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 700;
+    font-size: 16px;
+    color: #ffffff;
+    opacity: 0.8;
+    margin-bottom: 1rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .eats-image-container {
-  position: relative;
-  width: 100%;
-  margin-top: 15px;
+    position: relative;
+    width: 100%;
+    margin-top: 15px;
 }
 
 .eats-hero-image {
-  width: 100%;
-  height: auto;
-  display: block;
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .eats-gradient-top {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 35%;
-  background: linear-gradient(to bottom, #000000, transparent);
-  pointer-events: none;
-  z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 35%;
+    background: linear-gradient(to bottom, #000000, transparent);
+    pointer-events: none;
+    z-index: 1;
 }
 
 .eats-gradient-bottom {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 55%;
-  background: linear-gradient(to bottom, transparent, #000000);
-  pointer-events: none;
-  z-index: 1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 55%;
+    background: linear-gradient(to bottom, transparent, #000000);
+    pointer-events: none;
+    z-index: 1;
 }
 
 .eats-buttons {
-  position: absolute;
-  bottom: calc(2rem + 20px);
-  left: 0;
-  right: 0;
-  display: flex;
-  flex-direction: row;
-  gap: 1.5rem;
-  justify-content: center;
-  padding: 0 1rem;
-  z-index: 2;
+    position: absolute;
+    bottom: calc(2rem + 20px);
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    justify-content: center;
+    padding: 0 1rem;
+    z-index: 2;
 }
 
 .eats-button {
-  position: relative;
-  width: 100px;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image: url('/design-assets/BUTTON BASE.webp');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  color: #ffffff;
-  font-family: 'JetBrains Mono', monospace;
-  font-weight: 400;
-  font-size: 15px;
-  text-align: center;
-  text-decoration: none;
-  padding: 0.75rem;
-  transition: all 0.2s;
-  line-height: 1.3;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("/design-assets/BUTTON BASE.webp");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #ffffff;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 400;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+    padding: 0.75rem;
+    transition: all 0.2s;
+    line-height: 1.3;
 }
 
 .eats-button:hover {
-  opacity: 0.8;
-  transform: scale(1.05);
+    opacity: 0.8;
+    transform: scale(1.05);
 }
 
 /* Audio Section */
 .audio-section {
-  position: relative;
-  width: 100%;
-  min-height: 60vh;
-  background-color: #000;
-  padding: 4rem 2rem;
-  text-align: center;
-  overflow: hidden;
+    position: relative;
+    width: 100%;
+    min-height: 60vh;
+    background-color: #000;
+    padding: 4rem 2rem;
+    text-align: center;
+    overflow: hidden;
 }
 
 .audio-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.55;
-  z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.55;
+    z-index: 0;
 }
 
 .audio-logo {
-  position: relative;
-  z-index: 1;
-  max-width: 400px;
-  width: 100%;
-  height: auto;
-  margin: 0 auto 2rem;
-  display: block;
+    position: relative;
+    z-index: 1;
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto 2rem;
+    display: block;
 }
 
 .audio-content {
-  position: relative;
-  z-index: 1;
-  margin-top: -90px;
-  margin-bottom: 3rem;
+    position: relative;
+    z-index: 1;
+    margin-top: -90px;
+    margin-bottom: 3rem;
 }
 
 .audio-heading {
-  font-family: 'JetBrains Mono', monospace;
-  font-weight: var(--section-heading-weight, 400);
-  font-size: var(--section-heading-size, 46px);
-  color: var(--color-heading, #ff0000);
-  opacity: 0.9;
-  margin-bottom: 0.4rem;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: var(--section-heading-weight, 400);
+    font-size: var(--section-heading-size, 46px);
+    color: var(--color-heading, #ff0000);
+    opacity: 0.9;
+    margin-bottom: 0.4rem;
 }
 
 .audio-text {
-  font-family: 'JetBrains Mono', monospace;
-  font-weight: 700;
-  font-size: 10px;
-  color: #ffffff;
-  opacity: 0.8;
-  margin: 0 auto;
-  max-width: 400px;
-  line-height: 1.6;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 700;
+    font-size: 10px;
+    color: #ffffff;
+    opacity: 0.8;
+    margin: 0 auto;
+    max-width: 400px;
+    line-height: 1.6;
 }
 
 .audio-buttons {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
-  max-width: 650px;
-  margin: 0 auto;
-  justify-content: center;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    max-width: 650px;
+    margin: 0 auto;
+    justify-content: center;
 }
 
 .audio-button {
-  position: relative;
-  width: 110px;
-  height: 110px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image: url('/design-assets/AUDIO BUTTON.webp');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  color: #ffffff;
-  font-family: 'JetBrains Mono', monospace;
-  font-weight: 700;
-  font-size: 16px;
-  text-align: center;
-  text-decoration: none;
-  padding: 1.5rem;
-  transition: all 0.2s;
-  line-height: 1.3;
+    position: relative;
+    width: 110px;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("/design-assets/AUDIO BUTTON.webp");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #ffffff;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    padding: 1.5rem;
+    transition: all 0.2s;
+    line-height: 1.3;
 }
 
 .audio-button:hover {
-  opacity: 0.8;
-  transform: scale(1.05);
+    opacity: 0.8;
+    transform: scale(1.05);
 }
 
 /* Visit Section */
 .visit-section {
-  position: relative;
-  width: 100%;
-  min-height: 50vh;
-  background-color: #000000;
-  padding: 4rem 2rem;
-  text-align: center;
+    position: relative;
+    width: 100%;
+    min-height: 50vh;
+    background-color: #000000;
+    padding: 4rem 2rem;
+    text-align: center;
 }
 
 .visit-heading {
-  font-family: 'JetBrains Mono', monospace;
-  font-weight: var(--section-heading-weight, 400);
-  font-size: var(--section-heading-size, 46px);
-  color: var(--color-heading, #ff0000);
-  margin-bottom: 3rem;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: var(--section-heading-weight, 400);
+    font-size: var(--section-heading-size, 46px);
+    color: var(--color-heading, #ff0000);
+    margin-bottom: 3rem;
 }
 
 .visit-cards {
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
-  max-width: 1100px;
-  margin: 0 auto;
-  justify-content: center;
-  flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .visit-card {
-  background-color: #1a1a1a;
-  border: 1px solid #333;
-  border-radius: 8px;
-  padding: 2rem;
-  flex: 1;
-  min-width: 300px;
-  max-width: 500px;
-  display: flex;
-  flex-direction: column;
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 2rem;
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
 }
 
 .visit-card h3 {
-  font-family: 'JetBrains Mono', monospace;
-  font-weight: 400;
-  font-size: 22px;
-  color: var(--color-heading, #ff0000);
-  margin-bottom: 1.5rem;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 400;
+    font-size: 22px;
+    color: var(--color-heading, #ff0000);
+    margin-bottom: 1.5rem;
 }
 
 .visit-hours {
-  color: #9ca3af;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 14px;
-  line-height: 1.8;
-  margin-bottom: 2rem;
+    color: #9ca3af;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 2rem;
 }
 
 .visit-hours p {
-  margin: 1rem 0;
+    margin: 1rem 0;
 }
 
 .visit-button {
-  display: block;
-  background-color: transparent;
-  border: 2px solid #ffffff;
-  color: #ffffff;
-  padding: 1rem 2rem;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 4px;
-  font-family: 'JetBrains Mono', monospace;
-  font-weight: 400;
-  transition: all 0.2s;
-  margin-top: auto;
+    display: block;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    padding: 1rem 2rem;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 400;
+    transition: all 0.2s;
+    margin-top: auto;
 }
 
 .visit-button:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Map Section */
 .map-section {
-  background-color: #000000;
-  padding: 3rem 2rem;
-  text-align: center;
+    background-color: #000000;
+    padding: 3rem 2rem;
+    text-align: center;
 }
 
 .map-link {
-  display: inline-block;
-  text-decoration: none;
+    display: inline-block;
+    text-decoration: none;
 }
 
 .map-pin {
-  font-size: 48px;
+    font-size: 48px;
 }
 
 /* Footer */
 .footer {
-  background-color: #000000;
-  padding: 2rem;
-  text-align: center;
+    background-color: #000000;
+    padding: 2rem;
+    text-align: center;
 }
 
 .footer-copy {
-  color: #9ca3af;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 12px;
+    color: #9ca3af;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
 }
 
 /* Mobile: shift hero background to center the building */
 @media (max-width: 500px) {
-  .hero-background {
-    object-position: calc(50% + 360px) calc(50% - 20px);
-  }
+    .hero-background {
+        object-position: 15% calc(50% - 20px);
+    }
 }
 
 /* Mobile fixes */
 @media (max-width: 767px) {
-  .hero-logo {
-    margin-top: 70px;
-  }
+    .hero-logo {
+        margin-top: 70px;
+    }
 
-  .welcome-heading {
-    font-size: 24px;
-  }
+    .welcome-heading {
+        font-size: 24px;
+    }
 
-  .welcome-text {
-    font-size: 15px;
-    width: 100%;
-    overflow-wrap: break-word;
-    word-break: break-word;
-  }
+    .welcome-text {
+        font-size: 15px;
+        width: 100%;
+        overflow-wrap: break-word;
+        word-break: break-word;
+    }
 
-  .welcome-text br {
-    display: none;
-  }
+    .welcome-text br {
+        display: none;
+    }
 
-  /* Party: video above, text+buttons below on mobile */
-  .party-section {
-    min-height: auto;
-    padding: 0 1rem 2rem;
-    justify-content: flex-start;
-  }
+    /* Party: video above, text+buttons below on mobile */
+    .party-section {
+        min-height: auto;
+        padding: 0 1rem 2rem;
+        justify-content: flex-start;
+    }
 
-  .party-background {
-    position: relative;
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 9;
-    opacity: 0.8;
-    border-radius: 0;
-  }
+    .party-background {
+        position: relative;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        opacity: 0.8;
+        border-radius: 0;
+    }
 
-  .party-heading {
-    margin-top: 1.5rem;
-  }
+    .party-heading {
+        margin-top: 1.5rem;
+    }
 
-  .party-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem;
-    max-width: none;
-    justify-content: center;
-  }
+    .party-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        max-width: none;
+        justify-content: center;
+    }
 
-  .party-button {
-    width: 78px;
-    height: 78px;
-    font-size: 9px;
-    padding: 0.5rem;
-  }
+    .party-button {
+        width: 78px;
+        height: 78px;
+        font-size: 9px;
+        padding: 0.5rem;
+    }
 
-  /* Audio: shrink to fit 3 across */
-  .audio-buttons {
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
+    /* Audio: shrink to fit 3 across */
+    .audio-buttons {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
 
-  .audio-button {
-    width: 90px;
-    height: 90px;
-    font-size: 10px;
-  }
+    .audio-button {
+        width: 90px;
+        height: 90px;
+        font-size: 10px;
+    }
 
-  .audio-text {
-    font-size: 14px;
-    overflow-wrap: break-word;
-    word-break: break-word;
-    padding: 0 0.5rem;
-  }
+    .audio-text {
+        font-size: 14px;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        padding: 0 0.5rem;
+    }
 
-  /* Visit cards: full-width stacked */
-  .visit-cards {
-    flex-direction: column;
-    align-items: stretch;
-  }
+    /* Visit cards: full-width stacked */
+    .visit-cards {
+        flex-direction: column;
+        align-items: stretch;
+    }
 
-  .visit-card {
-    min-width: unset;
-    max-width: unset;
-    width: 100%;
-  }
+    .visit-card {
+        min-width: unset;
+        max-width: unset;
+        width: 100%;
+    }
 
-  /* Eats: normal flow on mobile — heading, text, image, buttons */
-  .eats-section {
-    padding-left: 0;
-    padding-right: 0;
-  }
+    /* Eats: normal flow on mobile — heading, text, image, buttons */
+    .eats-section {
+        padding-left: 0;
+        padding-right: 0;
+    }
 
-  .eats-heading {
-    position: relative;
-    top: auto;
-    padding: 0 1rem;
-    margin-bottom: 0.75rem;
-  }
+    .eats-heading {
+        position: relative;
+        top: auto;
+        padding: 0 1rem;
+        margin-bottom: 0.75rem;
+    }
 
-  .eats-text {
-    position: relative;
-    top: auto;
-    padding: 0 1rem;
-    margin-bottom: 1rem;
-  }
+    .eats-text {
+        position: relative;
+        top: auto;
+        padding: 0 1rem;
+        margin-bottom: 1rem;
+    }
 
-  .eats-gradient-top {
-    display: none;
-  }
+    .eats-gradient-top {
+        display: none;
+    }
 
-  .eats-gradient-bottom {
-    height: 15%;
-  }
+    .eats-gradient-bottom {
+        height: 15%;
+    }
 
-  /* Eats buttons: 4-in-a-row below image */
-  .eats-buttons {
-    position: static;
-    flex-wrap: nowrap;
-    justify-content: center;
-    gap: 0.4rem;
-    padding: 1rem 0.5rem 3rem;
-    margin-top: -1rem;
-  }
+    /* Eats buttons: 4-in-a-row below image */
+    .eats-buttons {
+        position: static;
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 0.4rem;
+        padding: 1rem 0.5rem 3rem;
+        margin-top: -1rem;
+    }
 
-  .eats-button {
-    width: 82px;
-    height: 82px;
-    font-size: 9px;
-    padding: 0.5rem;
-  }
+    .eats-button {
+        width: 82px;
+        height: 82px;
+        font-size: 9px;
+        padding: 0.5rem;
+    }
 }
 
 /* 1024px — tablet/small laptop */
 @media (min-width: 1024px) {
-  /* Welcome */
-  .welcome-text {
-    font-size: 16px;
-  }
+    /* Welcome */
+    .welcome-text {
+        font-size: 16px;
+    }
 
-  /* Party */
-  .party-heading {
-    font-size: 24px;
-  }
+    /* Party */
+    .party-heading {
+        font-size: 24px;
+    }
 
-  .party-buttons {
-    gap: 2rem;
-  }
+    .party-buttons {
+        gap: 2rem;
+    }
 
-  .party-button {
-    width: 140px;
-    height: 140px;
-    font-size: 14px;
-  }
+    .party-button {
+        width: 140px;
+        height: 140px;
+        font-size: 14px;
+    }
 
-  /* Eats */
-  .eats-text {
-    font-size: 18px;
-  }
+    /* Eats */
+    .eats-text {
+        font-size: 18px;
+    }
 
-  .eats-buttons {
-    gap: 2rem;
-  }
+    .eats-buttons {
+        gap: 2rem;
+    }
 
-  .eats-button {
-    width: 140px;
-    height: 140px;
-    font-size: 14px;
-  }
+    .eats-button {
+        width: 140px;
+        height: 140px;
+        font-size: 14px;
+    }
 
-  /* Audio */
-  .audio-logo {
-    max-width: 500px;
-  }
+    /* Audio */
+    .audio-logo {
+        max-width: 500px;
+    }
 
-  .audio-text {
-    font-size: 14px;
-  }
+    .audio-text {
+        font-size: 14px;
+    }
 
-  .audio-button {
-    width: 140px;
-    height: 140px;
-    font-size: 14px;
-  }
+    .audio-button {
+        width: 140px;
+        height: 140px;
+        font-size: 14px;
+    }
 
-  /* Visit */
-  .visit-hours {
-    font-size: 16px;
-  }
+    /* Visit */
+    .visit-hours {
+        font-size: 16px;
+    }
 
-  .visit-card h3 {
-    font-size: 26px;
-  }
+    .visit-card h3 {
+        font-size: 26px;
+    }
 }
 
 /* Desktop Responsive — 1440px+ Desktop */
 @media (min-width: 1440px) {
-  /* Party section */
-  .party-heading {
-    font-size: 40px;
-  }
+    /* Party section */
+    .party-heading {
+        font-size: 40px;
+    }
 
-  .party-buttons {
-    gap: 2.5rem;
-    max-width: 1200px;
-  }
+    .party-buttons {
+        gap: 2.5rem;
+        max-width: 1200px;
+    }
 
-  .party-button {
-    width: 219px;
-    height: 216px;
-    font-size: 20px;
-  }
+    .party-button {
+        width: 219px;
+        height: 216px;
+        font-size: 20px;
+    }
 
-  /* Eats section */
-  .eats-heading {
-    font-size: 96px;
-  }
+    /* Eats section */
+    .eats-heading {
+        font-size: 96px;
+    }
 
-  .eats-text {
-    font-size: 24px;
-    top: 11rem;
-    max-width: 1000px;
-  }
+    .eats-text {
+        font-size: 24px;
+        top: 11rem;
+        max-width: 1000px;
+    }
 
-  .eats-buttons {
-    gap: 2.5rem;
-  }
+    .eats-buttons {
+        gap: 2.5rem;
+    }
 
-  .eats-button {
-    width: 219px;
-    height: 216px;
-    font-size: 20px;
-  }
+    .eats-button {
+        width: 219px;
+        height: 216px;
+        font-size: 20px;
+    }
 
-  /* Audio section */
-  .audio-logo {
-    max-width: 798px;
-  }
+    /* Audio section */
+    .audio-logo {
+        max-width: 798px;
+    }
 
-  .audio-heading {
-    font-size: 96px;
-  }
+    .audio-heading {
+        font-size: 96px;
+    }
 
-  .audio-text {
-    font-size: 20px;
-    max-width: 600px;
-  }
+    .audio-text {
+        font-size: 20px;
+        max-width: 600px;
+    }
 
-  .audio-buttons {
-    gap: 2.5rem;
-  }
+    .audio-buttons {
+        gap: 2.5rem;
+    }
 
-  .audio-button {
-    width: 219px;
-    height: 229px;
-    font-size: 20px;
-  }
+    .audio-button {
+        width: 219px;
+        height: 229px;
+        font-size: 20px;
+    }
 
-  /* Visit section */
-  .visit-heading {
-    font-size: 96px;
-  }
+    /* Visit section */
+    .visit-heading {
+        font-size: 96px;
+    }
 
-  .visit-cards {
-    max-width: 1600px;
-  }
+    .visit-cards {
+        max-width: 1600px;
+    }
 
-  .visit-card {
-    max-width: 751px;
-  }
+    .visit-card {
+        max-width: 751px;
+    }
 }
 </style>
