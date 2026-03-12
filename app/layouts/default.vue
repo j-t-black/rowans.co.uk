@@ -101,7 +101,7 @@ const hideLaneButton = computed(() => ['/groups', '/kids'].includes(route.path))
     position: fixed;
     top: auto;
     left: auto;
-    top: 90px;
+    top: 105px;
     right: 22px;
   }
 }
@@ -125,7 +125,7 @@ const hideLaneButton = computed(() => ['/groups', '/kids'].includes(route.path))
   }
 
   .lane-button {
-    top: 150px;
+    top: 170px;
     right: 30px;
   }
 
